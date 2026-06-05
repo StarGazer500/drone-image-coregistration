@@ -13,7 +13,7 @@ Drone flights taken at different dates are processed independently, so their ort
 
 | Reference flight | Target flight |
 |---|---|
-| ![Reference](assets/reference.png) | ![Target](assets/target.png) |
+| ![Reference](conceptual_assets/reference.png) | ![Target](conceptual_assets/target.png) |
 
 Both flights cover the same mining-impacted forest area in Ghana. Despite appearing visually similar, subtle spatial misalignment between the two acquisitions must be corrected before any temporal change analysis.
 
@@ -23,7 +23,7 @@ Both flights cover the same mining-impacted forest area in Ghana. Despite appear
 
 The mosaic is partitioned into a regular grid of cells. SIFT detection and matching runs independently on each cell in parallel, then all corrected cells are mosaicked into the final output.
 
-![Tiled grid concept](assets/tiled_grid.png)
+![Tiled grid concept](conceptual_assets/tiled_grid.png)
 
 ```mermaid
 flowchart TD
@@ -74,7 +74,7 @@ After running `visualize_matches.py`, the grid overview is saved to `match_visua
 
 Reference (left) vs target (right). **Green lines** = RANSAC inlier correspondences driving the shift. Rejected outliers are not shown — only clean, short, parallel matches survive the displacement filter.
 
-![Cell Correspondence](assets/match_filtering.png)
+![Cell Correspondence](conceptual_assets/match_filtering.png)
 
 ---
 
@@ -137,7 +137,7 @@ image_coregistration/
 ├── remosaic.py                  # Re-run mosaic step on existing corrected tiles
 │
 ├── coregistration_utils.py      # Shared utilities (VRT building, tile I/O, mosaic)
-├── assets/                      # Screenshots for this README
+├── conceptual_assets/           # Screenshots for this README
 ├── README.md
 └── Install.md
 ```
