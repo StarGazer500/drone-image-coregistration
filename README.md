@@ -178,7 +178,7 @@ conda activate co_reg
 
 Run a single approach:
 ```
-python run_affine.py
+python run_affine_selective.py
 ```
 
 Or chain both:
