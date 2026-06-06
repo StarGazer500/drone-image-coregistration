@@ -49,14 +49,20 @@ flowchart TD
 
 ## Correction Approaches
 
-Two approaches are provided so results can be compared side-by-side:
+Three approaches are provided so results can be compared side-by-side:
 
-| Script | DOF | Rotation + Scale |
-|---|:---:|:---:|
-| `run_homography_selective.py` | 8 DOF | No (translation extracted) |
-| `run_affine_selective.py` | 4 DOF | **Yes** |
+| Script | Method | Shift model | Pixel resampling |
+|---|---|---|:---:|
+| `run_homography_selective.py` | SIFT + RANSAC (8 DOF) | Per-cell translation | No |
+| `run_affine_selective.py` | SIFT + RANSAC (4 DOF) | Per-cell translation + rotation + scale | At mosaic |
+| `run_arosics_selective.py` | AROSICS NCC | Spatially-interpolated shifts | No (translation) / bilinear (spline) |
 
-Unmatched cells are left at their original position. Use this when you believe unmatched areas are already well-aligned, or where there is no reliable texture for SIFT (e.g. uniform forest canopy).
+**SIFT scripts** — unmatched cells are left at their original position. Use this when you believe unmatched areas are already well-aligned, or where there is no reliable texture for SIFT (e.g. uniform forest canopy).
+
+**AROSICS script** — uses normalised cross-correlation (NCC) instead of SIFT keypoints. It runs on a downsampled copy of the full mosaic to avoid OOM, then interpolates the resulting tie-point table spatially to produce a per-cell (or per-pixel) shift. Two correction modes are available via `AROSICS_CORRECTION` in `config.py`:
+
+- `"translation"` — one constant shift per grid tile; zero pixel resampling; fast
+- `"spline"` — thin-plate spline warp applied per-pixel inside every tile; bilinear resample; recommended when GPS drift varies strongly across the mosaic
 
 ---
 
@@ -106,7 +112,8 @@ Create the environment:
 ```bash
 conda create -n co_reg python=3.12
 conda activate co_reg
-conda install -c conda-forge rasterio matplotlib numpy tqdm gdal opencv
+conda install -c conda-forge rasterio matplotlib numpy tqdm gdal opencv scipy
+pip install arosics          # required for run_arosics_selective.py
 ```
 
 ### Windows
@@ -118,8 +125,11 @@ conda install -c conda-forge rasterio matplotlib numpy tqdm gdal opencv
 ```
 conda create -n co_reg python=3.12
 conda activate co_reg
-conda install -c conda-forge rasterio matplotlib numpy tqdm gdal opencv
+conda install -c conda-forge rasterio matplotlib numpy tqdm gdal opencv scipy
+pip install arosics
 ```
+
+> `arosics` and `scipy` are only required if you intend to run `run_arosics_selective.py`. The SIFT scripts work without them.
 
 ---
 
@@ -129,8 +139,9 @@ conda install -c conda-forge rasterio matplotlib numpy tqdm gdal opencv
 image_coregistration/
 ├── config.py                    ← Edit this first — set your data paths and parameters
 │
-├── run_homography_selective.py  # Homography correction  (zero shift for unmatched cells)
-├── run_affine_selective.py      # Affine correction      (zero shift for unmatched cells)
+├── run_homography_selective.py  # SIFT homography correction  (zero shift for unmatched cells)
+├── run_affine_selective.py      # SIFT affine correction      (zero shift for unmatched cells)
+├── run_arosics_selective.py     # AROSICS NCC correction      (translation or spline warp)
 │
 ├── visualize_matches.py         # SIFT match visualiser — PNG per cell + GeoPackage for QGIS
 ├── evaluate.py                  # NCC / SSIM / residual-shift comparison across all outputs
@@ -156,12 +167,21 @@ TARGET_GLOB    = r"path/to/target/tiles/*.tif"
 # ── Tiling and detection ────────────────────────────────────────────────────────
 TILE_PX      = 8192   # grid cell size in pixels
 DETECT_PX    = 2048   # SIFT detection resolution (smaller = faster, less memory)
-BAND         = 1      # band used for SIFT (1 = Red for RGBA drone imagery)
+BAND         = 1      # band used for SIFT / AROSICS (1 = Red for RGBA drone imagery)
 N_CPUS       = 4      # parallel workers
 
-# ── Quality filters ─────────────────────────────────────────────────────────────
+# ── Quality filters (SIFT scripts only) ────────────────────────────────────────
 MAD_K        = 3.0    # cells with shift > MAD_K × MAD from consensus are excluded
 MAX_SHIFT_PX = 20     # per-match displacement limit in detection pixels (≈ 5 m)
+
+# ── AROSICS settings (run_arosics_selective.py only) ───────────────────────────
+AROSICS_GRID_RES      = 200           # tie-point grid spacing in pixels (downsampled input)
+AROSICS_WIN_SIZE      = (512, 512)    # NCC matching window (cols, rows) in pixels
+AROSICS_MAX_SHIFT     = 50            # maximum expected shift in pixels
+AROSICS_MAX_PX        = 4096          # mosaic is downsampled to this size for AROSICS
+AROSICS_CORRECTION    = "translation" # "translation" (fast, zero resample) or
+                                      # "spline" (per-pixel warp, bilinear resample)
+AROSICS_SPLINE_EVAL_N = 16            # coarse grid size for spline evaluation per tile
 ```
 
 Each run script also has its own `OUTPUT` directory name at the top, which you can leave as-is.
@@ -181,9 +201,9 @@ Run a single approach:
 python run_affine_selective.py
 ```
 
-Or chain both:
+Or chain all three:
 ```
-python run_homography_selective.py && python run_affine_selective.py
+python run_homography_selective.py && python run_affine_selective.py && python run_arosics_selective.py
 ```
 
 Each script produces:
@@ -194,6 +214,8 @@ coregistration_output_<method>/
 ├── _target_mosaic.vrt
 └── coregistered_final.tif  # final Cloud-Optimized GeoTIFF
 ```
+
+The AROSICS script also writes two intermediate downsampled GeoTIFFs (`_ref_arosics.tif`, `_tgt_arosics.tif`) during shift detection, which are deleted automatically once the tie-point table is built.
 
 ### Step 2 — Visualise matches
 
@@ -236,12 +258,22 @@ Results saved to `evaluate_coregistration_results.csv`.
 6. **Displacement filter** — discard RANSAC inliers whose keypoint distance exceeds `MAX_SHIFT_PX` detection pixels (~5 m); removes false inliers with long lines
 7. Require ≥ 10 surviving inliers to accept the cell
 
-### Outlier rejection (per run)
+### Outlier rejection (SIFT scripts, per run)
 - **MAD filter** — after all cells are processed, cells whose shift is > `MAD_K × MAD` from the median are excluded from the consensus statistics (but still receive their own detected shift)
 
-### Correction (zero resampling)
+### Correction (SIFT, zero resampling)
 - **Homography** — shifts the tile GeoTransform origin; no pixel resampling
 - **Affine** — encodes translation + rotation + scale into the GeoTransform; no per-tile resampling; single resampling at mosaic time via `gdal.Warp`
+
+### AROSICS detection (`run_arosics_selective.py`)
+1. Both VRTs are downsampled to `AROSICS_MAX_PX` on the longest edge (avoids the large nodata-mask allocation AROSICS performs at init)
+2. `COREG_LOCAL.calculate_spatial_shifts()` runs NCC matching on a regular grid (`AROSICS_GRID_RES` × `AROSICS_GRID_RES` px) using `AROSICS_WIN_SIZE` matching windows
+3. AROSICS' own quality filtering (`OUTLIER == False`) keeps only reliable tie points
+4. The valid tie-point table is handed to the correction step
+
+### AROSICS correction
+- **Translation mode** — scipy `griddata` (linear triangulation) interpolates `X_SHIFT_M` / `Y_SHIFT_M` from tie-point map coordinates to each grid-cell centre; cells outside the tie-point convex hull receive zero shift; shifts are applied as GeoTransform offsets (zero pixel resampling)
+- **Spline mode** — an `RBFInterpolator` thin-plate spline is fitted to all valid tie points; evaluated on a coarse `AROSICS_SPLINE_EVAL_N × AROSICS_SPLINE_EVAL_N` grid per tile then upsampled to full resolution with `cv2.resize`; each tile is warped with `cv2.remap` (bilinear); a 64-pixel overlap buffer eliminates seam artefacts at tile boundaries
 
 ---
 

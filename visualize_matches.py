@@ -1,20 +1,19 @@
 """
-visualize_matches.py — SIFT correspondence visualiser.
+visualize_matches.py — Co-registration match / shift visualiser.
 
-For every grid cell that passes detection, produces a side-by-side PNG showing:
-  • Left panel  : reference crop (grayscale)
-  • Right panel : target crop (histogram-matched, grayscale)
-  • Grey lines  : good matches that RANSAC rejected
-  • Green lines : RANSAC inlier correspondences
-  • Title bar   : cell position, detected shift, inlier count
+Set METHOD (line ~38) to select the visualisation mode:
 
-Also produces match_map.png — a colour-coded grid overview:
-  • Dark green  : high inliers (≥ 100)
-  • Light green : low inliers (10 – 99)
-  • Red         : detection failed (pixels present but too few features/inliers)
-  • Dark grey   : no valid pixels in one or both mosaics
+  "homography" / "affine"
+      Re-run SIFT + RANSAC on the same tiled grid used by run_homography.py /
+      run_affine.py.  Produces per-cell side-by-side correspondence PNGs, a
+      colour-coded match-map grid, and a GeoPackage with inlier/outlier lines.
 
-Outputs are written to OUTPUT_DIR/.
+  "arosics"
+      Run AROSICS COREG_LOCAL.calculate_spatial_shifts() on the full VRT mosaic
+      (no manual tiling).  Produces a tie-point shift-magnitude scatter map and
+      a GeoPackage with tie_point_stats (Point) and shift_vectors (LineString).
+
+Outputs are written to match_visualizations_<METHOD>/.
 """
 
 import os
@@ -26,7 +25,7 @@ import matplotlib
 matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 import matplotlib.patches as mpatches
-
+from matplotlib.colors import LinearSegmentedColormap
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import coregistration_utils as ict
@@ -35,7 +34,7 @@ import coregistration_utils as ict
 from config import REFERENCE_GLOB as REFERENCE, TARGET_GLOB as TARGET
 from config import TILE_PX, DETECT_PX, BAND, MAX_SHIFT_PX
 
-METHOD     = "affine"   # "homography" or "affine" — controls the RANSAC step
+METHOD     = "arosics"   # "homography", "affine", or "arosics"
 OUTPUT_DIR = f"match_visualizations_{METHOD}"
 
 # How many inlier lines to draw per cell (None = all)
@@ -430,6 +429,262 @@ def _save_geopackage(grid, cell_results, ref_vrt, out_path, method):
     print(f"    Layers: match_lines_inliers, match_lines_outliers, cell_stats")
 
 
+# ── AROSICS visualisation ─────────────────────────────────────────────────────
+
+def _downsample_for_arosics(vrt_path, out_path, max_px):
+    """
+    Write a downsampled GeoTIFF capped at max_px along the longest edge.
+    AROSICS returns shifts in map units regardless of input resolution — the
+    detected shift is the same whether the image is 4 096 px or 127 000 px.
+    """
+    from osgeo import gdal
+    import rasterio
+    with rasterio.open(vrt_path) as ds:
+        w, h = ds.width, ds.height
+    scale = min(1.0, max_px / max(w, h))
+    new_w = max(1, int(round(w * scale)))
+    new_h = max(1, int(round(h * scale)))
+    print(f"  {os.path.basename(vrt_path)}  {w}×{h}  →  {new_w}×{new_h} px")
+    tmp = gdal.Translate(out_path, vrt_path,
+                         width=new_w, height=new_h,
+                         resampleAlg=gdal.GRA_Average,
+                         format='GTiff',
+                         creationOptions=['COMPRESS=DEFLATE'])
+    tmp.FlushCache()
+    tmp = None
+
+
+def _vrt_corners(path):
+    """
+    Return [[UL],[UR],[LR],[LL]] bounding-box corners from a raster's
+    geotransform (no pixel reads).  Passed to AROSICS as data_corners_* to
+    skip the automatic footprint computation.
+    """
+    import rasterio
+    with rasterio.open(path) as ds:
+        b = ds.bounds
+    return [[b.left, b.top], [b.right, b.top],
+            [b.right, b.bottom], [b.left, b.bottom]]
+
+
+def _run_arosics_shifts(ref_vrt, tgt_vrt):
+    """
+    Detect shifts using AROSICS COREG_LOCAL.calculate_spatial_shifts().
+
+    Both inputs are downsampled to AROSICS_MAX_PX before being passed to
+    AROSICS so that the single-band nodata-mask read stays within RAM.
+    Shifts are returned in map units, so the result is resolution-independent.
+    Does NOT apply any correction.
+    """
+    from arosics import COREG_LOCAL
+    from config import N_CPUS, AROSICS_GRID_RES, AROSICS_WIN_SIZE, AROSICS_MAX_SHIFT, AROSICS_MAX_PX
+
+    ref_small = os.path.join(OUTPUT_DIR, "_ref_arosics.tif")
+    tgt_small = os.path.join(OUTPUT_DIR, "_tgt_arosics.tif")
+
+    print(f"Downsampling inputs to ≤{AROSICS_MAX_PX} px for AROSICS ...")
+    _downsample_for_arosics(ref_vrt, ref_small, AROSICS_MAX_PX)
+    _downsample_for_arosics(tgt_vrt, tgt_small, AROSICS_MAX_PX)
+
+    print(f"\nRunning AROSICS shift detection  "
+          f"(grid_res={AROSICS_GRID_RES} px, "
+          f"window={AROSICS_WIN_SIZE}, "
+          f"max_shift={AROSICS_MAX_SHIFT} px, "
+          f"band={BAND}) ...")
+    CRL = COREG_LOCAL(
+        ref_small, tgt_small,
+        grid_res=AROSICS_GRID_RES,
+        window_size=AROSICS_WIN_SIZE,
+        max_shift=AROSICS_MAX_SHIFT,
+        nodata=(0, 0),
+        r_b4match=BAND,
+        s_b4match=BAND,
+        CPUs=N_CPUS,
+        progress=True,
+        data_corners_ref=_vrt_corners(ref_small),
+        data_corners_tgt=_vrt_corners(tgt_small),
+    )
+    CRL.calculate_spatial_shifts()
+
+    for p in (ref_small, tgt_small):
+        try:
+            os.remove(p)
+        except OSError:
+            pass
+
+    return CRL.CoRegPoints_table
+
+
+def _save_arosics_shift_map(table, out_path):
+    """
+    Scatter map of AROSICS tie points coloured by absolute shift magnitude.
+
+    AROSICS stores three distinct values in the OUTLIER column:
+      False (-0)   : valid tie point
+      True  (1)    : matched but filtered out by quality checks
+      -9999        : outFillVal — no match found (never had a valid shift)
+    Using .__eq__(False) mirrors the check AROSICS uses internally.
+    """
+    xs = table["X_MAP"].values.astype(float)
+    ys = table["Y_MAP"].values.astype(float)
+
+    valid      = table["OUTLIER"].__eq__(False).values   # 119 valid
+    filtered   = table["OUTLIER"].__eq__(True).values    # quality-filtered
+    unmatched  = ~valid & ~filtered                      # no-match (-9999)
+
+    shifts = (table.loc[table["OUTLIER"].__eq__(False), "ABS_SHIFT"]
+              .values.astype(float)
+              if "ABS_SHIFT" in table.columns else np.array([]))
+
+    fig, ax = plt.subplots(figsize=(10, 8))
+    ax.set_facecolor("#1e1e1e")
+    fig.patch.set_facecolor("#1e1e1e")
+
+    if valid.any() and len(shifts) > 0:
+        vmax = max(float(shifts.max()), 1e-9)
+        sc = ax.scatter(xs[valid], ys[valid], c=shifts,
+                        cmap="RdYlGn_r", s=40, zorder=3,
+                        vmin=0, vmax=vmax, label=f"Valid ({valid.sum()})")
+        cb = plt.colorbar(sc, ax=ax)
+        cb.set_label("ABS_SHIFT (map units)", color="white")
+        cb.ax.yaxis.set_tick_params(color="white")
+        plt.setp(cb.ax.yaxis.get_ticklabels(), color="white")
+
+    if filtered.any():
+        ax.scatter(xs[filtered], ys[filtered], c="#ff6633",
+                   marker="x", s=40, linewidths=1.2, zorder=4,
+                   label=f"Filtered outlier ({filtered.sum()})")
+
+    if unmatched.any():
+        ax.scatter(xs[unmatched], ys[unmatched], c="#555555",
+                   marker=".", s=15, zorder=2,
+                   label=f"No match ({unmatched.sum()})")
+
+    n_valid     = int(valid.sum())
+    n_filtered  = int(filtered.sum())
+    n_unmatched = int(unmatched.sum())
+    med_shift   = float(np.median(shifts)) if len(shifts) > 0 else 0.0
+
+    ax.text(0.02, 0.98,
+            f"Total: {len(table)}  |  valid: {n_valid}  "
+            f"filtered: {n_filtered}  no-match: {n_unmatched}  |  "
+            f"median shift: {med_shift:.3e} map units",
+            transform=ax.transAxes, va="top", fontsize=8, color="white",
+            bbox=dict(fc="#333333", alpha=0.75, boxstyle="round,pad=0.3"))
+
+    for spine in ax.spines.values():
+        spine.set_edgecolor("#555555")
+    ax.set_xlabel("X (map units)", color="white")
+    ax.set_ylabel("Y (map units)", color="white")
+    ax.set_title("AROSICS Local Co-registration — Tie-point Shift Map",
+                 fontsize=11, color="white")
+    ax.tick_params(colors="white", labelsize=7)
+    legend = ax.legend(fontsize=8, facecolor="#333333", edgecolor="#555555")
+    for text in legend.get_texts():
+        text.set_color("white")
+
+    fig.tight_layout()
+    fig.savefig(out_path, dpi=150, bbox_inches="tight", facecolor="#1e1e1e")
+    plt.close(fig)
+    print(f"  Shift map saved → {out_path}")
+
+
+def _save_arosics_geopackage(table, ref_vrt, out_path):
+    """
+    Write two GeoPackage layers from the AROSICS CoRegPoints table:
+
+    tie_point_stats   Point      One point per tie point with shift attributes.
+    shift_vectors     LineString Start = tie point position; end = shifted position.
+                                 Metre shifts are converted to CRS units so the
+                                 lines are geographically correct in QGIS.
+    """
+    from osgeo import gdal as _gdal, ogr as _ogr, osr as _osr
+
+    ds = _gdal.Open(ref_vrt, _gdal.GA_ReadOnly)
+    srs = _osr.SpatialReference()
+    srs.ImportFromWkt(ds.GetProjection())
+    ds = None
+    is_geographic = bool(srs.IsGeographic())
+
+    if os.path.exists(out_path):
+        os.remove(out_path)
+
+    drv  = _ogr.GetDriverByName("GPKG")
+    gpkg = drv.CreateDataSource(out_path)
+
+    attr_fields = [
+        ("X_SHIFT_M",   _ogr.OFTReal),
+        ("Y_SHIFT_M",   _ogr.OFTReal),
+        ("ABS_SHIFT",   _ogr.OFTReal),
+        ("ANGLE",       _ogr.OFTReal),
+        ("RELIABILITY", _ogr.OFTReal),
+        ("OUTLIER",     _ogr.OFTInteger),
+    ]
+
+    lyr_pts = gpkg.CreateLayer("tie_point_stats", srs=srs, geom_type=_ogr.wkbPoint)
+    for fname, ftype in [("X_MAP", _ogr.OFTReal), ("Y_MAP", _ogr.OFTReal)] + attr_fields:
+        lyr_pts.CreateField(_ogr.FieldDefn(fname, ftype))
+
+    lyr_vec = gpkg.CreateLayer("shift_vectors", srs=srs, geom_type=_ogr.wkbLineString)
+    for fname, ftype in attr_fields:
+        lyr_vec.CreateField(_ogr.FieldDefn(fname, ftype))
+
+    def _col(row, name, default=0.0):
+        return float(row[name]) if name in table.columns and row[name] == row[name] else default
+
+    for _, row in table.iterrows():
+        x     = float(row["X_MAP"])
+        y     = float(row["Y_MAP"])
+        dx_m  = _col(row, "X_SHIFT_M")
+        dy_m  = _col(row, "Y_SHIFT_M")
+        abs_s = _col(row, "ABS_SHIFT")
+        angle = _col(row, "ANGLE")
+        rel   = _col(row, "RELIABILITY")
+        # Preserve the raw OUTLIER value: 0 (valid), 1 (filtered), -9999 (unmatched)
+        try:
+            out = int(row["OUTLIER"]) if "OUTLIER" in table.columns else 0
+        except (ValueError, TypeError):
+            out = 0
+
+        # Point — write for every tie point
+        pt = _ogr.Geometry(_ogr.wkbPoint)
+        pt.AddPoint_2D(x, y)
+        feat = _ogr.Feature(lyr_pts.GetLayerDefn())
+        feat.SetGeometry(pt)
+        feat["X_MAP"] = x;      feat["Y_MAP"]     = y
+        feat["X_SHIFT_M"] = dx_m; feat["Y_SHIFT_M"] = dy_m
+        feat["ABS_SHIFT"]   = abs_s; feat["ANGLE"]       = angle
+        feat["RELIABILITY"] = rel;   feat["OUTLIER"]     = out
+        lyr_pts.CreateFeature(feat)
+
+        # Shift vector — only for matched points (skip outFillVal=-9999 rows which
+        # have no valid shift and would produce ~10 km lines in QGIS for WGS84 data)
+        if abs(dx_m) >= 9999:
+            continue
+
+        if is_geographic:
+            lat_rad = np.radians(y)
+            dx_crs = dx_m / (111320.0 * max(np.cos(lat_rad), 1e-9))
+            dy_crs = dy_m / 111320.0
+        else:
+            dx_crs, dy_crs = dx_m, dy_m
+
+        line = _ogr.Geometry(_ogr.wkbLineString)
+        line.AddPoint_2D(x, y)
+        line.AddPoint_2D(x + dx_crs, y + dy_crs)
+        feat = _ogr.Feature(lyr_vec.GetLayerDefn())
+        feat.SetGeometry(line)
+        feat["X_SHIFT_M"] = dx_m; feat["Y_SHIFT_M"] = dy_m
+        feat["ABS_SHIFT"]   = abs_s; feat["ANGLE"]       = angle
+        feat["RELIABILITY"] = rel;   feat["OUTLIER"]     = out
+        lyr_vec.CreateFeature(feat)
+
+    gpkg.FlushCache()
+    gpkg = None
+    print(f"  GeoPackage saved → {out_path}")
+    print(f"    Layers: tie_point_stats, shift_vectors")
+
+
 # ── Main ───────────────────────────────────────────────────────────────────────
 
 def main():
@@ -450,50 +705,90 @@ def main():
     ict.build_vrt(ref_tiles, ref_vrt)
     ict.build_vrt(tgt_tiles, tgt_vrt)
 
-    grid    = ict.compute_grid(tgt_vrt, TILE_PX)
-    n_cells = len(grid)
-    print(f"Grid      : {n_cells} cells\n")
+    if METHOD == "arosics":
+        # ── AROSICS path: no manual tiling, AROSICS places its own grid ──────
+        table = _run_arosics_shifts(ref_vrt, tgt_vrt)
 
-    cell_results = {}
-    n_matched = 0
+        n_total = len(table)
+        if "OUTLIER" in table.columns:
+            valid_mask  = table["OUTLIER"].__eq__(False)
+            n_valid     = int(valid_mask.sum())
+            n_filtered  = int(table["OUTLIER"].__eq__(True).sum())
+            n_unmatched = n_total - n_valid - n_filtered
+            med_shift   = (float(table.loc[valid_mask, "ABS_SHIFT"].median())
+                           if "ABS_SHIFT" in table.columns else 0.0)
+        else:
+            n_valid = n_total; n_filtered = 0; n_unmatched = 0; med_shift = 0.0
+        print(f"\n{n_valid}/{n_total} tie points valid  "
+              f"(filtered: {n_filtered}  no-match: {n_unmatched})  "
+              f"median shift: {med_shift:.3e} map units")
 
-    for i, (row, col, left, bottom, right, top, h_px, w_px, res) in enumerate(grid):
-        print(f"  [{row:03d},{col:03d}]  ({i+1}/{n_cells})", end="  ")
-        result = _detect_cell(ref_vrt, tgt_vrt, left, bottom, right, top,
-                               h_px, w_px, BAND, DETECT_PX,
-                               method=METHOD, max_shift_px=MAX_SHIFT_PX)
-        cell_results[(row, col)] = result
-        print(result["message"])
+        map_path = os.path.join(OUTPUT_DIR, "match_map.png")
+        _save_arosics_shift_map(table, map_path)
 
-        if result["status"] == "matched":
-            n_matched += 1
-            if SAVE_CELL_IMAGES:
-                img_path = os.path.join(OUTPUT_DIR,
-                                         f"match_{row:03d}_{col:03d}.png")
-                _save_cell_image(result, row, col, img_path, max_lines=MAX_LINES)
+        if SAVE_GEOPACKAGE:
+            gpkg_path = os.path.join(OUTPUT_DIR, "matches_arosics.gpkg")
+            _save_arosics_geopackage(table, ref_vrt, gpkg_path)
 
-    print(f"\n{n_matched}/{n_cells} cells matched.")
+        # Cleanup temp VRTs
+        for p in (ref_vrt, tgt_vrt):
+            try:
+                os.remove(p)
+            except OSError:
+                pass
 
-    map_path = os.path.join(OUTPUT_DIR, "match_map.png")
-    _save_match_map(grid, cell_results, map_path)
+        print(f"\nDone.  Output folder: {OUTPUT_DIR}/")
+        print(f"  Shift map  : match_map.png")
+        if SAVE_GEOPACKAGE:
+            print(f"  GeoPackage : matches_arosics.gpkg")
+            print(f"    Layers   : tie_point_stats, shift_vectors")
 
-    if SAVE_GEOPACKAGE:
-        gpkg_path = os.path.join(OUTPUT_DIR, f"matches_{METHOD}.gpkg")
-        _save_geopackage(grid, cell_results, ref_vrt, gpkg_path, METHOD)
+    else:
+        # ── SIFT path: tiled grid detection ──────────────────────────────────
+        grid    = ict.compute_grid(tgt_vrt, TILE_PX)
+        n_cells = len(grid)
+        print(f"Grid      : {n_cells} cells\n")
 
-    # Cleanup temp VRTs
-    for p in (ref_vrt, tgt_vrt):
-        try:
-            os.remove(p)
-        except OSError:
-            pass
+        cell_results = {}
+        n_matched = 0
 
-    print(f"\nDone.  Output folder: {OUTPUT_DIR}/")
-    if SAVE_CELL_IMAGES:
-        print(f"  Per-cell images : match_<row>_<col>.png  ({n_matched} files)")
-    print(f"  Grid overview   : match_map.png")
-    if SAVE_GEOPACKAGE:
-        print(f"  GeoPackage      : matches_{METHOD}.gpkg")
+        for i, (row, col, left, bottom, right, top, h_px, w_px, res) in enumerate(grid):
+            print(f"  [{row:03d},{col:03d}]  ({i+1}/{n_cells})", end="  ")
+            result = _detect_cell(ref_vrt, tgt_vrt, left, bottom, right, top,
+                                   h_px, w_px, BAND, DETECT_PX,
+                                   method=METHOD, max_shift_px=MAX_SHIFT_PX)
+            cell_results[(row, col)] = result
+            print(result["message"])
+
+            if result["status"] == "matched":
+                n_matched += 1
+                if SAVE_CELL_IMAGES:
+                    img_path = os.path.join(OUTPUT_DIR,
+                                             f"match_{row:03d}_{col:03d}.png")
+                    _save_cell_image(result, row, col, img_path, max_lines=MAX_LINES)
+
+        print(f"\n{n_matched}/{n_cells} cells matched.")
+
+        map_path = os.path.join(OUTPUT_DIR, "match_map.png")
+        _save_match_map(grid, cell_results, map_path)
+
+        if SAVE_GEOPACKAGE:
+            gpkg_path = os.path.join(OUTPUT_DIR, f"matches_{METHOD}.gpkg")
+            _save_geopackage(grid, cell_results, ref_vrt, gpkg_path, METHOD)
+
+        # Cleanup temp VRTs
+        for p in (ref_vrt, tgt_vrt):
+            try:
+                os.remove(p)
+            except OSError:
+                pass
+
+        print(f"\nDone.  Output folder: {OUTPUT_DIR}/")
+        if SAVE_CELL_IMAGES:
+            print(f"  Per-cell images : match_<row>_<col>.png  ({n_matched} files)")
+        print(f"  Grid overview   : match_map.png")
+        if SAVE_GEOPACKAGE:
+            print(f"  GeoPackage      : matches_{METHOD}.gpkg")
 
 
 if __name__ == "__main__":

@@ -21,3 +21,22 @@ MAD_K        = 3.0  # cells whose shift is > MAD_K × MAD from the median are ex
                     # from the consensus before computing the fallback median
 MAX_SHIFT_PX = 20   # per-match displacement limit (detection pixels, ≈ 5 m at typical
                     # drone resolution) — RANSAC inliers beyond this are discarded
+
+# ── AROSICS local co-registration (run_arosics.py only) ─────────────────────────
+AROSICS_GRID_RES  = 200          # tie-point grid spacing in pixels of the downsampled input
+AROSICS_WIN_SIZE  = (512, 512)   # (cols, rows) NCC matching window in pixels
+AROSICS_MAX_SHIFT = 50           # maximum expected shift in pixels
+AROSICS_MAX_PX    = 4096         # max pixels along the longest edge before passing to AROSICS;
+                                 # large mosaics are downsampled to this size to stay within RAM
+
+# Correction strategy after shift detection:
+#   "translation" — one constant shift per grid tile (zero pixel resampling;
+#                   fast; accurate when shift varies slowly across the mosaic)
+#   "spline"      — thin-plate spline warp applied per-pixel inside every tile
+#                   (one bilinear resample; handles any spatial shift pattern;
+#                   recommended for datasets with strongly non-uniform GPS drift)
+AROSICS_CORRECTION    = "translation"  # "translation" or "spline"
+                                       # translation: zero pixel resampling, minimal disk use
+                                       # spline: per-pixel warp, needs ~2× disk space for tiles
+AROSICS_SPLINE_EVAL_N = 16             # only used when AROSICS_CORRECTION = "spline"
+

@@ -443,19 +443,30 @@ def mosaic_cog(tile_paths, output_path, tmp_dir):
     from osgeo import gdal
     gdal.UseExceptions()
 
-    fmt      = "COG" if gdal.GetDriverByName("COG") else "GTiff"
-    cog_opts = ["COMPRESS=LZW", "PREDICTOR=2", "BIGTIFF=YES", "NUM_THREADS=ALL_CPUS"]
-    if fmt == "COG":
-        cog_opts.append("OVERVIEWS=AUTO")
-    else:
-        cog_opts += ["TILED=YES", "BLOCKXSIZE=512", "BLOCKYSIZE=512"]
-
+    # Always use GTiff, not the COG driver.  The COG driver writes a full
+    # uncompressed intermediate copy (~31 GB for a 126k×62k image) before
+    # reordering into COG layout — this causes out-of-space errors.
+    # GTiff with TILED+COMPRESS streams directly with no intermediate file.
     opts = gdal.WarpOptions(
-        format=fmt,
-        creationOptions=cog_opts,
+        format="GTiff",
+        creationOptions=[
+            "COMPRESS=LZW", "PREDICTOR=2", "BIGTIFF=IF_SAFER",
+            "TILED=YES", "BLOCKXSIZE=512", "BLOCKYSIZE=512",
+            "NUM_THREADS=ALL_CPUS",
+        ],
     )
     out = gdal.Warp(output_path, list(tile_paths), options=opts)
     if out is None:
         raise RuntimeError(f"gdal.Warp failed mosaicking to {output_path}")
+
+    # Build overview pyramids after the warp (not during) so there is no
+    # uncompressed intermediate file on disk.  Without these QGIS reads the
+    # full-resolution raster when zoomed out, making large mosaics very slow.
+    print("  Building overviews ...")
+    gdal.SetConfigOption("COMPRESS_OVERVIEW", "LZW")
+    gdal.SetConfigOption("PREDICTOR_OVERVIEW", "2")
+    out.BuildOverviews("AVERAGE", [2, 4, 8, 16, 32, 64])
+    out.FlushCache()
+    out = None
 
     return output_path
