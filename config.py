@@ -23,7 +23,7 @@ MAX_SHIFT_PX = 20   # per-match displacement limit (detection pixels, ≈ 5 m at
                     # drone resolution) — RANSAC inliers beyond this are discarded
 
 # ── AROSICS local co-registration (run_arosics.py only) ─────────────────────────
-AROSICS_GRID_RES  = 200          # tie-point grid spacing in pixels of the downsampled input
+AROSICS_GRID_RES  = 100          # tie-point grid spacing in pixels of the downsampled input
 AROSICS_WIN_SIZE  = (512, 512)   # (cols, rows) NCC matching window in pixels
 AROSICS_MAX_SHIFT = 50           # maximum expected shift in pixels
 AROSICS_MAX_PX    = 4096         # max pixels along the longest edge before passing to AROSICS;
