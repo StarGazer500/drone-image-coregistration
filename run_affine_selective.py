@@ -38,7 +38,23 @@ import coregistration_utils as ict
 # ── Configuration ─────────────────────────────────────────────────────────────
 from config import REFERENCE_GLOB as REFERENCE, TARGET_GLOB as TARGET
 from config import TILE_PX, DETECT_PX, BAND, N_CPUS, MAD_K, MAX_SHIFT_PX
-OUTPUT = "coregistration_output_affine_selective"
+OUTPUT = os.path.join(os.path.dirname(os.path.abspath(__file__)), "coregistration_output_affine_selective")
+
+
+# ── Per-cell write workers ────────────────────────────────────────────────────
+
+def _write_worker(args):
+    tgt_vrt, cell, shift, tiles_dir = args
+    r, c, left, bottom, right, top, h_px, w_px, res = cell
+    out = os.path.join(tiles_dir, f"tile_{r:04d}_{c:04d}.tif")
+    if shift is not None:
+        *_, M_cell, dw, dh = shift
+        ict.write_affine_geotransform_tile(tgt_vrt, left, bottom, right, top,
+                                           h_px, w_px, M_cell, dw, dh, res, out)
+    else:
+        ict.write_translation_tile(tgt_vrt, left, bottom, right, top,
+                                   h_px, w_px, 0.0, 0.0, res, out)
+    return out
 
 
 # ── Per-cell affine detection (subprocess worker) ─────────────────────────────
@@ -197,20 +213,15 @@ def run(ref_glob, tgt_glob, output_dir, tile_px=8192, band=1, n_cpus=4):
 
     # ── Step 2: write corrected tiles ────────────────────────────────────────
     print(f"\n[2/3] Writing {n_cells} tiles...")
+    work = [
+        (tgt_vrt, cell, shifts[(cell[0], cell[1])], tiles_dir)
+        for cell in grid
+    ]
     corrected = []
-    for cell in tqdm(grid, desc="    Writing"):
-        r, c, left, bottom, right, top, h_px, w_px, res = cell
-        out = os.path.join(tiles_dir, f"tile_{r:04d}_{c:04d}.tif")
-        if shifts[(r, c)] is not None:
-            # Detected: apply full affine correction
-            dx, dy, M_cell, dw, dh = shifts[(r, c)]
-            ict.write_affine_geotransform_tile(tgt_vrt, left, bottom, right, top,
-                                                h_px, w_px, M_cell, dw, dh, res, out)
-        else:
-            # Not detected: zero shift — tile written at its original position
-            ict.write_translation_tile(tgt_vrt, left, bottom, right, top,
-                                        h_px, w_px, 0.0, 0.0, res, out)
-        corrected.append(out)
+    with ProcessPoolExecutor(max_workers=N_CPUS) as pool:
+        futs = {pool.submit(_write_worker, w): w for w in work}
+        for f in tqdm(as_completed(futs), total=len(work), desc="    Writing"):
+            corrected.append(f.result())
 
     # ── Step 3: mosaic → single COG ──────────────────────────────────────────
     final = os.path.join(output_dir, "coregistered_final.tif")

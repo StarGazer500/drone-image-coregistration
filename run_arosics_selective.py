@@ -20,6 +20,7 @@ import os
 import glob
 import sys
 import multiprocessing
+from concurrent.futures import ProcessPoolExecutor, as_completed
 import numpy as np
 from tqdm import tqdm
 
@@ -39,7 +40,16 @@ from config import (
     AROSICS_SPLINE_EVAL_N,
 )
 
-OUTPUT = "coregistration_output_arosics"
+OUTPUT = os.path.join(os.path.dirname(os.path.abspath(__file__)), "coregistration_output_arosics")
+
+
+def _write_translation_worker(args):
+    tgt_vrt, cell, dx, dy, tiles_dir = args
+    r, c, left, bottom, right, top, h_px, w_px, res = cell
+    out = os.path.join(tiles_dir, f"tile_{r:04d}_{c:04d}.tif")
+    ict.write_translation_tile(tgt_vrt, left, bottom, right, top,
+                               h_px, w_px, dx, dy, res, out)
+    return out
 
 
 def _downsample(vrt_path, out_path, max_px):
@@ -327,15 +337,15 @@ def run(ref_glob, tgt_glob, output_dir):
         print(f"\n[3/3] Translation correction — interpolating shifts for "
               f"{len(grid)} tiles ...")
         pred_dx, pred_dy = _interpolate_cell_shifts(tbl_valid, grid)
+        work = [
+            (tgt_vrt, cell, float(pred_dx[i]), float(pred_dy[i]), tiles_dir)
+            for i, cell in enumerate(grid)
+        ]
         corrected = []
-        for i, cell in enumerate(tqdm(grid, desc="    Writing")):
-            r, c, left, bottom, right, top, h_px, w_px, res = cell
-            out = os.path.join(tiles_dir, f"tile_{r:04d}_{c:04d}.tif")
-            ict.write_translation_tile(tgt_vrt, left, bottom, right, top,
-                                       h_px, w_px,
-                                       float(pred_dx[i]), float(pred_dy[i]),
-                                       res, out)
-            corrected.append(out)
+        with ProcessPoolExecutor(max_workers=N_CPUS) as pool:
+            futs = {pool.submit(_write_translation_worker, w): w for w in work}
+            for f in tqdm(as_completed(futs), total=len(work), desc="    Writing"):
+                corrected.append(f.result())
 
     # ── Step 4: mosaic → COG ──────────────────────────────────────────────────
     final = os.path.join(output_dir, "coregistered_final.tif")
