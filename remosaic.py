@@ -11,7 +11,7 @@ import sys
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import coregistration_utils as ict
 
-OUTPUT_DIR = "coregistration_output_affine_selective"  # change to whichever run you want to re-mosaic
+OUTPUT_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), "coregistration_output_arosics")  # change to whichever run you want to re-mosaic
 
 tiles_dir = os.path.join(OUTPUT_DIR, "corrected_tiles")
 tile_paths = sorted(glob.glob(os.path.join(tiles_dir, "tile_*.tif")))

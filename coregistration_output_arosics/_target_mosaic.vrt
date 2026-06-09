@@ -1,852 +1,1040 @@
-<VRTDataset rasterXSize="126773" rasterYSize="61926">
+<VRTDataset rasterXSize="136051" rasterYSize="65890">
   <SRS dataAxisToSRSAxisMapping="2,1">GEOGCS["WGS 84",DATUM["WGS_1984",SPHEROID["WGS 84",6378137,298.257223563,AUTHORITY["EPSG","7030"]],AUTHORITY["EPSG","6326"]],PRIMEM["Greenwich",0,AUTHORITY["EPSG","8901"]],UNIT["degree",0.0174532925199433,AUTHORITY["EPSG","9122"]],AXIS["Latitude",NORTH],AXIS["Longitude",EAST],AUTHORITY["EPSG","4326"]]</SRS>
-  <GeoTransform> -2.2609191652775777e+00,  5.7556814025971903e-07,  0.0000000000000000e+00,  6.2221910157799263e+00,  0.0000000000000000e+00, -5.7599583236367380e-07</GeoTransform>
+  <GeoTransform> -2.2619699221887002e+00,  5.4995900000000027e-07,  0.0000000000000000e+00,  6.2227425983679767e+00,  0.0000000000000000e+00, -5.5037900000000107e-07</GeoTransform>
   <VRTRasterBand dataType="Byte" band="1">
-    <NoDataValue>0</NoDataValue>
     <ColorInterp>Red</ColorInterp>
     <ComplexSource>
-      <SourceFilename relativeToVRT="0">C:\Users\LENOVO\Rainforest Builder Dropbox\03_RB Ghana - All Team\03_Planning\00_Spatial\04_Drone Imagery\01_Data\01_Forest Reserves\03_Anhwiaso South Compartment\2026\ASO_S21-04-26_E21-04-26_R53\ASO_S21-04-26_E21-04-26_R53_0001.tif</SourceFilename>
+      <SourceFilename relativeToVRT="0">C:\Users\LENOVO\Rainforest Builder Dropbox\03_RB Ghana - All Team\03_Planning\00_Spatial\04_Drone Imagery\01_Data\01_Forest Reserves\03_Anhwiaso South Compartment\2026\ASO_S21-05-26_E21-05-26_R53\ASO_S21-05-26_E21-05-26_R53_0001.tif</SourceFilename>
       <SourceBand>1</SourceBand>
       <SourceProperties RasterXSize="16388" RasterYSize="16388" DataType="Byte" BlockXSize="512" BlockYSize="512" />
       <SrcRect xOff="0" yOff="0" xSize="16388" ySize="16388" />
       <DstRect xOff="0" yOff="0" xSize="16388" ySize="16388" />
-      <NODATA>0</NODATA>
+      <UseMaskBand>true</UseMaskBand>
     </ComplexSource>
     <ComplexSource>
-      <SourceFilename relativeToVRT="0">C:\Users\LENOVO\Rainforest Builder Dropbox\03_RB Ghana - All Team\03_Planning\00_Spatial\04_Drone Imagery\01_Data\01_Forest Reserves\03_Anhwiaso South Compartment\2026\ASO_S21-04-26_E21-04-26_R53\ASO_S21-04-26_E21-04-26_R53_0002.tif</SourceFilename>
+      <SourceFilename relativeToVRT="0">C:\Users\LENOVO\Rainforest Builder Dropbox\03_RB Ghana - All Team\03_Planning\00_Spatial\04_Drone Imagery\01_Data\01_Forest Reserves\03_Anhwiaso South Compartment\2026\ASO_S21-05-26_E21-05-26_R53\ASO_S21-05-26_E21-05-26_R53_0002.tif</SourceFilename>
       <SourceBand>1</SourceBand>
       <SourceProperties RasterXSize="16392" RasterYSize="16388" DataType="Byte" BlockXSize="512" BlockYSize="512" />
       <SrcRect xOff="0" yOff="0" xSize="16392" ySize="16388" />
       <DstRect xOff="16380" yOff="0" xSize="16392" ySize="16388" />
-      <NODATA>0</NODATA>
+      <UseMaskBand>true</UseMaskBand>
     </ComplexSource>
     <ComplexSource>
-      <SourceFilename relativeToVRT="0">C:\Users\LENOVO\Rainforest Builder Dropbox\03_RB Ghana - All Team\03_Planning\00_Spatial\04_Drone Imagery\01_Data\01_Forest Reserves\03_Anhwiaso South Compartment\2026\ASO_S21-04-26_E21-04-26_R53\ASO_S21-04-26_E21-04-26_R53_0003.tif</SourceFilename>
+      <SourceFilename relativeToVRT="0">C:\Users\LENOVO\Rainforest Builder Dropbox\03_RB Ghana - All Team\03_Planning\00_Spatial\04_Drone Imagery\01_Data\01_Forest Reserves\03_Anhwiaso South Compartment\2026\ASO_S21-05-26_E21-05-26_R53\ASO_S21-05-26_E21-05-26_R53_0003.tif</SourceFilename>
       <SourceBand>1</SourceBand>
       <SourceProperties RasterXSize="16392" RasterYSize="16388" DataType="Byte" BlockXSize="512" BlockYSize="512" />
       <SrcRect xOff="0" yOff="0" xSize="16392" ySize="16388" />
       <DstRect xOff="32764" yOff="0" xSize="16392" ySize="16388" />
-      <NODATA>0</NODATA>
+      <UseMaskBand>true</UseMaskBand>
     </ComplexSource>
     <ComplexSource>
-      <SourceFilename relativeToVRT="0">C:\Users\LENOVO\Rainforest Builder Dropbox\03_RB Ghana - All Team\03_Planning\00_Spatial\04_Drone Imagery\01_Data\01_Forest Reserves\03_Anhwiaso South Compartment\2026\ASO_S21-04-26_E21-04-26_R53\ASO_S21-04-26_E21-04-26_R53_0004.tif</SourceFilename>
+      <SourceFilename relativeToVRT="0">C:\Users\LENOVO\Rainforest Builder Dropbox\03_RB Ghana - All Team\03_Planning\00_Spatial\04_Drone Imagery\01_Data\01_Forest Reserves\03_Anhwiaso South Compartment\2026\ASO_S21-05-26_E21-05-26_R53\ASO_S21-05-26_E21-05-26_R53_0004.tif</SourceFilename>
       <SourceBand>1</SourceBand>
       <SourceProperties RasterXSize="16392" RasterYSize="16388" DataType="Byte" BlockXSize="512" BlockYSize="512" />
       <SrcRect xOff="0" yOff="0" xSize="16392" ySize="16388" />
       <DstRect xOff="49148" yOff="0" xSize="16392" ySize="16388" />
-      <NODATA>0</NODATA>
+      <UseMaskBand>true</UseMaskBand>
     </ComplexSource>
     <ComplexSource>
-      <SourceFilename relativeToVRT="0">C:\Users\LENOVO\Rainforest Builder Dropbox\03_RB Ghana - All Team\03_Planning\00_Spatial\04_Drone Imagery\01_Data\01_Forest Reserves\03_Anhwiaso South Compartment\2026\ASO_S21-04-26_E21-04-26_R53\ASO_S21-04-26_E21-04-26_R53_0005.tif</SourceFilename>
+      <SourceFilename relativeToVRT="0">C:\Users\LENOVO\Rainforest Builder Dropbox\03_RB Ghana - All Team\03_Planning\00_Spatial\04_Drone Imagery\01_Data\01_Forest Reserves\03_Anhwiaso South Compartment\2026\ASO_S21-05-26_E21-05-26_R53\ASO_S21-05-26_E21-05-26_R53_0005.tif</SourceFilename>
       <SourceBand>1</SourceBand>
       <SourceProperties RasterXSize="16392" RasterYSize="16388" DataType="Byte" BlockXSize="512" BlockYSize="512" />
       <SrcRect xOff="0" yOff="0" xSize="16392" ySize="16388" />
       <DstRect xOff="65532" yOff="0" xSize="16392" ySize="16388" />
-      <NODATA>0</NODATA>
+      <UseMaskBand>true</UseMaskBand>
     </ComplexSource>
     <ComplexSource>
-      <SourceFilename relativeToVRT="0">C:\Users\LENOVO\Rainforest Builder Dropbox\03_RB Ghana - All Team\03_Planning\00_Spatial\04_Drone Imagery\01_Data\01_Forest Reserves\03_Anhwiaso South Compartment\2026\ASO_S21-04-26_E21-04-26_R53\ASO_S21-04-26_E21-04-26_R53_0006.tif</SourceFilename>
+      <SourceFilename relativeToVRT="0">C:\Users\LENOVO\Rainforest Builder Dropbox\03_RB Ghana - All Team\03_Planning\00_Spatial\04_Drone Imagery\01_Data\01_Forest Reserves\03_Anhwiaso South Compartment\2026\ASO_S21-05-26_E21-05-26_R53\ASO_S21-05-26_E21-05-26_R53_0006.tif</SourceFilename>
       <SourceBand>1</SourceBand>
       <SourceProperties RasterXSize="16392" RasterYSize="16388" DataType="Byte" BlockXSize="512" BlockYSize="512" />
       <SrcRect xOff="0" yOff="0" xSize="16392" ySize="16388" />
       <DstRect xOff="81916" yOff="0" xSize="16392" ySize="16388" />
-      <NODATA>0</NODATA>
+      <UseMaskBand>true</UseMaskBand>
     </ComplexSource>
     <ComplexSource>
-      <SourceFilename relativeToVRT="0">C:\Users\LENOVO\Rainforest Builder Dropbox\03_RB Ghana - All Team\03_Planning\00_Spatial\04_Drone Imagery\01_Data\01_Forest Reserves\03_Anhwiaso South Compartment\2026\ASO_S21-04-26_E21-04-26_R53\ASO_S21-04-26_E21-04-26_R53_0007.tif</SourceFilename>
+      <SourceFilename relativeToVRT="0">C:\Users\LENOVO\Rainforest Builder Dropbox\03_RB Ghana - All Team\03_Planning\00_Spatial\04_Drone Imagery\01_Data\01_Forest Reserves\03_Anhwiaso South Compartment\2026\ASO_S21-05-26_E21-05-26_R53\ASO_S21-05-26_E21-05-26_R53_0007.tif</SourceFilename>
       <SourceBand>1</SourceBand>
       <SourceProperties RasterXSize="16392" RasterYSize="16388" DataType="Byte" BlockXSize="512" BlockYSize="512" />
       <SrcRect xOff="0" yOff="0" xSize="16392" ySize="16388" />
       <DstRect xOff="98300" yOff="0" xSize="16392" ySize="16388" />
-      <NODATA>0</NODATA>
+      <UseMaskBand>true</UseMaskBand>
     </ComplexSource>
     <ComplexSource>
-      <SourceFilename relativeToVRT="0">C:\Users\LENOVO\Rainforest Builder Dropbox\03_RB Ghana - All Team\03_Planning\00_Spatial\04_Drone Imagery\01_Data\01_Forest Reserves\03_Anhwiaso South Compartment\2026\ASO_S21-04-26_E21-04-26_R53\ASO_S21-04-26_E21-04-26_R53_0008.tif</SourceFilename>
+      <SourceFilename relativeToVRT="0">C:\Users\LENOVO\Rainforest Builder Dropbox\03_RB Ghana - All Team\03_Planning\00_Spatial\04_Drone Imagery\01_Data\01_Forest Reserves\03_Anhwiaso South Compartment\2026\ASO_S21-05-26_E21-05-26_R53\ASO_S21-05-26_E21-05-26_R53_0008.tif</SourceFilename>
       <SourceBand>1</SourceBand>
-      <SourceProperties RasterXSize="12089" RasterYSize="16388" DataType="Byte" BlockXSize="512" BlockYSize="512" />
-      <SrcRect xOff="0" yOff="0" xSize="12089" ySize="16388" />
-      <DstRect xOff="114684" yOff="0" xSize="12089" ySize="16388" />
-      <NODATA>0</NODATA>
+      <SourceProperties RasterXSize="16392" RasterYSize="16388" DataType="Byte" BlockXSize="512" BlockYSize="512" />
+      <SrcRect xOff="0" yOff="0" xSize="16392" ySize="16388" />
+      <DstRect xOff="114684" yOff="0" xSize="16392" ySize="16388" />
+      <UseMaskBand>true</UseMaskBand>
     </ComplexSource>
     <ComplexSource>
-      <SourceFilename relativeToVRT="0">C:\Users\LENOVO\Rainforest Builder Dropbox\03_RB Ghana - All Team\03_Planning\00_Spatial\04_Drone Imagery\01_Data\01_Forest Reserves\03_Anhwiaso South Compartment\2026\ASO_S21-04-26_E21-04-26_R53\ASO_S21-04-26_E21-04-26_R53_0009.tif</SourceFilename>
+      <SourceFilename relativeToVRT="0">C:\Users\LENOVO\Rainforest Builder Dropbox\03_RB Ghana - All Team\03_Planning\00_Spatial\04_Drone Imagery\01_Data\01_Forest Reserves\03_Anhwiaso South Compartment\2026\ASO_S21-05-26_E21-05-26_R53\ASO_S21-05-26_E21-05-26_R53_0009.tif</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="4983" RasterYSize="16388" DataType="Byte" BlockXSize="512" BlockYSize="512" />
+      <SrcRect xOff="0" yOff="0" xSize="4983" ySize="16388" />
+      <DstRect xOff="131068" yOff="0" xSize="4983" ySize="16388" />
+      <UseMaskBand>true</UseMaskBand>
+    </ComplexSource>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="0">C:\Users\LENOVO\Rainforest Builder Dropbox\03_RB Ghana - All Team\03_Planning\00_Spatial\04_Drone Imagery\01_Data\01_Forest Reserves\03_Anhwiaso South Compartment\2026\ASO_S21-05-26_E21-05-26_R53\ASO_S21-05-26_E21-05-26_R53_0010.tif</SourceFilename>
       <SourceBand>1</SourceBand>
       <SourceProperties RasterXSize="16388" RasterYSize="16392" DataType="Byte" BlockXSize="512" BlockYSize="512" />
       <SrcRect xOff="0" yOff="0" xSize="16388" ySize="16392" />
       <DstRect xOff="0" yOff="16380" xSize="16388" ySize="16392" />
-      <NODATA>0</NODATA>
+      <UseMaskBand>true</UseMaskBand>
     </ComplexSource>
     <ComplexSource>
-      <SourceFilename relativeToVRT="0">C:\Users\LENOVO\Rainforest Builder Dropbox\03_RB Ghana - All Team\03_Planning\00_Spatial\04_Drone Imagery\01_Data\01_Forest Reserves\03_Anhwiaso South Compartment\2026\ASO_S21-04-26_E21-04-26_R53\ASO_S21-04-26_E21-04-26_R53_0010.tif</SourceFilename>
+      <SourceFilename relativeToVRT="0">C:\Users\LENOVO\Rainforest Builder Dropbox\03_RB Ghana - All Team\03_Planning\00_Spatial\04_Drone Imagery\01_Data\01_Forest Reserves\03_Anhwiaso South Compartment\2026\ASO_S21-05-26_E21-05-26_R53\ASO_S21-05-26_E21-05-26_R53_0011.tif</SourceFilename>
       <SourceBand>1</SourceBand>
       <SourceProperties RasterXSize="16392" RasterYSize="16392" DataType="Byte" BlockXSize="512" BlockYSize="512" />
       <SrcRect xOff="0" yOff="0" xSize="16392" ySize="16392" />
       <DstRect xOff="16380" yOff="16380" xSize="16392" ySize="16392" />
-      <NODATA>0</NODATA>
+      <UseMaskBand>true</UseMaskBand>
     </ComplexSource>
     <ComplexSource>
-      <SourceFilename relativeToVRT="0">C:\Users\LENOVO\Rainforest Builder Dropbox\03_RB Ghana - All Team\03_Planning\00_Spatial\04_Drone Imagery\01_Data\01_Forest Reserves\03_Anhwiaso South Compartment\2026\ASO_S21-04-26_E21-04-26_R53\ASO_S21-04-26_E21-04-26_R53_0011.tif</SourceFilename>
+      <SourceFilename relativeToVRT="0">C:\Users\LENOVO\Rainforest Builder Dropbox\03_RB Ghana - All Team\03_Planning\00_Spatial\04_Drone Imagery\01_Data\01_Forest Reserves\03_Anhwiaso South Compartment\2026\ASO_S21-05-26_E21-05-26_R53\ASO_S21-05-26_E21-05-26_R53_0012.tif</SourceFilename>
       <SourceBand>1</SourceBand>
       <SourceProperties RasterXSize="16392" RasterYSize="16392" DataType="Byte" BlockXSize="512" BlockYSize="512" />
       <SrcRect xOff="0" yOff="0" xSize="16392" ySize="16392" />
       <DstRect xOff="32764" yOff="16380" xSize="16392" ySize="16392" />
-      <NODATA>0</NODATA>
+      <UseMaskBand>true</UseMaskBand>
     </ComplexSource>
     <ComplexSource>
-      <SourceFilename relativeToVRT="0">C:\Users\LENOVO\Rainforest Builder Dropbox\03_RB Ghana - All Team\03_Planning\00_Spatial\04_Drone Imagery\01_Data\01_Forest Reserves\03_Anhwiaso South Compartment\2026\ASO_S21-04-26_E21-04-26_R53\ASO_S21-04-26_E21-04-26_R53_0012.tif</SourceFilename>
+      <SourceFilename relativeToVRT="0">C:\Users\LENOVO\Rainforest Builder Dropbox\03_RB Ghana - All Team\03_Planning\00_Spatial\04_Drone Imagery\01_Data\01_Forest Reserves\03_Anhwiaso South Compartment\2026\ASO_S21-05-26_E21-05-26_R53\ASO_S21-05-26_E21-05-26_R53_0013.tif</SourceFilename>
       <SourceBand>1</SourceBand>
       <SourceProperties RasterXSize="16392" RasterYSize="16392" DataType="Byte" BlockXSize="512" BlockYSize="512" />
       <SrcRect xOff="0" yOff="0" xSize="16392" ySize="16392" />
       <DstRect xOff="49148" yOff="16380" xSize="16392" ySize="16392" />
-      <NODATA>0</NODATA>
+      <UseMaskBand>true</UseMaskBand>
     </ComplexSource>
     <ComplexSource>
-      <SourceFilename relativeToVRT="0">C:\Users\LENOVO\Rainforest Builder Dropbox\03_RB Ghana - All Team\03_Planning\00_Spatial\04_Drone Imagery\01_Data\01_Forest Reserves\03_Anhwiaso South Compartment\2026\ASO_S21-04-26_E21-04-26_R53\ASO_S21-04-26_E21-04-26_R53_0013.tif</SourceFilename>
+      <SourceFilename relativeToVRT="0">C:\Users\LENOVO\Rainforest Builder Dropbox\03_RB Ghana - All Team\03_Planning\00_Spatial\04_Drone Imagery\01_Data\01_Forest Reserves\03_Anhwiaso South Compartment\2026\ASO_S21-05-26_E21-05-26_R53\ASO_S21-05-26_E21-05-26_R53_0014.tif</SourceFilename>
       <SourceBand>1</SourceBand>
       <SourceProperties RasterXSize="16392" RasterYSize="16392" DataType="Byte" BlockXSize="512" BlockYSize="512" />
       <SrcRect xOff="0" yOff="0" xSize="16392" ySize="16392" />
       <DstRect xOff="65532" yOff="16380" xSize="16392" ySize="16392" />
-      <NODATA>0</NODATA>
+      <UseMaskBand>true</UseMaskBand>
     </ComplexSource>
     <ComplexSource>
-      <SourceFilename relativeToVRT="0">C:\Users\LENOVO\Rainforest Builder Dropbox\03_RB Ghana - All Team\03_Planning\00_Spatial\04_Drone Imagery\01_Data\01_Forest Reserves\03_Anhwiaso South Compartment\2026\ASO_S21-04-26_E21-04-26_R53\ASO_S21-04-26_E21-04-26_R53_0014.tif</SourceFilename>
+      <SourceFilename relativeToVRT="0">C:\Users\LENOVO\Rainforest Builder Dropbox\03_RB Ghana - All Team\03_Planning\00_Spatial\04_Drone Imagery\01_Data\01_Forest Reserves\03_Anhwiaso South Compartment\2026\ASO_S21-05-26_E21-05-26_R53\ASO_S21-05-26_E21-05-26_R53_0015.tif</SourceFilename>
       <SourceBand>1</SourceBand>
       <SourceProperties RasterXSize="16392" RasterYSize="16392" DataType="Byte" BlockXSize="512" BlockYSize="512" />
       <SrcRect xOff="0" yOff="0" xSize="16392" ySize="16392" />
       <DstRect xOff="81916" yOff="16380" xSize="16392" ySize="16392" />
-      <NODATA>0</NODATA>
+      <UseMaskBand>true</UseMaskBand>
     </ComplexSource>
     <ComplexSource>
-      <SourceFilename relativeToVRT="0">C:\Users\LENOVO\Rainforest Builder Dropbox\03_RB Ghana - All Team\03_Planning\00_Spatial\04_Drone Imagery\01_Data\01_Forest Reserves\03_Anhwiaso South Compartment\2026\ASO_S21-04-26_E21-04-26_R53\ASO_S21-04-26_E21-04-26_R53_0015.tif</SourceFilename>
+      <SourceFilename relativeToVRT="0">C:\Users\LENOVO\Rainforest Builder Dropbox\03_RB Ghana - All Team\03_Planning\00_Spatial\04_Drone Imagery\01_Data\01_Forest Reserves\03_Anhwiaso South Compartment\2026\ASO_S21-05-26_E21-05-26_R53\ASO_S21-05-26_E21-05-26_R53_0016.tif</SourceFilename>
       <SourceBand>1</SourceBand>
       <SourceProperties RasterXSize="16392" RasterYSize="16392" DataType="Byte" BlockXSize="512" BlockYSize="512" />
       <SrcRect xOff="0" yOff="0" xSize="16392" ySize="16392" />
       <DstRect xOff="98300" yOff="16380" xSize="16392" ySize="16392" />
-      <NODATA>0</NODATA>
+      <UseMaskBand>true</UseMaskBand>
     </ComplexSource>
     <ComplexSource>
-      <SourceFilename relativeToVRT="0">C:\Users\LENOVO\Rainforest Builder Dropbox\03_RB Ghana - All Team\03_Planning\00_Spatial\04_Drone Imagery\01_Data\01_Forest Reserves\03_Anhwiaso South Compartment\2026\ASO_S21-04-26_E21-04-26_R53\ASO_S21-04-26_E21-04-26_R53_0016.tif</SourceFilename>
+      <SourceFilename relativeToVRT="0">C:\Users\LENOVO\Rainforest Builder Dropbox\03_RB Ghana - All Team\03_Planning\00_Spatial\04_Drone Imagery\01_Data\01_Forest Reserves\03_Anhwiaso South Compartment\2026\ASO_S21-05-26_E21-05-26_R53\ASO_S21-05-26_E21-05-26_R53_0017.tif</SourceFilename>
       <SourceBand>1</SourceBand>
-      <SourceProperties RasterXSize="12089" RasterYSize="16392" DataType="Byte" BlockXSize="512" BlockYSize="512" />
-      <SrcRect xOff="0" yOff="0" xSize="12089" ySize="16392" />
-      <DstRect xOff="114684" yOff="16380" xSize="12089" ySize="16392" />
-      <NODATA>0</NODATA>
+      <SourceProperties RasterXSize="16392" RasterYSize="16392" DataType="Byte" BlockXSize="512" BlockYSize="512" />
+      <SrcRect xOff="0" yOff="0" xSize="16392" ySize="16392" />
+      <DstRect xOff="114684" yOff="16380" xSize="16392" ySize="16392" />
+      <UseMaskBand>true</UseMaskBand>
     </ComplexSource>
     <ComplexSource>
-      <SourceFilename relativeToVRT="0">C:\Users\LENOVO\Rainforest Builder Dropbox\03_RB Ghana - All Team\03_Planning\00_Spatial\04_Drone Imagery\01_Data\01_Forest Reserves\03_Anhwiaso South Compartment\2026\ASO_S21-04-26_E21-04-26_R53\ASO_S21-04-26_E21-04-26_R53_0017.tif</SourceFilename>
+      <SourceFilename relativeToVRT="0">C:\Users\LENOVO\Rainforest Builder Dropbox\03_RB Ghana - All Team\03_Planning\00_Spatial\04_Drone Imagery\01_Data\01_Forest Reserves\03_Anhwiaso South Compartment\2026\ASO_S21-05-26_E21-05-26_R53\ASO_S21-05-26_E21-05-26_R53_0018.tif</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="4983" RasterYSize="16392" DataType="Byte" BlockXSize="512" BlockYSize="512" />
+      <SrcRect xOff="0" yOff="0" xSize="4983" ySize="16392" />
+      <DstRect xOff="131068" yOff="16380" xSize="4983" ySize="16392" />
+      <UseMaskBand>true</UseMaskBand>
+    </ComplexSource>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="0">C:\Users\LENOVO\Rainforest Builder Dropbox\03_RB Ghana - All Team\03_Planning\00_Spatial\04_Drone Imagery\01_Data\01_Forest Reserves\03_Anhwiaso South Compartment\2026\ASO_S21-05-26_E21-05-26_R53\ASO_S21-05-26_E21-05-26_R53_0019.tif</SourceFilename>
       <SourceBand>1</SourceBand>
       <SourceProperties RasterXSize="16388" RasterYSize="16392" DataType="Byte" BlockXSize="512" BlockYSize="512" />
       <SrcRect xOff="0" yOff="0" xSize="16388" ySize="16392" />
       <DstRect xOff="0" yOff="32764" xSize="16388" ySize="16392" />
-      <NODATA>0</NODATA>
+      <UseMaskBand>true</UseMaskBand>
     </ComplexSource>
     <ComplexSource>
-      <SourceFilename relativeToVRT="0">C:\Users\LENOVO\Rainforest Builder Dropbox\03_RB Ghana - All Team\03_Planning\00_Spatial\04_Drone Imagery\01_Data\01_Forest Reserves\03_Anhwiaso South Compartment\2026\ASO_S21-04-26_E21-04-26_R53\ASO_S21-04-26_E21-04-26_R53_0018.tif</SourceFilename>
+      <SourceFilename relativeToVRT="0">C:\Users\LENOVO\Rainforest Builder Dropbox\03_RB Ghana - All Team\03_Planning\00_Spatial\04_Drone Imagery\01_Data\01_Forest Reserves\03_Anhwiaso South Compartment\2026\ASO_S21-05-26_E21-05-26_R53\ASO_S21-05-26_E21-05-26_R53_0020.tif</SourceFilename>
       <SourceBand>1</SourceBand>
       <SourceProperties RasterXSize="16392" RasterYSize="16392" DataType="Byte" BlockXSize="512" BlockYSize="512" />
       <SrcRect xOff="0" yOff="0" xSize="16392" ySize="16392" />
       <DstRect xOff="16380" yOff="32764" xSize="16392" ySize="16392" />
-      <NODATA>0</NODATA>
+      <UseMaskBand>true</UseMaskBand>
     </ComplexSource>
     <ComplexSource>
-      <SourceFilename relativeToVRT="0">C:\Users\LENOVO\Rainforest Builder Dropbox\03_RB Ghana - All Team\03_Planning\00_Spatial\04_Drone Imagery\01_Data\01_Forest Reserves\03_Anhwiaso South Compartment\2026\ASO_S21-04-26_E21-04-26_R53\ASO_S21-04-26_E21-04-26_R53_0019.tif</SourceFilename>
+      <SourceFilename relativeToVRT="0">C:\Users\LENOVO\Rainforest Builder Dropbox\03_RB Ghana - All Team\03_Planning\00_Spatial\04_Drone Imagery\01_Data\01_Forest Reserves\03_Anhwiaso South Compartment\2026\ASO_S21-05-26_E21-05-26_R53\ASO_S21-05-26_E21-05-26_R53_0021.tif</SourceFilename>
       <SourceBand>1</SourceBand>
       <SourceProperties RasterXSize="16392" RasterYSize="16392" DataType="Byte" BlockXSize="512" BlockYSize="512" />
       <SrcRect xOff="0" yOff="0" xSize="16392" ySize="16392" />
       <DstRect xOff="32764" yOff="32764" xSize="16392" ySize="16392" />
-      <NODATA>0</NODATA>
+      <UseMaskBand>true</UseMaskBand>
     </ComplexSource>
     <ComplexSource>
-      <SourceFilename relativeToVRT="0">C:\Users\LENOVO\Rainforest Builder Dropbox\03_RB Ghana - All Team\03_Planning\00_Spatial\04_Drone Imagery\01_Data\01_Forest Reserves\03_Anhwiaso South Compartment\2026\ASO_S21-04-26_E21-04-26_R53\ASO_S21-04-26_E21-04-26_R53_0020.tif</SourceFilename>
+      <SourceFilename relativeToVRT="0">C:\Users\LENOVO\Rainforest Builder Dropbox\03_RB Ghana - All Team\03_Planning\00_Spatial\04_Drone Imagery\01_Data\01_Forest Reserves\03_Anhwiaso South Compartment\2026\ASO_S21-05-26_E21-05-26_R53\ASO_S21-05-26_E21-05-26_R53_0022.tif</SourceFilename>
       <SourceBand>1</SourceBand>
       <SourceProperties RasterXSize="16392" RasterYSize="16392" DataType="Byte" BlockXSize="512" BlockYSize="512" />
       <SrcRect xOff="0" yOff="0" xSize="16392" ySize="16392" />
       <DstRect xOff="49148" yOff="32764" xSize="16392" ySize="16392" />
-      <NODATA>0</NODATA>
+      <UseMaskBand>true</UseMaskBand>
     </ComplexSource>
     <ComplexSource>
-      <SourceFilename relativeToVRT="0">C:\Users\LENOVO\Rainforest Builder Dropbox\03_RB Ghana - All Team\03_Planning\00_Spatial\04_Drone Imagery\01_Data\01_Forest Reserves\03_Anhwiaso South Compartment\2026\ASO_S21-04-26_E21-04-26_R53\ASO_S21-04-26_E21-04-26_R53_0021.tif</SourceFilename>
+      <SourceFilename relativeToVRT="0">C:\Users\LENOVO\Rainforest Builder Dropbox\03_RB Ghana - All Team\03_Planning\00_Spatial\04_Drone Imagery\01_Data\01_Forest Reserves\03_Anhwiaso South Compartment\2026\ASO_S21-05-26_E21-05-26_R53\ASO_S21-05-26_E21-05-26_R53_0023.tif</SourceFilename>
       <SourceBand>1</SourceBand>
       <SourceProperties RasterXSize="16392" RasterYSize="16392" DataType="Byte" BlockXSize="512" BlockYSize="512" />
       <SrcRect xOff="0" yOff="0" xSize="16392" ySize="16392" />
       <DstRect xOff="65532" yOff="32764" xSize="16392" ySize="16392" />
-      <NODATA>0</NODATA>
+      <UseMaskBand>true</UseMaskBand>
     </ComplexSource>
     <ComplexSource>
-      <SourceFilename relativeToVRT="0">C:\Users\LENOVO\Rainforest Builder Dropbox\03_RB Ghana - All Team\03_Planning\00_Spatial\04_Drone Imagery\01_Data\01_Forest Reserves\03_Anhwiaso South Compartment\2026\ASO_S21-04-26_E21-04-26_R53\ASO_S21-04-26_E21-04-26_R53_0022.tif</SourceFilename>
+      <SourceFilename relativeToVRT="0">C:\Users\LENOVO\Rainforest Builder Dropbox\03_RB Ghana - All Team\03_Planning\00_Spatial\04_Drone Imagery\01_Data\01_Forest Reserves\03_Anhwiaso South Compartment\2026\ASO_S21-05-26_E21-05-26_R53\ASO_S21-05-26_E21-05-26_R53_0024.tif</SourceFilename>
       <SourceBand>1</SourceBand>
       <SourceProperties RasterXSize="16392" RasterYSize="16392" DataType="Byte" BlockXSize="512" BlockYSize="512" />
       <SrcRect xOff="0" yOff="0" xSize="16392" ySize="16392" />
       <DstRect xOff="81916" yOff="32764" xSize="16392" ySize="16392" />
-      <NODATA>0</NODATA>
+      <UseMaskBand>true</UseMaskBand>
     </ComplexSource>
     <ComplexSource>
-      <SourceFilename relativeToVRT="0">C:\Users\LENOVO\Rainforest Builder Dropbox\03_RB Ghana - All Team\03_Planning\00_Spatial\04_Drone Imagery\01_Data\01_Forest Reserves\03_Anhwiaso South Compartment\2026\ASO_S21-04-26_E21-04-26_R53\ASO_S21-04-26_E21-04-26_R53_0025.tif</SourceFilename>
+      <SourceFilename relativeToVRT="0">C:\Users\LENOVO\Rainforest Builder Dropbox\03_RB Ghana - All Team\03_Planning\00_Spatial\04_Drone Imagery\01_Data\01_Forest Reserves\03_Anhwiaso South Compartment\2026\ASO_S21-05-26_E21-05-26_R53\ASO_S21-05-26_E21-05-26_R53_0025.tif</SourceFilename>
       <SourceBand>1</SourceBand>
-      <SourceProperties RasterXSize="16388" RasterYSize="12778" DataType="Byte" BlockXSize="512" BlockYSize="512" />
-      <SrcRect xOff="0" yOff="0" xSize="16388" ySize="12778" />
-      <DstRect xOff="0" yOff="49148" xSize="16388" ySize="12778" />
-      <NODATA>0</NODATA>
+      <SourceProperties RasterXSize="16392" RasterYSize="16392" DataType="Byte" BlockXSize="512" BlockYSize="512" />
+      <SrcRect xOff="0" yOff="0" xSize="16392" ySize="16392" />
+      <DstRect xOff="98300" yOff="32764" xSize="16392" ySize="16392" />
+      <UseMaskBand>true</UseMaskBand>
     </ComplexSource>
     <ComplexSource>
-      <SourceFilename relativeToVRT="0">C:\Users\LENOVO\Rainforest Builder Dropbox\03_RB Ghana - All Team\03_Planning\00_Spatial\04_Drone Imagery\01_Data\01_Forest Reserves\03_Anhwiaso South Compartment\2026\ASO_S21-04-26_E21-04-26_R53\ASO_S21-04-26_E21-04-26_R53_0026.tif</SourceFilename>
+      <SourceFilename relativeToVRT="0">C:\Users\LENOVO\Rainforest Builder Dropbox\03_RB Ghana - All Team\03_Planning\00_Spatial\04_Drone Imagery\01_Data\01_Forest Reserves\03_Anhwiaso South Compartment\2026\ASO_S21-05-26_E21-05-26_R53\ASO_S21-05-26_E21-05-26_R53_0028.tif</SourceFilename>
       <SourceBand>1</SourceBand>
-      <SourceProperties RasterXSize="16392" RasterYSize="12778" DataType="Byte" BlockXSize="512" BlockYSize="512" />
-      <SrcRect xOff="0" yOff="0" xSize="16392" ySize="12778" />
-      <DstRect xOff="16380" yOff="49148" xSize="16392" ySize="12778" />
-      <NODATA>0</NODATA>
+      <SourceProperties RasterXSize="16388" RasterYSize="16392" DataType="Byte" BlockXSize="512" BlockYSize="512" />
+      <SrcRect xOff="0" yOff="0" xSize="16388" ySize="16392" />
+      <DstRect xOff="0" yOff="49148" xSize="16388" ySize="16392" />
+      <UseMaskBand>true</UseMaskBand>
     </ComplexSource>
     <ComplexSource>
-      <SourceFilename relativeToVRT="0">C:\Users\LENOVO\Rainforest Builder Dropbox\03_RB Ghana - All Team\03_Planning\00_Spatial\04_Drone Imagery\01_Data\01_Forest Reserves\03_Anhwiaso South Compartment\2026\ASO_S21-04-26_E21-04-26_R53\ASO_S21-04-26_E21-04-26_R53_0027.tif</SourceFilename>
+      <SourceFilename relativeToVRT="0">C:\Users\LENOVO\Rainforest Builder Dropbox\03_RB Ghana - All Team\03_Planning\00_Spatial\04_Drone Imagery\01_Data\01_Forest Reserves\03_Anhwiaso South Compartment\2026\ASO_S21-05-26_E21-05-26_R53\ASO_S21-05-26_E21-05-26_R53_0029.tif</SourceFilename>
       <SourceBand>1</SourceBand>
-      <SourceProperties RasterXSize="16392" RasterYSize="12778" DataType="Byte" BlockXSize="512" BlockYSize="512" />
-      <SrcRect xOff="0" yOff="0" xSize="16392" ySize="12778" />
-      <DstRect xOff="32764" yOff="49148" xSize="16392" ySize="12778" />
-      <NODATA>0</NODATA>
+      <SourceProperties RasterXSize="16392" RasterYSize="16392" DataType="Byte" BlockXSize="512" BlockYSize="512" />
+      <SrcRect xOff="0" yOff="0" xSize="16392" ySize="16392" />
+      <DstRect xOff="16380" yOff="49148" xSize="16392" ySize="16392" />
+      <UseMaskBand>true</UseMaskBand>
     </ComplexSource>
     <ComplexSource>
-      <SourceFilename relativeToVRT="0">C:\Users\LENOVO\Rainforest Builder Dropbox\03_RB Ghana - All Team\03_Planning\00_Spatial\04_Drone Imagery\01_Data\01_Forest Reserves\03_Anhwiaso South Compartment\2026\ASO_S21-04-26_E21-04-26_R53\ASO_S21-04-26_E21-04-26_R53_0028.tif</SourceFilename>
+      <SourceFilename relativeToVRT="0">C:\Users\LENOVO\Rainforest Builder Dropbox\03_RB Ghana - All Team\03_Planning\00_Spatial\04_Drone Imagery\01_Data\01_Forest Reserves\03_Anhwiaso South Compartment\2026\ASO_S21-05-26_E21-05-26_R53\ASO_S21-05-26_E21-05-26_R53_0030.tif</SourceFilename>
       <SourceBand>1</SourceBand>
-      <SourceProperties RasterXSize="16392" RasterYSize="12778" DataType="Byte" BlockXSize="512" BlockYSize="512" />
-      <SrcRect xOff="0" yOff="0" xSize="16392" ySize="12778" />
-      <DstRect xOff="49148" yOff="49148" xSize="16392" ySize="12778" />
-      <NODATA>0</NODATA>
+      <SourceProperties RasterXSize="16392" RasterYSize="16392" DataType="Byte" BlockXSize="512" BlockYSize="512" />
+      <SrcRect xOff="0" yOff="0" xSize="16392" ySize="16392" />
+      <DstRect xOff="32764" yOff="49148" xSize="16392" ySize="16392" />
+      <UseMaskBand>true</UseMaskBand>
+    </ComplexSource>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="0">C:\Users\LENOVO\Rainforest Builder Dropbox\03_RB Ghana - All Team\03_Planning\00_Spatial\04_Drone Imagery\01_Data\01_Forest Reserves\03_Anhwiaso South Compartment\2026\ASO_S21-05-26_E21-05-26_R53\ASO_S21-05-26_E21-05-26_R53_0031.tif</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="16392" RasterYSize="16392" DataType="Byte" BlockXSize="512" BlockYSize="512" />
+      <SrcRect xOff="0" yOff="0" xSize="16392" ySize="16392" />
+      <DstRect xOff="49148" yOff="49148" xSize="16392" ySize="16392" />
+      <UseMaskBand>true</UseMaskBand>
+    </ComplexSource>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="0">C:\Users\LENOVO\Rainforest Builder Dropbox\03_RB Ghana - All Team\03_Planning\00_Spatial\04_Drone Imagery\01_Data\01_Forest Reserves\03_Anhwiaso South Compartment\2026\ASO_S21-05-26_E21-05-26_R53\ASO_S21-05-26_E21-05-26_R53_0032.tif</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="16392" RasterYSize="16392" DataType="Byte" BlockXSize="512" BlockYSize="512" />
+      <SrcRect xOff="0" yOff="0" xSize="16392" ySize="16392" />
+      <DstRect xOff="65532" yOff="49148" xSize="16392" ySize="16392" />
+      <UseMaskBand>true</UseMaskBand>
+    </ComplexSource>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="0">C:\Users\LENOVO\Rainforest Builder Dropbox\03_RB Ghana - All Team\03_Planning\00_Spatial\04_Drone Imagery\01_Data\01_Forest Reserves\03_Anhwiaso South Compartment\2026\ASO_S21-05-26_E21-05-26_R53\ASO_S21-05-26_E21-05-26_R53_0033.tif</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="16392" RasterYSize="16392" DataType="Byte" BlockXSize="512" BlockYSize="512" />
+      <SrcRect xOff="0" yOff="0" xSize="16392" ySize="16392" />
+      <DstRect xOff="81916" yOff="49148" xSize="16392" ySize="16392" />
+      <UseMaskBand>true</UseMaskBand>
+    </ComplexSource>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="0">C:\Users\LENOVO\Rainforest Builder Dropbox\03_RB Ghana - All Team\03_Planning\00_Spatial\04_Drone Imagery\01_Data\01_Forest Reserves\03_Anhwiaso South Compartment\2026\ASO_S21-05-26_E21-05-26_R53\ASO_S21-05-26_E21-05-26_R53_0038.tif</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="16392" RasterYSize="358" DataType="Byte" BlockXSize="512" BlockYSize="512" />
+      <SrcRect xOff="0" yOff="0" xSize="16392" ySize="358" />
+      <DstRect xOff="16380" yOff="65532" xSize="16392" ySize="358" />
+      <UseMaskBand>true</UseMaskBand>
     </ComplexSource>
   </VRTRasterBand>
   <VRTRasterBand dataType="Byte" band="2">
-    <NoDataValue>0</NoDataValue>
     <ColorInterp>Green</ColorInterp>
     <ComplexSource>
-      <SourceFilename relativeToVRT="0">C:\Users\LENOVO\Rainforest Builder Dropbox\03_RB Ghana - All Team\03_Planning\00_Spatial\04_Drone Imagery\01_Data\01_Forest Reserves\03_Anhwiaso South Compartment\2026\ASO_S21-04-26_E21-04-26_R53\ASO_S21-04-26_E21-04-26_R53_0001.tif</SourceFilename>
+      <SourceFilename relativeToVRT="0">C:\Users\LENOVO\Rainforest Builder Dropbox\03_RB Ghana - All Team\03_Planning\00_Spatial\04_Drone Imagery\01_Data\01_Forest Reserves\03_Anhwiaso South Compartment\2026\ASO_S21-05-26_E21-05-26_R53\ASO_S21-05-26_E21-05-26_R53_0001.tif</SourceFilename>
       <SourceBand>2</SourceBand>
       <SourceProperties RasterXSize="16388" RasterYSize="16388" DataType="Byte" BlockXSize="512" BlockYSize="512" />
       <SrcRect xOff="0" yOff="0" xSize="16388" ySize="16388" />
       <DstRect xOff="0" yOff="0" xSize="16388" ySize="16388" />
-      <NODATA>0</NODATA>
+      <UseMaskBand>true</UseMaskBand>
     </ComplexSource>
     <ComplexSource>
-      <SourceFilename relativeToVRT="0">C:\Users\LENOVO\Rainforest Builder Dropbox\03_RB Ghana - All Team\03_Planning\00_Spatial\04_Drone Imagery\01_Data\01_Forest Reserves\03_Anhwiaso South Compartment\2026\ASO_S21-04-26_E21-04-26_R53\ASO_S21-04-26_E21-04-26_R53_0002.tif</SourceFilename>
+      <SourceFilename relativeToVRT="0">C:\Users\LENOVO\Rainforest Builder Dropbox\03_RB Ghana - All Team\03_Planning\00_Spatial\04_Drone Imagery\01_Data\01_Forest Reserves\03_Anhwiaso South Compartment\2026\ASO_S21-05-26_E21-05-26_R53\ASO_S21-05-26_E21-05-26_R53_0002.tif</SourceFilename>
       <SourceBand>2</SourceBand>
       <SourceProperties RasterXSize="16392" RasterYSize="16388" DataType="Byte" BlockXSize="512" BlockYSize="512" />
       <SrcRect xOff="0" yOff="0" xSize="16392" ySize="16388" />
       <DstRect xOff="16380" yOff="0" xSize="16392" ySize="16388" />
-      <NODATA>0</NODATA>
+      <UseMaskBand>true</UseMaskBand>
     </ComplexSource>
     <ComplexSource>
-      <SourceFilename relativeToVRT="0">C:\Users\LENOVO\Rainforest Builder Dropbox\03_RB Ghana - All Team\03_Planning\00_Spatial\04_Drone Imagery\01_Data\01_Forest Reserves\03_Anhwiaso South Compartment\2026\ASO_S21-04-26_E21-04-26_R53\ASO_S21-04-26_E21-04-26_R53_0003.tif</SourceFilename>
+      <SourceFilename relativeToVRT="0">C:\Users\LENOVO\Rainforest Builder Dropbox\03_RB Ghana - All Team\03_Planning\00_Spatial\04_Drone Imagery\01_Data\01_Forest Reserves\03_Anhwiaso South Compartment\2026\ASO_S21-05-26_E21-05-26_R53\ASO_S21-05-26_E21-05-26_R53_0003.tif</SourceFilename>
       <SourceBand>2</SourceBand>
       <SourceProperties RasterXSize="16392" RasterYSize="16388" DataType="Byte" BlockXSize="512" BlockYSize="512" />
       <SrcRect xOff="0" yOff="0" xSize="16392" ySize="16388" />
       <DstRect xOff="32764" yOff="0" xSize="16392" ySize="16388" />
-      <NODATA>0</NODATA>
+      <UseMaskBand>true</UseMaskBand>
     </ComplexSource>
     <ComplexSource>
-      <SourceFilename relativeToVRT="0">C:\Users\LENOVO\Rainforest Builder Dropbox\03_RB Ghana - All Team\03_Planning\00_Spatial\04_Drone Imagery\01_Data\01_Forest Reserves\03_Anhwiaso South Compartment\2026\ASO_S21-04-26_E21-04-26_R53\ASO_S21-04-26_E21-04-26_R53_0004.tif</SourceFilename>
+      <SourceFilename relativeToVRT="0">C:\Users\LENOVO\Rainforest Builder Dropbox\03_RB Ghana - All Team\03_Planning\00_Spatial\04_Drone Imagery\01_Data\01_Forest Reserves\03_Anhwiaso South Compartment\2026\ASO_S21-05-26_E21-05-26_R53\ASO_S21-05-26_E21-05-26_R53_0004.tif</SourceFilename>
       <SourceBand>2</SourceBand>
       <SourceProperties RasterXSize="16392" RasterYSize="16388" DataType="Byte" BlockXSize="512" BlockYSize="512" />
       <SrcRect xOff="0" yOff="0" xSize="16392" ySize="16388" />
       <DstRect xOff="49148" yOff="0" xSize="16392" ySize="16388" />
-      <NODATA>0</NODATA>
+      <UseMaskBand>true</UseMaskBand>
     </ComplexSource>
     <ComplexSource>
-      <SourceFilename relativeToVRT="0">C:\Users\LENOVO\Rainforest Builder Dropbox\03_RB Ghana - All Team\03_Planning\00_Spatial\04_Drone Imagery\01_Data\01_Forest Reserves\03_Anhwiaso South Compartment\2026\ASO_S21-04-26_E21-04-26_R53\ASO_S21-04-26_E21-04-26_R53_0005.tif</SourceFilename>
+      <SourceFilename relativeToVRT="0">C:\Users\LENOVO\Rainforest Builder Dropbox\03_RB Ghana - All Team\03_Planning\00_Spatial\04_Drone Imagery\01_Data\01_Forest Reserves\03_Anhwiaso South Compartment\2026\ASO_S21-05-26_E21-05-26_R53\ASO_S21-05-26_E21-05-26_R53_0005.tif</SourceFilename>
       <SourceBand>2</SourceBand>
       <SourceProperties RasterXSize="16392" RasterYSize="16388" DataType="Byte" BlockXSize="512" BlockYSize="512" />
       <SrcRect xOff="0" yOff="0" xSize="16392" ySize="16388" />
       <DstRect xOff="65532" yOff="0" xSize="16392" ySize="16388" />
-      <NODATA>0</NODATA>
+      <UseMaskBand>true</UseMaskBand>
     </ComplexSource>
     <ComplexSource>
-      <SourceFilename relativeToVRT="0">C:\Users\LENOVO\Rainforest Builder Dropbox\03_RB Ghana - All Team\03_Planning\00_Spatial\04_Drone Imagery\01_Data\01_Forest Reserves\03_Anhwiaso South Compartment\2026\ASO_S21-04-26_E21-04-26_R53\ASO_S21-04-26_E21-04-26_R53_0006.tif</SourceFilename>
+      <SourceFilename relativeToVRT="0">C:\Users\LENOVO\Rainforest Builder Dropbox\03_RB Ghana - All Team\03_Planning\00_Spatial\04_Drone Imagery\01_Data\01_Forest Reserves\03_Anhwiaso South Compartment\2026\ASO_S21-05-26_E21-05-26_R53\ASO_S21-05-26_E21-05-26_R53_0006.tif</SourceFilename>
       <SourceBand>2</SourceBand>
       <SourceProperties RasterXSize="16392" RasterYSize="16388" DataType="Byte" BlockXSize="512" BlockYSize="512" />
       <SrcRect xOff="0" yOff="0" xSize="16392" ySize="16388" />
       <DstRect xOff="81916" yOff="0" xSize="16392" ySize="16388" />
-      <NODATA>0</NODATA>
+      <UseMaskBand>true</UseMaskBand>
     </ComplexSource>
     <ComplexSource>
-      <SourceFilename relativeToVRT="0">C:\Users\LENOVO\Rainforest Builder Dropbox\03_RB Ghana - All Team\03_Planning\00_Spatial\04_Drone Imagery\01_Data\01_Forest Reserves\03_Anhwiaso South Compartment\2026\ASO_S21-04-26_E21-04-26_R53\ASO_S21-04-26_E21-04-26_R53_0007.tif</SourceFilename>
+      <SourceFilename relativeToVRT="0">C:\Users\LENOVO\Rainforest Builder Dropbox\03_RB Ghana - All Team\03_Planning\00_Spatial\04_Drone Imagery\01_Data\01_Forest Reserves\03_Anhwiaso South Compartment\2026\ASO_S21-05-26_E21-05-26_R53\ASO_S21-05-26_E21-05-26_R53_0007.tif</SourceFilename>
       <SourceBand>2</SourceBand>
       <SourceProperties RasterXSize="16392" RasterYSize="16388" DataType="Byte" BlockXSize="512" BlockYSize="512" />
       <SrcRect xOff="0" yOff="0" xSize="16392" ySize="16388" />
       <DstRect xOff="98300" yOff="0" xSize="16392" ySize="16388" />
-      <NODATA>0</NODATA>
+      <UseMaskBand>true</UseMaskBand>
     </ComplexSource>
     <ComplexSource>
-      <SourceFilename relativeToVRT="0">C:\Users\LENOVO\Rainforest Builder Dropbox\03_RB Ghana - All Team\03_Planning\00_Spatial\04_Drone Imagery\01_Data\01_Forest Reserves\03_Anhwiaso South Compartment\2026\ASO_S21-04-26_E21-04-26_R53\ASO_S21-04-26_E21-04-26_R53_0008.tif</SourceFilename>
+      <SourceFilename relativeToVRT="0">C:\Users\LENOVO\Rainforest Builder Dropbox\03_RB Ghana - All Team\03_Planning\00_Spatial\04_Drone Imagery\01_Data\01_Forest Reserves\03_Anhwiaso South Compartment\2026\ASO_S21-05-26_E21-05-26_R53\ASO_S21-05-26_E21-05-26_R53_0008.tif</SourceFilename>
       <SourceBand>2</SourceBand>
-      <SourceProperties RasterXSize="12089" RasterYSize="16388" DataType="Byte" BlockXSize="512" BlockYSize="512" />
-      <SrcRect xOff="0" yOff="0" xSize="12089" ySize="16388" />
-      <DstRect xOff="114684" yOff="0" xSize="12089" ySize="16388" />
-      <NODATA>0</NODATA>
+      <SourceProperties RasterXSize="16392" RasterYSize="16388" DataType="Byte" BlockXSize="512" BlockYSize="512" />
+      <SrcRect xOff="0" yOff="0" xSize="16392" ySize="16388" />
+      <DstRect xOff="114684" yOff="0" xSize="16392" ySize="16388" />
+      <UseMaskBand>true</UseMaskBand>
     </ComplexSource>
     <ComplexSource>
-      <SourceFilename relativeToVRT="0">C:\Users\LENOVO\Rainforest Builder Dropbox\03_RB Ghana - All Team\03_Planning\00_Spatial\04_Drone Imagery\01_Data\01_Forest Reserves\03_Anhwiaso South Compartment\2026\ASO_S21-04-26_E21-04-26_R53\ASO_S21-04-26_E21-04-26_R53_0009.tif</SourceFilename>
+      <SourceFilename relativeToVRT="0">C:\Users\LENOVO\Rainforest Builder Dropbox\03_RB Ghana - All Team\03_Planning\00_Spatial\04_Drone Imagery\01_Data\01_Forest Reserves\03_Anhwiaso South Compartment\2026\ASO_S21-05-26_E21-05-26_R53\ASO_S21-05-26_E21-05-26_R53_0009.tif</SourceFilename>
+      <SourceBand>2</SourceBand>
+      <SourceProperties RasterXSize="4983" RasterYSize="16388" DataType="Byte" BlockXSize="512" BlockYSize="512" />
+      <SrcRect xOff="0" yOff="0" xSize="4983" ySize="16388" />
+      <DstRect xOff="131068" yOff="0" xSize="4983" ySize="16388" />
+      <UseMaskBand>true</UseMaskBand>
+    </ComplexSource>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="0">C:\Users\LENOVO\Rainforest Builder Dropbox\03_RB Ghana - All Team\03_Planning\00_Spatial\04_Drone Imagery\01_Data\01_Forest Reserves\03_Anhwiaso South Compartment\2026\ASO_S21-05-26_E21-05-26_R53\ASO_S21-05-26_E21-05-26_R53_0010.tif</SourceFilename>
       <SourceBand>2</SourceBand>
       <SourceProperties RasterXSize="16388" RasterYSize="16392" DataType="Byte" BlockXSize="512" BlockYSize="512" />
       <SrcRect xOff="0" yOff="0" xSize="16388" ySize="16392" />
       <DstRect xOff="0" yOff="16380" xSize="16388" ySize="16392" />
-      <NODATA>0</NODATA>
+      <UseMaskBand>true</UseMaskBand>
     </ComplexSource>
     <ComplexSource>
-      <SourceFilename relativeToVRT="0">C:\Users\LENOVO\Rainforest Builder Dropbox\03_RB Ghana - All Team\03_Planning\00_Spatial\04_Drone Imagery\01_Data\01_Forest Reserves\03_Anhwiaso South Compartment\2026\ASO_S21-04-26_E21-04-26_R53\ASO_S21-04-26_E21-04-26_R53_0010.tif</SourceFilename>
+      <SourceFilename relativeToVRT="0">C:\Users\LENOVO\Rainforest Builder Dropbox\03_RB Ghana - All Team\03_Planning\00_Spatial\04_Drone Imagery\01_Data\01_Forest Reserves\03_Anhwiaso South Compartment\2026\ASO_S21-05-26_E21-05-26_R53\ASO_S21-05-26_E21-05-26_R53_0011.tif</SourceFilename>
       <SourceBand>2</SourceBand>
       <SourceProperties RasterXSize="16392" RasterYSize="16392" DataType="Byte" BlockXSize="512" BlockYSize="512" />
       <SrcRect xOff="0" yOff="0" xSize="16392" ySize="16392" />
       <DstRect xOff="16380" yOff="16380" xSize="16392" ySize="16392" />
-      <NODATA>0</NODATA>
+      <UseMaskBand>true</UseMaskBand>
     </ComplexSource>
     <ComplexSource>
-      <SourceFilename relativeToVRT="0">C:\Users\LENOVO\Rainforest Builder Dropbox\03_RB Ghana - All Team\03_Planning\00_Spatial\04_Drone Imagery\01_Data\01_Forest Reserves\03_Anhwiaso South Compartment\2026\ASO_S21-04-26_E21-04-26_R53\ASO_S21-04-26_E21-04-26_R53_0011.tif</SourceFilename>
+      <SourceFilename relativeToVRT="0">C:\Users\LENOVO\Rainforest Builder Dropbox\03_RB Ghana - All Team\03_Planning\00_Spatial\04_Drone Imagery\01_Data\01_Forest Reserves\03_Anhwiaso South Compartment\2026\ASO_S21-05-26_E21-05-26_R53\ASO_S21-05-26_E21-05-26_R53_0012.tif</SourceFilename>
       <SourceBand>2</SourceBand>
       <SourceProperties RasterXSize="16392" RasterYSize="16392" DataType="Byte" BlockXSize="512" BlockYSize="512" />
       <SrcRect xOff="0" yOff="0" xSize="16392" ySize="16392" />
       <DstRect xOff="32764" yOff="16380" xSize="16392" ySize="16392" />
-      <NODATA>0</NODATA>
+      <UseMaskBand>true</UseMaskBand>
     </ComplexSource>
     <ComplexSource>
-      <SourceFilename relativeToVRT="0">C:\Users\LENOVO\Rainforest Builder Dropbox\03_RB Ghana - All Team\03_Planning\00_Spatial\04_Drone Imagery\01_Data\01_Forest Reserves\03_Anhwiaso South Compartment\2026\ASO_S21-04-26_E21-04-26_R53\ASO_S21-04-26_E21-04-26_R53_0012.tif</SourceFilename>
+      <SourceFilename relativeToVRT="0">C:\Users\LENOVO\Rainforest Builder Dropbox\03_RB Ghana - All Team\03_Planning\00_Spatial\04_Drone Imagery\01_Data\01_Forest Reserves\03_Anhwiaso South Compartment\2026\ASO_S21-05-26_E21-05-26_R53\ASO_S21-05-26_E21-05-26_R53_0013.tif</SourceFilename>
       <SourceBand>2</SourceBand>
       <SourceProperties RasterXSize="16392" RasterYSize="16392" DataType="Byte" BlockXSize="512" BlockYSize="512" />
       <SrcRect xOff="0" yOff="0" xSize="16392" ySize="16392" />
       <DstRect xOff="49148" yOff="16380" xSize="16392" ySize="16392" />
-      <NODATA>0</NODATA>
+      <UseMaskBand>true</UseMaskBand>
     </ComplexSource>
     <ComplexSource>
-      <SourceFilename relativeToVRT="0">C:\Users\LENOVO\Rainforest Builder Dropbox\03_RB Ghana - All Team\03_Planning\00_Spatial\04_Drone Imagery\01_Data\01_Forest Reserves\03_Anhwiaso South Compartment\2026\ASO_S21-04-26_E21-04-26_R53\ASO_S21-04-26_E21-04-26_R53_0013.tif</SourceFilename>
+      <SourceFilename relativeToVRT="0">C:\Users\LENOVO\Rainforest Builder Dropbox\03_RB Ghana - All Team\03_Planning\00_Spatial\04_Drone Imagery\01_Data\01_Forest Reserves\03_Anhwiaso South Compartment\2026\ASO_S21-05-26_E21-05-26_R53\ASO_S21-05-26_E21-05-26_R53_0014.tif</SourceFilename>
       <SourceBand>2</SourceBand>
       <SourceProperties RasterXSize="16392" RasterYSize="16392" DataType="Byte" BlockXSize="512" BlockYSize="512" />
       <SrcRect xOff="0" yOff="0" xSize="16392" ySize="16392" />
       <DstRect xOff="65532" yOff="16380" xSize="16392" ySize="16392" />
-      <NODATA>0</NODATA>
+      <UseMaskBand>true</UseMaskBand>
     </ComplexSource>
     <ComplexSource>
-      <SourceFilename relativeToVRT="0">C:\Users\LENOVO\Rainforest Builder Dropbox\03_RB Ghana - All Team\03_Planning\00_Spatial\04_Drone Imagery\01_Data\01_Forest Reserves\03_Anhwiaso South Compartment\2026\ASO_S21-04-26_E21-04-26_R53\ASO_S21-04-26_E21-04-26_R53_0014.tif</SourceFilename>
+      <SourceFilename relativeToVRT="0">C:\Users\LENOVO\Rainforest Builder Dropbox\03_RB Ghana - All Team\03_Planning\00_Spatial\04_Drone Imagery\01_Data\01_Forest Reserves\03_Anhwiaso South Compartment\2026\ASO_S21-05-26_E21-05-26_R53\ASO_S21-05-26_E21-05-26_R53_0015.tif</SourceFilename>
       <SourceBand>2</SourceBand>
       <SourceProperties RasterXSize="16392" RasterYSize="16392" DataType="Byte" BlockXSize="512" BlockYSize="512" />
       <SrcRect xOff="0" yOff="0" xSize="16392" ySize="16392" />
       <DstRect xOff="81916" yOff="16380" xSize="16392" ySize="16392" />
-      <NODATA>0</NODATA>
+      <UseMaskBand>true</UseMaskBand>
     </ComplexSource>
     <ComplexSource>
-      <SourceFilename relativeToVRT="0">C:\Users\LENOVO\Rainforest Builder Dropbox\03_RB Ghana - All Team\03_Planning\00_Spatial\04_Drone Imagery\01_Data\01_Forest Reserves\03_Anhwiaso South Compartment\2026\ASO_S21-04-26_E21-04-26_R53\ASO_S21-04-26_E21-04-26_R53_0015.tif</SourceFilename>
+      <SourceFilename relativeToVRT="0">C:\Users\LENOVO\Rainforest Builder Dropbox\03_RB Ghana - All Team\03_Planning\00_Spatial\04_Drone Imagery\01_Data\01_Forest Reserves\03_Anhwiaso South Compartment\2026\ASO_S21-05-26_E21-05-26_R53\ASO_S21-05-26_E21-05-26_R53_0016.tif</SourceFilename>
       <SourceBand>2</SourceBand>
       <SourceProperties RasterXSize="16392" RasterYSize="16392" DataType="Byte" BlockXSize="512" BlockYSize="512" />
       <SrcRect xOff="0" yOff="0" xSize="16392" ySize="16392" />
       <DstRect xOff="98300" yOff="16380" xSize="16392" ySize="16392" />
-      <NODATA>0</NODATA>
+      <UseMaskBand>true</UseMaskBand>
     </ComplexSource>
     <ComplexSource>
-      <SourceFilename relativeToVRT="0">C:\Users\LENOVO\Rainforest Builder Dropbox\03_RB Ghana - All Team\03_Planning\00_Spatial\04_Drone Imagery\01_Data\01_Forest Reserves\03_Anhwiaso South Compartment\2026\ASO_S21-04-26_E21-04-26_R53\ASO_S21-04-26_E21-04-26_R53_0016.tif</SourceFilename>
+      <SourceFilename relativeToVRT="0">C:\Users\LENOVO\Rainforest Builder Dropbox\03_RB Ghana - All Team\03_Planning\00_Spatial\04_Drone Imagery\01_Data\01_Forest Reserves\03_Anhwiaso South Compartment\2026\ASO_S21-05-26_E21-05-26_R53\ASO_S21-05-26_E21-05-26_R53_0017.tif</SourceFilename>
       <SourceBand>2</SourceBand>
-      <SourceProperties RasterXSize="12089" RasterYSize="16392" DataType="Byte" BlockXSize="512" BlockYSize="512" />
-      <SrcRect xOff="0" yOff="0" xSize="12089" ySize="16392" />
-      <DstRect xOff="114684" yOff="16380" xSize="12089" ySize="16392" />
-      <NODATA>0</NODATA>
+      <SourceProperties RasterXSize="16392" RasterYSize="16392" DataType="Byte" BlockXSize="512" BlockYSize="512" />
+      <SrcRect xOff="0" yOff="0" xSize="16392" ySize="16392" />
+      <DstRect xOff="114684" yOff="16380" xSize="16392" ySize="16392" />
+      <UseMaskBand>true</UseMaskBand>
     </ComplexSource>
     <ComplexSource>
-      <SourceFilename relativeToVRT="0">C:\Users\LENOVO\Rainforest Builder Dropbox\03_RB Ghana - All Team\03_Planning\00_Spatial\04_Drone Imagery\01_Data\01_Forest Reserves\03_Anhwiaso South Compartment\2026\ASO_S21-04-26_E21-04-26_R53\ASO_S21-04-26_E21-04-26_R53_0017.tif</SourceFilename>
+      <SourceFilename relativeToVRT="0">C:\Users\LENOVO\Rainforest Builder Dropbox\03_RB Ghana - All Team\03_Planning\00_Spatial\04_Drone Imagery\01_Data\01_Forest Reserves\03_Anhwiaso South Compartment\2026\ASO_S21-05-26_E21-05-26_R53\ASO_S21-05-26_E21-05-26_R53_0018.tif</SourceFilename>
+      <SourceBand>2</SourceBand>
+      <SourceProperties RasterXSize="4983" RasterYSize="16392" DataType="Byte" BlockXSize="512" BlockYSize="512" />
+      <SrcRect xOff="0" yOff="0" xSize="4983" ySize="16392" />
+      <DstRect xOff="131068" yOff="16380" xSize="4983" ySize="16392" />
+      <UseMaskBand>true</UseMaskBand>
+    </ComplexSource>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="0">C:\Users\LENOVO\Rainforest Builder Dropbox\03_RB Ghana - All Team\03_Planning\00_Spatial\04_Drone Imagery\01_Data\01_Forest Reserves\03_Anhwiaso South Compartment\2026\ASO_S21-05-26_E21-05-26_R53\ASO_S21-05-26_E21-05-26_R53_0019.tif</SourceFilename>
       <SourceBand>2</SourceBand>
       <SourceProperties RasterXSize="16388" RasterYSize="16392" DataType="Byte" BlockXSize="512" BlockYSize="512" />
       <SrcRect xOff="0" yOff="0" xSize="16388" ySize="16392" />
       <DstRect xOff="0" yOff="32764" xSize="16388" ySize="16392" />
-      <NODATA>0</NODATA>
+      <UseMaskBand>true</UseMaskBand>
     </ComplexSource>
     <ComplexSource>
-      <SourceFilename relativeToVRT="0">C:\Users\LENOVO\Rainforest Builder Dropbox\03_RB Ghana - All Team\03_Planning\00_Spatial\04_Drone Imagery\01_Data\01_Forest Reserves\03_Anhwiaso South Compartment\2026\ASO_S21-04-26_E21-04-26_R53\ASO_S21-04-26_E21-04-26_R53_0018.tif</SourceFilename>
+      <SourceFilename relativeToVRT="0">C:\Users\LENOVO\Rainforest Builder Dropbox\03_RB Ghana - All Team\03_Planning\00_Spatial\04_Drone Imagery\01_Data\01_Forest Reserves\03_Anhwiaso South Compartment\2026\ASO_S21-05-26_E21-05-26_R53\ASO_S21-05-26_E21-05-26_R53_0020.tif</SourceFilename>
       <SourceBand>2</SourceBand>
       <SourceProperties RasterXSize="16392" RasterYSize="16392" DataType="Byte" BlockXSize="512" BlockYSize="512" />
       <SrcRect xOff="0" yOff="0" xSize="16392" ySize="16392" />
       <DstRect xOff="16380" yOff="32764" xSize="16392" ySize="16392" />
-      <NODATA>0</NODATA>
+      <UseMaskBand>true</UseMaskBand>
     </ComplexSource>
     <ComplexSource>
-      <SourceFilename relativeToVRT="0">C:\Users\LENOVO\Rainforest Builder Dropbox\03_RB Ghana - All Team\03_Planning\00_Spatial\04_Drone Imagery\01_Data\01_Forest Reserves\03_Anhwiaso South Compartment\2026\ASO_S21-04-26_E21-04-26_R53\ASO_S21-04-26_E21-04-26_R53_0019.tif</SourceFilename>
+      <SourceFilename relativeToVRT="0">C:\Users\LENOVO\Rainforest Builder Dropbox\03_RB Ghana - All Team\03_Planning\00_Spatial\04_Drone Imagery\01_Data\01_Forest Reserves\03_Anhwiaso South Compartment\2026\ASO_S21-05-26_E21-05-26_R53\ASO_S21-05-26_E21-05-26_R53_0021.tif</SourceFilename>
       <SourceBand>2</SourceBand>
       <SourceProperties RasterXSize="16392" RasterYSize="16392" DataType="Byte" BlockXSize="512" BlockYSize="512" />
       <SrcRect xOff="0" yOff="0" xSize="16392" ySize="16392" />
       <DstRect xOff="32764" yOff="32764" xSize="16392" ySize="16392" />
-      <NODATA>0</NODATA>
+      <UseMaskBand>true</UseMaskBand>
     </ComplexSource>
     <ComplexSource>
-      <SourceFilename relativeToVRT="0">C:\Users\LENOVO\Rainforest Builder Dropbox\03_RB Ghana - All Team\03_Planning\00_Spatial\04_Drone Imagery\01_Data\01_Forest Reserves\03_Anhwiaso South Compartment\2026\ASO_S21-04-26_E21-04-26_R53\ASO_S21-04-26_E21-04-26_R53_0020.tif</SourceFilename>
+      <SourceFilename relativeToVRT="0">C:\Users\LENOVO\Rainforest Builder Dropbox\03_RB Ghana - All Team\03_Planning\00_Spatial\04_Drone Imagery\01_Data\01_Forest Reserves\03_Anhwiaso South Compartment\2026\ASO_S21-05-26_E21-05-26_R53\ASO_S21-05-26_E21-05-26_R53_0022.tif</SourceFilename>
       <SourceBand>2</SourceBand>
       <SourceProperties RasterXSize="16392" RasterYSize="16392" DataType="Byte" BlockXSize="512" BlockYSize="512" />
       <SrcRect xOff="0" yOff="0" xSize="16392" ySize="16392" />
       <DstRect xOff="49148" yOff="32764" xSize="16392" ySize="16392" />
-      <NODATA>0</NODATA>
+      <UseMaskBand>true</UseMaskBand>
     </ComplexSource>
     <ComplexSource>
-      <SourceFilename relativeToVRT="0">C:\Users\LENOVO\Rainforest Builder Dropbox\03_RB Ghana - All Team\03_Planning\00_Spatial\04_Drone Imagery\01_Data\01_Forest Reserves\03_Anhwiaso South Compartment\2026\ASO_S21-04-26_E21-04-26_R53\ASO_S21-04-26_E21-04-26_R53_0021.tif</SourceFilename>
+      <SourceFilename relativeToVRT="0">C:\Users\LENOVO\Rainforest Builder Dropbox\03_RB Ghana - All Team\03_Planning\00_Spatial\04_Drone Imagery\01_Data\01_Forest Reserves\03_Anhwiaso South Compartment\2026\ASO_S21-05-26_E21-05-26_R53\ASO_S21-05-26_E21-05-26_R53_0023.tif</SourceFilename>
       <SourceBand>2</SourceBand>
       <SourceProperties RasterXSize="16392" RasterYSize="16392" DataType="Byte" BlockXSize="512" BlockYSize="512" />
       <SrcRect xOff="0" yOff="0" xSize="16392" ySize="16392" />
       <DstRect xOff="65532" yOff="32764" xSize="16392" ySize="16392" />
-      <NODATA>0</NODATA>
+      <UseMaskBand>true</UseMaskBand>
     </ComplexSource>
     <ComplexSource>
-      <SourceFilename relativeToVRT="0">C:\Users\LENOVO\Rainforest Builder Dropbox\03_RB Ghana - All Team\03_Planning\00_Spatial\04_Drone Imagery\01_Data\01_Forest Reserves\03_Anhwiaso South Compartment\2026\ASO_S21-04-26_E21-04-26_R53\ASO_S21-04-26_E21-04-26_R53_0022.tif</SourceFilename>
+      <SourceFilename relativeToVRT="0">C:\Users\LENOVO\Rainforest Builder Dropbox\03_RB Ghana - All Team\03_Planning\00_Spatial\04_Drone Imagery\01_Data\01_Forest Reserves\03_Anhwiaso South Compartment\2026\ASO_S21-05-26_E21-05-26_R53\ASO_S21-05-26_E21-05-26_R53_0024.tif</SourceFilename>
       <SourceBand>2</SourceBand>
       <SourceProperties RasterXSize="16392" RasterYSize="16392" DataType="Byte" BlockXSize="512" BlockYSize="512" />
       <SrcRect xOff="0" yOff="0" xSize="16392" ySize="16392" />
       <DstRect xOff="81916" yOff="32764" xSize="16392" ySize="16392" />
-      <NODATA>0</NODATA>
+      <UseMaskBand>true</UseMaskBand>
     </ComplexSource>
     <ComplexSource>
-      <SourceFilename relativeToVRT="0">C:\Users\LENOVO\Rainforest Builder Dropbox\03_RB Ghana - All Team\03_Planning\00_Spatial\04_Drone Imagery\01_Data\01_Forest Reserves\03_Anhwiaso South Compartment\2026\ASO_S21-04-26_E21-04-26_R53\ASO_S21-04-26_E21-04-26_R53_0025.tif</SourceFilename>
+      <SourceFilename relativeToVRT="0">C:\Users\LENOVO\Rainforest Builder Dropbox\03_RB Ghana - All Team\03_Planning\00_Spatial\04_Drone Imagery\01_Data\01_Forest Reserves\03_Anhwiaso South Compartment\2026\ASO_S21-05-26_E21-05-26_R53\ASO_S21-05-26_E21-05-26_R53_0025.tif</SourceFilename>
       <SourceBand>2</SourceBand>
-      <SourceProperties RasterXSize="16388" RasterYSize="12778" DataType="Byte" BlockXSize="512" BlockYSize="512" />
-      <SrcRect xOff="0" yOff="0" xSize="16388" ySize="12778" />
-      <DstRect xOff="0" yOff="49148" xSize="16388" ySize="12778" />
-      <NODATA>0</NODATA>
+      <SourceProperties RasterXSize="16392" RasterYSize="16392" DataType="Byte" BlockXSize="512" BlockYSize="512" />
+      <SrcRect xOff="0" yOff="0" xSize="16392" ySize="16392" />
+      <DstRect xOff="98300" yOff="32764" xSize="16392" ySize="16392" />
+      <UseMaskBand>true</UseMaskBand>
     </ComplexSource>
     <ComplexSource>
-      <SourceFilename relativeToVRT="0">C:\Users\LENOVO\Rainforest Builder Dropbox\03_RB Ghana - All Team\03_Planning\00_Spatial\04_Drone Imagery\01_Data\01_Forest Reserves\03_Anhwiaso South Compartment\2026\ASO_S21-04-26_E21-04-26_R53\ASO_S21-04-26_E21-04-26_R53_0026.tif</SourceFilename>
+      <SourceFilename relativeToVRT="0">C:\Users\LENOVO\Rainforest Builder Dropbox\03_RB Ghana - All Team\03_Planning\00_Spatial\04_Drone Imagery\01_Data\01_Forest Reserves\03_Anhwiaso South Compartment\2026\ASO_S21-05-26_E21-05-26_R53\ASO_S21-05-26_E21-05-26_R53_0028.tif</SourceFilename>
       <SourceBand>2</SourceBand>
-      <SourceProperties RasterXSize="16392" RasterYSize="12778" DataType="Byte" BlockXSize="512" BlockYSize="512" />
-      <SrcRect xOff="0" yOff="0" xSize="16392" ySize="12778" />
-      <DstRect xOff="16380" yOff="49148" xSize="16392" ySize="12778" />
-      <NODATA>0</NODATA>
+      <SourceProperties RasterXSize="16388" RasterYSize="16392" DataType="Byte" BlockXSize="512" BlockYSize="512" />
+      <SrcRect xOff="0" yOff="0" xSize="16388" ySize="16392" />
+      <DstRect xOff="0" yOff="49148" xSize="16388" ySize="16392" />
+      <UseMaskBand>true</UseMaskBand>
     </ComplexSource>
     <ComplexSource>
-      <SourceFilename relativeToVRT="0">C:\Users\LENOVO\Rainforest Builder Dropbox\03_RB Ghana - All Team\03_Planning\00_Spatial\04_Drone Imagery\01_Data\01_Forest Reserves\03_Anhwiaso South Compartment\2026\ASO_S21-04-26_E21-04-26_R53\ASO_S21-04-26_E21-04-26_R53_0027.tif</SourceFilename>
+      <SourceFilename relativeToVRT="0">C:\Users\LENOVO\Rainforest Builder Dropbox\03_RB Ghana - All Team\03_Planning\00_Spatial\04_Drone Imagery\01_Data\01_Forest Reserves\03_Anhwiaso South Compartment\2026\ASO_S21-05-26_E21-05-26_R53\ASO_S21-05-26_E21-05-26_R53_0029.tif</SourceFilename>
       <SourceBand>2</SourceBand>
-      <SourceProperties RasterXSize="16392" RasterYSize="12778" DataType="Byte" BlockXSize="512" BlockYSize="512" />
-      <SrcRect xOff="0" yOff="0" xSize="16392" ySize="12778" />
-      <DstRect xOff="32764" yOff="49148" xSize="16392" ySize="12778" />
-      <NODATA>0</NODATA>
+      <SourceProperties RasterXSize="16392" RasterYSize="16392" DataType="Byte" BlockXSize="512" BlockYSize="512" />
+      <SrcRect xOff="0" yOff="0" xSize="16392" ySize="16392" />
+      <DstRect xOff="16380" yOff="49148" xSize="16392" ySize="16392" />
+      <UseMaskBand>true</UseMaskBand>
     </ComplexSource>
     <ComplexSource>
-      <SourceFilename relativeToVRT="0">C:\Users\LENOVO\Rainforest Builder Dropbox\03_RB Ghana - All Team\03_Planning\00_Spatial\04_Drone Imagery\01_Data\01_Forest Reserves\03_Anhwiaso South Compartment\2026\ASO_S21-04-26_E21-04-26_R53\ASO_S21-04-26_E21-04-26_R53_0028.tif</SourceFilename>
+      <SourceFilename relativeToVRT="0">C:\Users\LENOVO\Rainforest Builder Dropbox\03_RB Ghana - All Team\03_Planning\00_Spatial\04_Drone Imagery\01_Data\01_Forest Reserves\03_Anhwiaso South Compartment\2026\ASO_S21-05-26_E21-05-26_R53\ASO_S21-05-26_E21-05-26_R53_0030.tif</SourceFilename>
       <SourceBand>2</SourceBand>
-      <SourceProperties RasterXSize="16392" RasterYSize="12778" DataType="Byte" BlockXSize="512" BlockYSize="512" />
-      <SrcRect xOff="0" yOff="0" xSize="16392" ySize="12778" />
-      <DstRect xOff="49148" yOff="49148" xSize="16392" ySize="12778" />
-      <NODATA>0</NODATA>
+      <SourceProperties RasterXSize="16392" RasterYSize="16392" DataType="Byte" BlockXSize="512" BlockYSize="512" />
+      <SrcRect xOff="0" yOff="0" xSize="16392" ySize="16392" />
+      <DstRect xOff="32764" yOff="49148" xSize="16392" ySize="16392" />
+      <UseMaskBand>true</UseMaskBand>
+    </ComplexSource>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="0">C:\Users\LENOVO\Rainforest Builder Dropbox\03_RB Ghana - All Team\03_Planning\00_Spatial\04_Drone Imagery\01_Data\01_Forest Reserves\03_Anhwiaso South Compartment\2026\ASO_S21-05-26_E21-05-26_R53\ASO_S21-05-26_E21-05-26_R53_0031.tif</SourceFilename>
+      <SourceBand>2</SourceBand>
+      <SourceProperties RasterXSize="16392" RasterYSize="16392" DataType="Byte" BlockXSize="512" BlockYSize="512" />
+      <SrcRect xOff="0" yOff="0" xSize="16392" ySize="16392" />
+      <DstRect xOff="49148" yOff="49148" xSize="16392" ySize="16392" />
+      <UseMaskBand>true</UseMaskBand>
+    </ComplexSource>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="0">C:\Users\LENOVO\Rainforest Builder Dropbox\03_RB Ghana - All Team\03_Planning\00_Spatial\04_Drone Imagery\01_Data\01_Forest Reserves\03_Anhwiaso South Compartment\2026\ASO_S21-05-26_E21-05-26_R53\ASO_S21-05-26_E21-05-26_R53_0032.tif</SourceFilename>
+      <SourceBand>2</SourceBand>
+      <SourceProperties RasterXSize="16392" RasterYSize="16392" DataType="Byte" BlockXSize="512" BlockYSize="512" />
+      <SrcRect xOff="0" yOff="0" xSize="16392" ySize="16392" />
+      <DstRect xOff="65532" yOff="49148" xSize="16392" ySize="16392" />
+      <UseMaskBand>true</UseMaskBand>
+    </ComplexSource>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="0">C:\Users\LENOVO\Rainforest Builder Dropbox\03_RB Ghana - All Team\03_Planning\00_Spatial\04_Drone Imagery\01_Data\01_Forest Reserves\03_Anhwiaso South Compartment\2026\ASO_S21-05-26_E21-05-26_R53\ASO_S21-05-26_E21-05-26_R53_0033.tif</SourceFilename>
+      <SourceBand>2</SourceBand>
+      <SourceProperties RasterXSize="16392" RasterYSize="16392" DataType="Byte" BlockXSize="512" BlockYSize="512" />
+      <SrcRect xOff="0" yOff="0" xSize="16392" ySize="16392" />
+      <DstRect xOff="81916" yOff="49148" xSize="16392" ySize="16392" />
+      <UseMaskBand>true</UseMaskBand>
+    </ComplexSource>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="0">C:\Users\LENOVO\Rainforest Builder Dropbox\03_RB Ghana - All Team\03_Planning\00_Spatial\04_Drone Imagery\01_Data\01_Forest Reserves\03_Anhwiaso South Compartment\2026\ASO_S21-05-26_E21-05-26_R53\ASO_S21-05-26_E21-05-26_R53_0038.tif</SourceFilename>
+      <SourceBand>2</SourceBand>
+      <SourceProperties RasterXSize="16392" RasterYSize="358" DataType="Byte" BlockXSize="512" BlockYSize="512" />
+      <SrcRect xOff="0" yOff="0" xSize="16392" ySize="358" />
+      <DstRect xOff="16380" yOff="65532" xSize="16392" ySize="358" />
+      <UseMaskBand>true</UseMaskBand>
     </ComplexSource>
   </VRTRasterBand>
   <VRTRasterBand dataType="Byte" band="3">
-    <NoDataValue>0</NoDataValue>
     <ColorInterp>Blue</ColorInterp>
     <ComplexSource>
-      <SourceFilename relativeToVRT="0">C:\Users\LENOVO\Rainforest Builder Dropbox\03_RB Ghana - All Team\03_Planning\00_Spatial\04_Drone Imagery\01_Data\01_Forest Reserves\03_Anhwiaso South Compartment\2026\ASO_S21-04-26_E21-04-26_R53\ASO_S21-04-26_E21-04-26_R53_0001.tif</SourceFilename>
+      <SourceFilename relativeToVRT="0">C:\Users\LENOVO\Rainforest Builder Dropbox\03_RB Ghana - All Team\03_Planning\00_Spatial\04_Drone Imagery\01_Data\01_Forest Reserves\03_Anhwiaso South Compartment\2026\ASO_S21-05-26_E21-05-26_R53\ASO_S21-05-26_E21-05-26_R53_0001.tif</SourceFilename>
       <SourceBand>3</SourceBand>
       <SourceProperties RasterXSize="16388" RasterYSize="16388" DataType="Byte" BlockXSize="512" BlockYSize="512" />
       <SrcRect xOff="0" yOff="0" xSize="16388" ySize="16388" />
       <DstRect xOff="0" yOff="0" xSize="16388" ySize="16388" />
-      <NODATA>0</NODATA>
+      <UseMaskBand>true</UseMaskBand>
     </ComplexSource>
     <ComplexSource>
-      <SourceFilename relativeToVRT="0">C:\Users\LENOVO\Rainforest Builder Dropbox\03_RB Ghana - All Team\03_Planning\00_Spatial\04_Drone Imagery\01_Data\01_Forest Reserves\03_Anhwiaso South Compartment\2026\ASO_S21-04-26_E21-04-26_R53\ASO_S21-04-26_E21-04-26_R53_0002.tif</SourceFilename>
+      <SourceFilename relativeToVRT="0">C:\Users\LENOVO\Rainforest Builder Dropbox\03_RB Ghana - All Team\03_Planning\00_Spatial\04_Drone Imagery\01_Data\01_Forest Reserves\03_Anhwiaso South Compartment\2026\ASO_S21-05-26_E21-05-26_R53\ASO_S21-05-26_E21-05-26_R53_0002.tif</SourceFilename>
       <SourceBand>3</SourceBand>
       <SourceProperties RasterXSize="16392" RasterYSize="16388" DataType="Byte" BlockXSize="512" BlockYSize="512" />
       <SrcRect xOff="0" yOff="0" xSize="16392" ySize="16388" />
       <DstRect xOff="16380" yOff="0" xSize="16392" ySize="16388" />
-      <NODATA>0</NODATA>
+      <UseMaskBand>true</UseMaskBand>
     </ComplexSource>
     <ComplexSource>
-      <SourceFilename relativeToVRT="0">C:\Users\LENOVO\Rainforest Builder Dropbox\03_RB Ghana - All Team\03_Planning\00_Spatial\04_Drone Imagery\01_Data\01_Forest Reserves\03_Anhwiaso South Compartment\2026\ASO_S21-04-26_E21-04-26_R53\ASO_S21-04-26_E21-04-26_R53_0003.tif</SourceFilename>
+      <SourceFilename relativeToVRT="0">C:\Users\LENOVO\Rainforest Builder Dropbox\03_RB Ghana - All Team\03_Planning\00_Spatial\04_Drone Imagery\01_Data\01_Forest Reserves\03_Anhwiaso South Compartment\2026\ASO_S21-05-26_E21-05-26_R53\ASO_S21-05-26_E21-05-26_R53_0003.tif</SourceFilename>
       <SourceBand>3</SourceBand>
       <SourceProperties RasterXSize="16392" RasterYSize="16388" DataType="Byte" BlockXSize="512" BlockYSize="512" />
       <SrcRect xOff="0" yOff="0" xSize="16392" ySize="16388" />
       <DstRect xOff="32764" yOff="0" xSize="16392" ySize="16388" />
-      <NODATA>0</NODATA>
+      <UseMaskBand>true</UseMaskBand>
     </ComplexSource>
     <ComplexSource>
-      <SourceFilename relativeToVRT="0">C:\Users\LENOVO\Rainforest Builder Dropbox\03_RB Ghana - All Team\03_Planning\00_Spatial\04_Drone Imagery\01_Data\01_Forest Reserves\03_Anhwiaso South Compartment\2026\ASO_S21-04-26_E21-04-26_R53\ASO_S21-04-26_E21-04-26_R53_0004.tif</SourceFilename>
+      <SourceFilename relativeToVRT="0">C:\Users\LENOVO\Rainforest Builder Dropbox\03_RB Ghana - All Team\03_Planning\00_Spatial\04_Drone Imagery\01_Data\01_Forest Reserves\03_Anhwiaso South Compartment\2026\ASO_S21-05-26_E21-05-26_R53\ASO_S21-05-26_E21-05-26_R53_0004.tif</SourceFilename>
       <SourceBand>3</SourceBand>
       <SourceProperties RasterXSize="16392" RasterYSize="16388" DataType="Byte" BlockXSize="512" BlockYSize="512" />
       <SrcRect xOff="0" yOff="0" xSize="16392" ySize="16388" />
       <DstRect xOff="49148" yOff="0" xSize="16392" ySize="16388" />
-      <NODATA>0</NODATA>
+      <UseMaskBand>true</UseMaskBand>
     </ComplexSource>
     <ComplexSource>
-      <SourceFilename relativeToVRT="0">C:\Users\LENOVO\Rainforest Builder Dropbox\03_RB Ghana - All Team\03_Planning\00_Spatial\04_Drone Imagery\01_Data\01_Forest Reserves\03_Anhwiaso South Compartment\2026\ASO_S21-04-26_E21-04-26_R53\ASO_S21-04-26_E21-04-26_R53_0005.tif</SourceFilename>
+      <SourceFilename relativeToVRT="0">C:\Users\LENOVO\Rainforest Builder Dropbox\03_RB Ghana - All Team\03_Planning\00_Spatial\04_Drone Imagery\01_Data\01_Forest Reserves\03_Anhwiaso South Compartment\2026\ASO_S21-05-26_E21-05-26_R53\ASO_S21-05-26_E21-05-26_R53_0005.tif</SourceFilename>
       <SourceBand>3</SourceBand>
       <SourceProperties RasterXSize="16392" RasterYSize="16388" DataType="Byte" BlockXSize="512" BlockYSize="512" />
       <SrcRect xOff="0" yOff="0" xSize="16392" ySize="16388" />
       <DstRect xOff="65532" yOff="0" xSize="16392" ySize="16388" />
-      <NODATA>0</NODATA>
+      <UseMaskBand>true</UseMaskBand>
     </ComplexSource>
     <ComplexSource>
-      <SourceFilename relativeToVRT="0">C:\Users\LENOVO\Rainforest Builder Dropbox\03_RB Ghana - All Team\03_Planning\00_Spatial\04_Drone Imagery\01_Data\01_Forest Reserves\03_Anhwiaso South Compartment\2026\ASO_S21-04-26_E21-04-26_R53\ASO_S21-04-26_E21-04-26_R53_0006.tif</SourceFilename>
+      <SourceFilename relativeToVRT="0">C:\Users\LENOVO\Rainforest Builder Dropbox\03_RB Ghana - All Team\03_Planning\00_Spatial\04_Drone Imagery\01_Data\01_Forest Reserves\03_Anhwiaso South Compartment\2026\ASO_S21-05-26_E21-05-26_R53\ASO_S21-05-26_E21-05-26_R53_0006.tif</SourceFilename>
       <SourceBand>3</SourceBand>
       <SourceProperties RasterXSize="16392" RasterYSize="16388" DataType="Byte" BlockXSize="512" BlockYSize="512" />
       <SrcRect xOff="0" yOff="0" xSize="16392" ySize="16388" />
       <DstRect xOff="81916" yOff="0" xSize="16392" ySize="16388" />
-      <NODATA>0</NODATA>
+      <UseMaskBand>true</UseMaskBand>
     </ComplexSource>
     <ComplexSource>
-      <SourceFilename relativeToVRT="0">C:\Users\LENOVO\Rainforest Builder Dropbox\03_RB Ghana - All Team\03_Planning\00_Spatial\04_Drone Imagery\01_Data\01_Forest Reserves\03_Anhwiaso South Compartment\2026\ASO_S21-04-26_E21-04-26_R53\ASO_S21-04-26_E21-04-26_R53_0007.tif</SourceFilename>
+      <SourceFilename relativeToVRT="0">C:\Users\LENOVO\Rainforest Builder Dropbox\03_RB Ghana - All Team\03_Planning\00_Spatial\04_Drone Imagery\01_Data\01_Forest Reserves\03_Anhwiaso South Compartment\2026\ASO_S21-05-26_E21-05-26_R53\ASO_S21-05-26_E21-05-26_R53_0007.tif</SourceFilename>
       <SourceBand>3</SourceBand>
       <SourceProperties RasterXSize="16392" RasterYSize="16388" DataType="Byte" BlockXSize="512" BlockYSize="512" />
       <SrcRect xOff="0" yOff="0" xSize="16392" ySize="16388" />
       <DstRect xOff="98300" yOff="0" xSize="16392" ySize="16388" />
-      <NODATA>0</NODATA>
+      <UseMaskBand>true</UseMaskBand>
     </ComplexSource>
     <ComplexSource>
-      <SourceFilename relativeToVRT="0">C:\Users\LENOVO\Rainforest Builder Dropbox\03_RB Ghana - All Team\03_Planning\00_Spatial\04_Drone Imagery\01_Data\01_Forest Reserves\03_Anhwiaso South Compartment\2026\ASO_S21-04-26_E21-04-26_R53\ASO_S21-04-26_E21-04-26_R53_0008.tif</SourceFilename>
+      <SourceFilename relativeToVRT="0">C:\Users\LENOVO\Rainforest Builder Dropbox\03_RB Ghana - All Team\03_Planning\00_Spatial\04_Drone Imagery\01_Data\01_Forest Reserves\03_Anhwiaso South Compartment\2026\ASO_S21-05-26_E21-05-26_R53\ASO_S21-05-26_E21-05-26_R53_0008.tif</SourceFilename>
       <SourceBand>3</SourceBand>
-      <SourceProperties RasterXSize="12089" RasterYSize="16388" DataType="Byte" BlockXSize="512" BlockYSize="512" />
-      <SrcRect xOff="0" yOff="0" xSize="12089" ySize="16388" />
-      <DstRect xOff="114684" yOff="0" xSize="12089" ySize="16388" />
-      <NODATA>0</NODATA>
+      <SourceProperties RasterXSize="16392" RasterYSize="16388" DataType="Byte" BlockXSize="512" BlockYSize="512" />
+      <SrcRect xOff="0" yOff="0" xSize="16392" ySize="16388" />
+      <DstRect xOff="114684" yOff="0" xSize="16392" ySize="16388" />
+      <UseMaskBand>true</UseMaskBand>
     </ComplexSource>
     <ComplexSource>
-      <SourceFilename relativeToVRT="0">C:\Users\LENOVO\Rainforest Builder Dropbox\03_RB Ghana - All Team\03_Planning\00_Spatial\04_Drone Imagery\01_Data\01_Forest Reserves\03_Anhwiaso South Compartment\2026\ASO_S21-04-26_E21-04-26_R53\ASO_S21-04-26_E21-04-26_R53_0009.tif</SourceFilename>
+      <SourceFilename relativeToVRT="0">C:\Users\LENOVO\Rainforest Builder Dropbox\03_RB Ghana - All Team\03_Planning\00_Spatial\04_Drone Imagery\01_Data\01_Forest Reserves\03_Anhwiaso South Compartment\2026\ASO_S21-05-26_E21-05-26_R53\ASO_S21-05-26_E21-05-26_R53_0009.tif</SourceFilename>
+      <SourceBand>3</SourceBand>
+      <SourceProperties RasterXSize="4983" RasterYSize="16388" DataType="Byte" BlockXSize="512" BlockYSize="512" />
+      <SrcRect xOff="0" yOff="0" xSize="4983" ySize="16388" />
+      <DstRect xOff="131068" yOff="0" xSize="4983" ySize="16388" />
+      <UseMaskBand>true</UseMaskBand>
+    </ComplexSource>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="0">C:\Users\LENOVO\Rainforest Builder Dropbox\03_RB Ghana - All Team\03_Planning\00_Spatial\04_Drone Imagery\01_Data\01_Forest Reserves\03_Anhwiaso South Compartment\2026\ASO_S21-05-26_E21-05-26_R53\ASO_S21-05-26_E21-05-26_R53_0010.tif</SourceFilename>
       <SourceBand>3</SourceBand>
       <SourceProperties RasterXSize="16388" RasterYSize="16392" DataType="Byte" BlockXSize="512" BlockYSize="512" />
       <SrcRect xOff="0" yOff="0" xSize="16388" ySize="16392" />
       <DstRect xOff="0" yOff="16380" xSize="16388" ySize="16392" />
-      <NODATA>0</NODATA>
+      <UseMaskBand>true</UseMaskBand>
     </ComplexSource>
     <ComplexSource>
-      <SourceFilename relativeToVRT="0">C:\Users\LENOVO\Rainforest Builder Dropbox\03_RB Ghana - All Team\03_Planning\00_Spatial\04_Drone Imagery\01_Data\01_Forest Reserves\03_Anhwiaso South Compartment\2026\ASO_S21-04-26_E21-04-26_R53\ASO_S21-04-26_E21-04-26_R53_0010.tif</SourceFilename>
+      <SourceFilename relativeToVRT="0">C:\Users\LENOVO\Rainforest Builder Dropbox\03_RB Ghana - All Team\03_Planning\00_Spatial\04_Drone Imagery\01_Data\01_Forest Reserves\03_Anhwiaso South Compartment\2026\ASO_S21-05-26_E21-05-26_R53\ASO_S21-05-26_E21-05-26_R53_0011.tif</SourceFilename>
       <SourceBand>3</SourceBand>
       <SourceProperties RasterXSize="16392" RasterYSize="16392" DataType="Byte" BlockXSize="512" BlockYSize="512" />
       <SrcRect xOff="0" yOff="0" xSize="16392" ySize="16392" />
       <DstRect xOff="16380" yOff="16380" xSize="16392" ySize="16392" />
-      <NODATA>0</NODATA>
+      <UseMaskBand>true</UseMaskBand>
     </ComplexSource>
     <ComplexSource>
-      <SourceFilename relativeToVRT="0">C:\Users\LENOVO\Rainforest Builder Dropbox\03_RB Ghana - All Team\03_Planning\00_Spatial\04_Drone Imagery\01_Data\01_Forest Reserves\03_Anhwiaso South Compartment\2026\ASO_S21-04-26_E21-04-26_R53\ASO_S21-04-26_E21-04-26_R53_0011.tif</SourceFilename>
+      <SourceFilename relativeToVRT="0">C:\Users\LENOVO\Rainforest Builder Dropbox\03_RB Ghana - All Team\03_Planning\00_Spatial\04_Drone Imagery\01_Data\01_Forest Reserves\03_Anhwiaso South Compartment\2026\ASO_S21-05-26_E21-05-26_R53\ASO_S21-05-26_E21-05-26_R53_0012.tif</SourceFilename>
       <SourceBand>3</SourceBand>
       <SourceProperties RasterXSize="16392" RasterYSize="16392" DataType="Byte" BlockXSize="512" BlockYSize="512" />
       <SrcRect xOff="0" yOff="0" xSize="16392" ySize="16392" />
       <DstRect xOff="32764" yOff="16380" xSize="16392" ySize="16392" />
-      <NODATA>0</NODATA>
+      <UseMaskBand>true</UseMaskBand>
     </ComplexSource>
     <ComplexSource>
-      <SourceFilename relativeToVRT="0">C:\Users\LENOVO\Rainforest Builder Dropbox\03_RB Ghana - All Team\03_Planning\00_Spatial\04_Drone Imagery\01_Data\01_Forest Reserves\03_Anhwiaso South Compartment\2026\ASO_S21-04-26_E21-04-26_R53\ASO_S21-04-26_E21-04-26_R53_0012.tif</SourceFilename>
+      <SourceFilename relativeToVRT="0">C:\Users\LENOVO\Rainforest Builder Dropbox\03_RB Ghana - All Team\03_Planning\00_Spatial\04_Drone Imagery\01_Data\01_Forest Reserves\03_Anhwiaso South Compartment\2026\ASO_S21-05-26_E21-05-26_R53\ASO_S21-05-26_E21-05-26_R53_0013.tif</SourceFilename>
       <SourceBand>3</SourceBand>
       <SourceProperties RasterXSize="16392" RasterYSize="16392" DataType="Byte" BlockXSize="512" BlockYSize="512" />
       <SrcRect xOff="0" yOff="0" xSize="16392" ySize="16392" />
       <DstRect xOff="49148" yOff="16380" xSize="16392" ySize="16392" />
-      <NODATA>0</NODATA>
+      <UseMaskBand>true</UseMaskBand>
     </ComplexSource>
     <ComplexSource>
-      <SourceFilename relativeToVRT="0">C:\Users\LENOVO\Rainforest Builder Dropbox\03_RB Ghana - All Team\03_Planning\00_Spatial\04_Drone Imagery\01_Data\01_Forest Reserves\03_Anhwiaso South Compartment\2026\ASO_S21-04-26_E21-04-26_R53\ASO_S21-04-26_E21-04-26_R53_0013.tif</SourceFilename>
+      <SourceFilename relativeToVRT="0">C:\Users\LENOVO\Rainforest Builder Dropbox\03_RB Ghana - All Team\03_Planning\00_Spatial\04_Drone Imagery\01_Data\01_Forest Reserves\03_Anhwiaso South Compartment\2026\ASO_S21-05-26_E21-05-26_R53\ASO_S21-05-26_E21-05-26_R53_0014.tif</SourceFilename>
       <SourceBand>3</SourceBand>
       <SourceProperties RasterXSize="16392" RasterYSize="16392" DataType="Byte" BlockXSize="512" BlockYSize="512" />
       <SrcRect xOff="0" yOff="0" xSize="16392" ySize="16392" />
       <DstRect xOff="65532" yOff="16380" xSize="16392" ySize="16392" />
-      <NODATA>0</NODATA>
+      <UseMaskBand>true</UseMaskBand>
     </ComplexSource>
     <ComplexSource>
-      <SourceFilename relativeToVRT="0">C:\Users\LENOVO\Rainforest Builder Dropbox\03_RB Ghana - All Team\03_Planning\00_Spatial\04_Drone Imagery\01_Data\01_Forest Reserves\03_Anhwiaso South Compartment\2026\ASO_S21-04-26_E21-04-26_R53\ASO_S21-04-26_E21-04-26_R53_0014.tif</SourceFilename>
+      <SourceFilename relativeToVRT="0">C:\Users\LENOVO\Rainforest Builder Dropbox\03_RB Ghana - All Team\03_Planning\00_Spatial\04_Drone Imagery\01_Data\01_Forest Reserves\03_Anhwiaso South Compartment\2026\ASO_S21-05-26_E21-05-26_R53\ASO_S21-05-26_E21-05-26_R53_0015.tif</SourceFilename>
       <SourceBand>3</SourceBand>
       <SourceProperties RasterXSize="16392" RasterYSize="16392" DataType="Byte" BlockXSize="512" BlockYSize="512" />
       <SrcRect xOff="0" yOff="0" xSize="16392" ySize="16392" />
       <DstRect xOff="81916" yOff="16380" xSize="16392" ySize="16392" />
-      <NODATA>0</NODATA>
+      <UseMaskBand>true</UseMaskBand>
     </ComplexSource>
     <ComplexSource>
-      <SourceFilename relativeToVRT="0">C:\Users\LENOVO\Rainforest Builder Dropbox\03_RB Ghana - All Team\03_Planning\00_Spatial\04_Drone Imagery\01_Data\01_Forest Reserves\03_Anhwiaso South Compartment\2026\ASO_S21-04-26_E21-04-26_R53\ASO_S21-04-26_E21-04-26_R53_0015.tif</SourceFilename>
+      <SourceFilename relativeToVRT="0">C:\Users\LENOVO\Rainforest Builder Dropbox\03_RB Ghana - All Team\03_Planning\00_Spatial\04_Drone Imagery\01_Data\01_Forest Reserves\03_Anhwiaso South Compartment\2026\ASO_S21-05-26_E21-05-26_R53\ASO_S21-05-26_E21-05-26_R53_0016.tif</SourceFilename>
       <SourceBand>3</SourceBand>
       <SourceProperties RasterXSize="16392" RasterYSize="16392" DataType="Byte" BlockXSize="512" BlockYSize="512" />
       <SrcRect xOff="0" yOff="0" xSize="16392" ySize="16392" />
       <DstRect xOff="98300" yOff="16380" xSize="16392" ySize="16392" />
-      <NODATA>0</NODATA>
+      <UseMaskBand>true</UseMaskBand>
     </ComplexSource>
     <ComplexSource>
-      <SourceFilename relativeToVRT="0">C:\Users\LENOVO\Rainforest Builder Dropbox\03_RB Ghana - All Team\03_Planning\00_Spatial\04_Drone Imagery\01_Data\01_Forest Reserves\03_Anhwiaso South Compartment\2026\ASO_S21-04-26_E21-04-26_R53\ASO_S21-04-26_E21-04-26_R53_0016.tif</SourceFilename>
+      <SourceFilename relativeToVRT="0">C:\Users\LENOVO\Rainforest Builder Dropbox\03_RB Ghana - All Team\03_Planning\00_Spatial\04_Drone Imagery\01_Data\01_Forest Reserves\03_Anhwiaso South Compartment\2026\ASO_S21-05-26_E21-05-26_R53\ASO_S21-05-26_E21-05-26_R53_0017.tif</SourceFilename>
       <SourceBand>3</SourceBand>
-      <SourceProperties RasterXSize="12089" RasterYSize="16392" DataType="Byte" BlockXSize="512" BlockYSize="512" />
-      <SrcRect xOff="0" yOff="0" xSize="12089" ySize="16392" />
-      <DstRect xOff="114684" yOff="16380" xSize="12089" ySize="16392" />
-      <NODATA>0</NODATA>
+      <SourceProperties RasterXSize="16392" RasterYSize="16392" DataType="Byte" BlockXSize="512" BlockYSize="512" />
+      <SrcRect xOff="0" yOff="0" xSize="16392" ySize="16392" />
+      <DstRect xOff="114684" yOff="16380" xSize="16392" ySize="16392" />
+      <UseMaskBand>true</UseMaskBand>
     </ComplexSource>
     <ComplexSource>
-      <SourceFilename relativeToVRT="0">C:\Users\LENOVO\Rainforest Builder Dropbox\03_RB Ghana - All Team\03_Planning\00_Spatial\04_Drone Imagery\01_Data\01_Forest Reserves\03_Anhwiaso South Compartment\2026\ASO_S21-04-26_E21-04-26_R53\ASO_S21-04-26_E21-04-26_R53_0017.tif</SourceFilename>
+      <SourceFilename relativeToVRT="0">C:\Users\LENOVO\Rainforest Builder Dropbox\03_RB Ghana - All Team\03_Planning\00_Spatial\04_Drone Imagery\01_Data\01_Forest Reserves\03_Anhwiaso South Compartment\2026\ASO_S21-05-26_E21-05-26_R53\ASO_S21-05-26_E21-05-26_R53_0018.tif</SourceFilename>
+      <SourceBand>3</SourceBand>
+      <SourceProperties RasterXSize="4983" RasterYSize="16392" DataType="Byte" BlockXSize="512" BlockYSize="512" />
+      <SrcRect xOff="0" yOff="0" xSize="4983" ySize="16392" />
+      <DstRect xOff="131068" yOff="16380" xSize="4983" ySize="16392" />
+      <UseMaskBand>true</UseMaskBand>
+    </ComplexSource>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="0">C:\Users\LENOVO\Rainforest Builder Dropbox\03_RB Ghana - All Team\03_Planning\00_Spatial\04_Drone Imagery\01_Data\01_Forest Reserves\03_Anhwiaso South Compartment\2026\ASO_S21-05-26_E21-05-26_R53\ASO_S21-05-26_E21-05-26_R53_0019.tif</SourceFilename>
       <SourceBand>3</SourceBand>
       <SourceProperties RasterXSize="16388" RasterYSize="16392" DataType="Byte" BlockXSize="512" BlockYSize="512" />
       <SrcRect xOff="0" yOff="0" xSize="16388" ySize="16392" />
       <DstRect xOff="0" yOff="32764" xSize="16388" ySize="16392" />
-      <NODATA>0</NODATA>
+      <UseMaskBand>true</UseMaskBand>
     </ComplexSource>
     <ComplexSource>
-      <SourceFilename relativeToVRT="0">C:\Users\LENOVO\Rainforest Builder Dropbox\03_RB Ghana - All Team\03_Planning\00_Spatial\04_Drone Imagery\01_Data\01_Forest Reserves\03_Anhwiaso South Compartment\2026\ASO_S21-04-26_E21-04-26_R53\ASO_S21-04-26_E21-04-26_R53_0018.tif</SourceFilename>
+      <SourceFilename relativeToVRT="0">C:\Users\LENOVO\Rainforest Builder Dropbox\03_RB Ghana - All Team\03_Planning\00_Spatial\04_Drone Imagery\01_Data\01_Forest Reserves\03_Anhwiaso South Compartment\2026\ASO_S21-05-26_E21-05-26_R53\ASO_S21-05-26_E21-05-26_R53_0020.tif</SourceFilename>
       <SourceBand>3</SourceBand>
       <SourceProperties RasterXSize="16392" RasterYSize="16392" DataType="Byte" BlockXSize="512" BlockYSize="512" />
       <SrcRect xOff="0" yOff="0" xSize="16392" ySize="16392" />
       <DstRect xOff="16380" yOff="32764" xSize="16392" ySize="16392" />
-      <NODATA>0</NODATA>
+      <UseMaskBand>true</UseMaskBand>
     </ComplexSource>
     <ComplexSource>
-      <SourceFilename relativeToVRT="0">C:\Users\LENOVO\Rainforest Builder Dropbox\03_RB Ghana - All Team\03_Planning\00_Spatial\04_Drone Imagery\01_Data\01_Forest Reserves\03_Anhwiaso South Compartment\2026\ASO_S21-04-26_E21-04-26_R53\ASO_S21-04-26_E21-04-26_R53_0019.tif</SourceFilename>
+      <SourceFilename relativeToVRT="0">C:\Users\LENOVO\Rainforest Builder Dropbox\03_RB Ghana - All Team\03_Planning\00_Spatial\04_Drone Imagery\01_Data\01_Forest Reserves\03_Anhwiaso South Compartment\2026\ASO_S21-05-26_E21-05-26_R53\ASO_S21-05-26_E21-05-26_R53_0021.tif</SourceFilename>
       <SourceBand>3</SourceBand>
       <SourceProperties RasterXSize="16392" RasterYSize="16392" DataType="Byte" BlockXSize="512" BlockYSize="512" />
       <SrcRect xOff="0" yOff="0" xSize="16392" ySize="16392" />
       <DstRect xOff="32764" yOff="32764" xSize="16392" ySize="16392" />
-      <NODATA>0</NODATA>
+      <UseMaskBand>true</UseMaskBand>
     </ComplexSource>
     <ComplexSource>
-      <SourceFilename relativeToVRT="0">C:\Users\LENOVO\Rainforest Builder Dropbox\03_RB Ghana - All Team\03_Planning\00_Spatial\04_Drone Imagery\01_Data\01_Forest Reserves\03_Anhwiaso South Compartment\2026\ASO_S21-04-26_E21-04-26_R53\ASO_S21-04-26_E21-04-26_R53_0020.tif</SourceFilename>
+      <SourceFilename relativeToVRT="0">C:\Users\LENOVO\Rainforest Builder Dropbox\03_RB Ghana - All Team\03_Planning\00_Spatial\04_Drone Imagery\01_Data\01_Forest Reserves\03_Anhwiaso South Compartment\2026\ASO_S21-05-26_E21-05-26_R53\ASO_S21-05-26_E21-05-26_R53_0022.tif</SourceFilename>
       <SourceBand>3</SourceBand>
       <SourceProperties RasterXSize="16392" RasterYSize="16392" DataType="Byte" BlockXSize="512" BlockYSize="512" />
       <SrcRect xOff="0" yOff="0" xSize="16392" ySize="16392" />
       <DstRect xOff="49148" yOff="32764" xSize="16392" ySize="16392" />
-      <NODATA>0</NODATA>
+      <UseMaskBand>true</UseMaskBand>
     </ComplexSource>
     <ComplexSource>
-      <SourceFilename relativeToVRT="0">C:\Users\LENOVO\Rainforest Builder Dropbox\03_RB Ghana - All Team\03_Planning\00_Spatial\04_Drone Imagery\01_Data\01_Forest Reserves\03_Anhwiaso South Compartment\2026\ASO_S21-04-26_E21-04-26_R53\ASO_S21-04-26_E21-04-26_R53_0021.tif</SourceFilename>
+      <SourceFilename relativeToVRT="0">C:\Users\LENOVO\Rainforest Builder Dropbox\03_RB Ghana - All Team\03_Planning\00_Spatial\04_Drone Imagery\01_Data\01_Forest Reserves\03_Anhwiaso South Compartment\2026\ASO_S21-05-26_E21-05-26_R53\ASO_S21-05-26_E21-05-26_R53_0023.tif</SourceFilename>
       <SourceBand>3</SourceBand>
       <SourceProperties RasterXSize="16392" RasterYSize="16392" DataType="Byte" BlockXSize="512" BlockYSize="512" />
       <SrcRect xOff="0" yOff="0" xSize="16392" ySize="16392" />
       <DstRect xOff="65532" yOff="32764" xSize="16392" ySize="16392" />
-      <NODATA>0</NODATA>
+      <UseMaskBand>true</UseMaskBand>
     </ComplexSource>
     <ComplexSource>
-      <SourceFilename relativeToVRT="0">C:\Users\LENOVO\Rainforest Builder Dropbox\03_RB Ghana - All Team\03_Planning\00_Spatial\04_Drone Imagery\01_Data\01_Forest Reserves\03_Anhwiaso South Compartment\2026\ASO_S21-04-26_E21-04-26_R53\ASO_S21-04-26_E21-04-26_R53_0022.tif</SourceFilename>
+      <SourceFilename relativeToVRT="0">C:\Users\LENOVO\Rainforest Builder Dropbox\03_RB Ghana - All Team\03_Planning\00_Spatial\04_Drone Imagery\01_Data\01_Forest Reserves\03_Anhwiaso South Compartment\2026\ASO_S21-05-26_E21-05-26_R53\ASO_S21-05-26_E21-05-26_R53_0024.tif</SourceFilename>
       <SourceBand>3</SourceBand>
       <SourceProperties RasterXSize="16392" RasterYSize="16392" DataType="Byte" BlockXSize="512" BlockYSize="512" />
       <SrcRect xOff="0" yOff="0" xSize="16392" ySize="16392" />
       <DstRect xOff="81916" yOff="32764" xSize="16392" ySize="16392" />
-      <NODATA>0</NODATA>
+      <UseMaskBand>true</UseMaskBand>
     </ComplexSource>
     <ComplexSource>
-      <SourceFilename relativeToVRT="0">C:\Users\LENOVO\Rainforest Builder Dropbox\03_RB Ghana - All Team\03_Planning\00_Spatial\04_Drone Imagery\01_Data\01_Forest Reserves\03_Anhwiaso South Compartment\2026\ASO_S21-04-26_E21-04-26_R53\ASO_S21-04-26_E21-04-26_R53_0025.tif</SourceFilename>
+      <SourceFilename relativeToVRT="0">C:\Users\LENOVO\Rainforest Builder Dropbox\03_RB Ghana - All Team\03_Planning\00_Spatial\04_Drone Imagery\01_Data\01_Forest Reserves\03_Anhwiaso South Compartment\2026\ASO_S21-05-26_E21-05-26_R53\ASO_S21-05-26_E21-05-26_R53_0025.tif</SourceFilename>
       <SourceBand>3</SourceBand>
-      <SourceProperties RasterXSize="16388" RasterYSize="12778" DataType="Byte" BlockXSize="512" BlockYSize="512" />
-      <SrcRect xOff="0" yOff="0" xSize="16388" ySize="12778" />
-      <DstRect xOff="0" yOff="49148" xSize="16388" ySize="12778" />
-      <NODATA>0</NODATA>
+      <SourceProperties RasterXSize="16392" RasterYSize="16392" DataType="Byte" BlockXSize="512" BlockYSize="512" />
+      <SrcRect xOff="0" yOff="0" xSize="16392" ySize="16392" />
+      <DstRect xOff="98300" yOff="32764" xSize="16392" ySize="16392" />
+      <UseMaskBand>true</UseMaskBand>
     </ComplexSource>
     <ComplexSource>
-      <SourceFilename relativeToVRT="0">C:\Users\LENOVO\Rainforest Builder Dropbox\03_RB Ghana - All Team\03_Planning\00_Spatial\04_Drone Imagery\01_Data\01_Forest Reserves\03_Anhwiaso South Compartment\2026\ASO_S21-04-26_E21-04-26_R53\ASO_S21-04-26_E21-04-26_R53_0026.tif</SourceFilename>
+      <SourceFilename relativeToVRT="0">C:\Users\LENOVO\Rainforest Builder Dropbox\03_RB Ghana - All Team\03_Planning\00_Spatial\04_Drone Imagery\01_Data\01_Forest Reserves\03_Anhwiaso South Compartment\2026\ASO_S21-05-26_E21-05-26_R53\ASO_S21-05-26_E21-05-26_R53_0028.tif</SourceFilename>
       <SourceBand>3</SourceBand>
-      <SourceProperties RasterXSize="16392" RasterYSize="12778" DataType="Byte" BlockXSize="512" BlockYSize="512" />
-      <SrcRect xOff="0" yOff="0" xSize="16392" ySize="12778" />
-      <DstRect xOff="16380" yOff="49148" xSize="16392" ySize="12778" />
-      <NODATA>0</NODATA>
+      <SourceProperties RasterXSize="16388" RasterYSize="16392" DataType="Byte" BlockXSize="512" BlockYSize="512" />
+      <SrcRect xOff="0" yOff="0" xSize="16388" ySize="16392" />
+      <DstRect xOff="0" yOff="49148" xSize="16388" ySize="16392" />
+      <UseMaskBand>true</UseMaskBand>
     </ComplexSource>
     <ComplexSource>
-      <SourceFilename relativeToVRT="0">C:\Users\LENOVO\Rainforest Builder Dropbox\03_RB Ghana - All Team\03_Planning\00_Spatial\04_Drone Imagery\01_Data\01_Forest Reserves\03_Anhwiaso South Compartment\2026\ASO_S21-04-26_E21-04-26_R53\ASO_S21-04-26_E21-04-26_R53_0027.tif</SourceFilename>
+      <SourceFilename relativeToVRT="0">C:\Users\LENOVO\Rainforest Builder Dropbox\03_RB Ghana - All Team\03_Planning\00_Spatial\04_Drone Imagery\01_Data\01_Forest Reserves\03_Anhwiaso South Compartment\2026\ASO_S21-05-26_E21-05-26_R53\ASO_S21-05-26_E21-05-26_R53_0029.tif</SourceFilename>
       <SourceBand>3</SourceBand>
-      <SourceProperties RasterXSize="16392" RasterYSize="12778" DataType="Byte" BlockXSize="512" BlockYSize="512" />
-      <SrcRect xOff="0" yOff="0" xSize="16392" ySize="12778" />
-      <DstRect xOff="32764" yOff="49148" xSize="16392" ySize="12778" />
-      <NODATA>0</NODATA>
+      <SourceProperties RasterXSize="16392" RasterYSize="16392" DataType="Byte" BlockXSize="512" BlockYSize="512" />
+      <SrcRect xOff="0" yOff="0" xSize="16392" ySize="16392" />
+      <DstRect xOff="16380" yOff="49148" xSize="16392" ySize="16392" />
+      <UseMaskBand>true</UseMaskBand>
     </ComplexSource>
     <ComplexSource>
-      <SourceFilename relativeToVRT="0">C:\Users\LENOVO\Rainforest Builder Dropbox\03_RB Ghana - All Team\03_Planning\00_Spatial\04_Drone Imagery\01_Data\01_Forest Reserves\03_Anhwiaso South Compartment\2026\ASO_S21-04-26_E21-04-26_R53\ASO_S21-04-26_E21-04-26_R53_0028.tif</SourceFilename>
+      <SourceFilename relativeToVRT="0">C:\Users\LENOVO\Rainforest Builder Dropbox\03_RB Ghana - All Team\03_Planning\00_Spatial\04_Drone Imagery\01_Data\01_Forest Reserves\03_Anhwiaso South Compartment\2026\ASO_S21-05-26_E21-05-26_R53\ASO_S21-05-26_E21-05-26_R53_0030.tif</SourceFilename>
       <SourceBand>3</SourceBand>
-      <SourceProperties RasterXSize="16392" RasterYSize="12778" DataType="Byte" BlockXSize="512" BlockYSize="512" />
-      <SrcRect xOff="0" yOff="0" xSize="16392" ySize="12778" />
-      <DstRect xOff="49148" yOff="49148" xSize="16392" ySize="12778" />
-      <NODATA>0</NODATA>
+      <SourceProperties RasterXSize="16392" RasterYSize="16392" DataType="Byte" BlockXSize="512" BlockYSize="512" />
+      <SrcRect xOff="0" yOff="0" xSize="16392" ySize="16392" />
+      <DstRect xOff="32764" yOff="49148" xSize="16392" ySize="16392" />
+      <UseMaskBand>true</UseMaskBand>
+    </ComplexSource>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="0">C:\Users\LENOVO\Rainforest Builder Dropbox\03_RB Ghana - All Team\03_Planning\00_Spatial\04_Drone Imagery\01_Data\01_Forest Reserves\03_Anhwiaso South Compartment\2026\ASO_S21-05-26_E21-05-26_R53\ASO_S21-05-26_E21-05-26_R53_0031.tif</SourceFilename>
+      <SourceBand>3</SourceBand>
+      <SourceProperties RasterXSize="16392" RasterYSize="16392" DataType="Byte" BlockXSize="512" BlockYSize="512" />
+      <SrcRect xOff="0" yOff="0" xSize="16392" ySize="16392" />
+      <DstRect xOff="49148" yOff="49148" xSize="16392" ySize="16392" />
+      <UseMaskBand>true</UseMaskBand>
+    </ComplexSource>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="0">C:\Users\LENOVO\Rainforest Builder Dropbox\03_RB Ghana - All Team\03_Planning\00_Spatial\04_Drone Imagery\01_Data\01_Forest Reserves\03_Anhwiaso South Compartment\2026\ASO_S21-05-26_E21-05-26_R53\ASO_S21-05-26_E21-05-26_R53_0032.tif</SourceFilename>
+      <SourceBand>3</SourceBand>
+      <SourceProperties RasterXSize="16392" RasterYSize="16392" DataType="Byte" BlockXSize="512" BlockYSize="512" />
+      <SrcRect xOff="0" yOff="0" xSize="16392" ySize="16392" />
+      <DstRect xOff="65532" yOff="49148" xSize="16392" ySize="16392" />
+      <UseMaskBand>true</UseMaskBand>
+    </ComplexSource>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="0">C:\Users\LENOVO\Rainforest Builder Dropbox\03_RB Ghana - All Team\03_Planning\00_Spatial\04_Drone Imagery\01_Data\01_Forest Reserves\03_Anhwiaso South Compartment\2026\ASO_S21-05-26_E21-05-26_R53\ASO_S21-05-26_E21-05-26_R53_0033.tif</SourceFilename>
+      <SourceBand>3</SourceBand>
+      <SourceProperties RasterXSize="16392" RasterYSize="16392" DataType="Byte" BlockXSize="512" BlockYSize="512" />
+      <SrcRect xOff="0" yOff="0" xSize="16392" ySize="16392" />
+      <DstRect xOff="81916" yOff="49148" xSize="16392" ySize="16392" />
+      <UseMaskBand>true</UseMaskBand>
+    </ComplexSource>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="0">C:\Users\LENOVO\Rainforest Builder Dropbox\03_RB Ghana - All Team\03_Planning\00_Spatial\04_Drone Imagery\01_Data\01_Forest Reserves\03_Anhwiaso South Compartment\2026\ASO_S21-05-26_E21-05-26_R53\ASO_S21-05-26_E21-05-26_R53_0038.tif</SourceFilename>
+      <SourceBand>3</SourceBand>
+      <SourceProperties RasterXSize="16392" RasterYSize="358" DataType="Byte" BlockXSize="512" BlockYSize="512" />
+      <SrcRect xOff="0" yOff="0" xSize="16392" ySize="358" />
+      <DstRect xOff="16380" yOff="65532" xSize="16392" ySize="358" />
+      <UseMaskBand>true</UseMaskBand>
     </ComplexSource>
   </VRTRasterBand>
   <VRTRasterBand dataType="Byte" band="4">
-    <NoDataValue>0</NoDataValue>
     <ColorInterp>Alpha</ColorInterp>
     <ComplexSource>
-      <SourceFilename relativeToVRT="0">C:\Users\LENOVO\Rainforest Builder Dropbox\03_RB Ghana - All Team\03_Planning\00_Spatial\04_Drone Imagery\01_Data\01_Forest Reserves\03_Anhwiaso South Compartment\2026\ASO_S21-04-26_E21-04-26_R53\ASO_S21-04-26_E21-04-26_R53_0001.tif</SourceFilename>
+      <SourceFilename relativeToVRT="0">C:\Users\LENOVO\Rainforest Builder Dropbox\03_RB Ghana - All Team\03_Planning\00_Spatial\04_Drone Imagery\01_Data\01_Forest Reserves\03_Anhwiaso South Compartment\2026\ASO_S21-05-26_E21-05-26_R53\ASO_S21-05-26_E21-05-26_R53_0001.tif</SourceFilename>
       <SourceBand>4</SourceBand>
       <SourceProperties RasterXSize="16388" RasterYSize="16388" DataType="Byte" BlockXSize="512" BlockYSize="512" />
       <SrcRect xOff="0" yOff="0" xSize="16388" ySize="16388" />
       <DstRect xOff="0" yOff="0" xSize="16388" ySize="16388" />
-      <NODATA>0</NODATA>
+      <UseMaskBand>true</UseMaskBand>
     </ComplexSource>
     <ComplexSource>
-      <SourceFilename relativeToVRT="0">C:\Users\LENOVO\Rainforest Builder Dropbox\03_RB Ghana - All Team\03_Planning\00_Spatial\04_Drone Imagery\01_Data\01_Forest Reserves\03_Anhwiaso South Compartment\2026\ASO_S21-04-26_E21-04-26_R53\ASO_S21-04-26_E21-04-26_R53_0002.tif</SourceFilename>
+      <SourceFilename relativeToVRT="0">C:\Users\LENOVO\Rainforest Builder Dropbox\03_RB Ghana - All Team\03_Planning\00_Spatial\04_Drone Imagery\01_Data\01_Forest Reserves\03_Anhwiaso South Compartment\2026\ASO_S21-05-26_E21-05-26_R53\ASO_S21-05-26_E21-05-26_R53_0002.tif</SourceFilename>
       <SourceBand>4</SourceBand>
       <SourceProperties RasterXSize="16392" RasterYSize="16388" DataType="Byte" BlockXSize="512" BlockYSize="512" />
       <SrcRect xOff="0" yOff="0" xSize="16392" ySize="16388" />
       <DstRect xOff="16380" yOff="0" xSize="16392" ySize="16388" />
-      <NODATA>0</NODATA>
+      <UseMaskBand>true</UseMaskBand>
     </ComplexSource>
     <ComplexSource>
-      <SourceFilename relativeToVRT="0">C:\Users\LENOVO\Rainforest Builder Dropbox\03_RB Ghana - All Team\03_Planning\00_Spatial\04_Drone Imagery\01_Data\01_Forest Reserves\03_Anhwiaso South Compartment\2026\ASO_S21-04-26_E21-04-26_R53\ASO_S21-04-26_E21-04-26_R53_0003.tif</SourceFilename>
+      <SourceFilename relativeToVRT="0">C:\Users\LENOVO\Rainforest Builder Dropbox\03_RB Ghana - All Team\03_Planning\00_Spatial\04_Drone Imagery\01_Data\01_Forest Reserves\03_Anhwiaso South Compartment\2026\ASO_S21-05-26_E21-05-26_R53\ASO_S21-05-26_E21-05-26_R53_0003.tif</SourceFilename>
       <SourceBand>4</SourceBand>
       <SourceProperties RasterXSize="16392" RasterYSize="16388" DataType="Byte" BlockXSize="512" BlockYSize="512" />
       <SrcRect xOff="0" yOff="0" xSize="16392" ySize="16388" />
       <DstRect xOff="32764" yOff="0" xSize="16392" ySize="16388" />
-      <NODATA>0</NODATA>
+      <UseMaskBand>true</UseMaskBand>
     </ComplexSource>
     <ComplexSource>
-      <SourceFilename relativeToVRT="0">C:\Users\LENOVO\Rainforest Builder Dropbox\03_RB Ghana - All Team\03_Planning\00_Spatial\04_Drone Imagery\01_Data\01_Forest Reserves\03_Anhwiaso South Compartment\2026\ASO_S21-04-26_E21-04-26_R53\ASO_S21-04-26_E21-04-26_R53_0004.tif</SourceFilename>
+      <SourceFilename relativeToVRT="0">C:\Users\LENOVO\Rainforest Builder Dropbox\03_RB Ghana - All Team\03_Planning\00_Spatial\04_Drone Imagery\01_Data\01_Forest Reserves\03_Anhwiaso South Compartment\2026\ASO_S21-05-26_E21-05-26_R53\ASO_S21-05-26_E21-05-26_R53_0004.tif</SourceFilename>
       <SourceBand>4</SourceBand>
       <SourceProperties RasterXSize="16392" RasterYSize="16388" DataType="Byte" BlockXSize="512" BlockYSize="512" />
       <SrcRect xOff="0" yOff="0" xSize="16392" ySize="16388" />
       <DstRect xOff="49148" yOff="0" xSize="16392" ySize="16388" />
-      <NODATA>0</NODATA>
+      <UseMaskBand>true</UseMaskBand>
     </ComplexSource>
     <ComplexSource>
-      <SourceFilename relativeToVRT="0">C:\Users\LENOVO\Rainforest Builder Dropbox\03_RB Ghana - All Team\03_Planning\00_Spatial\04_Drone Imagery\01_Data\01_Forest Reserves\03_Anhwiaso South Compartment\2026\ASO_S21-04-26_E21-04-26_R53\ASO_S21-04-26_E21-04-26_R53_0005.tif</SourceFilename>
+      <SourceFilename relativeToVRT="0">C:\Users\LENOVO\Rainforest Builder Dropbox\03_RB Ghana - All Team\03_Planning\00_Spatial\04_Drone Imagery\01_Data\01_Forest Reserves\03_Anhwiaso South Compartment\2026\ASO_S21-05-26_E21-05-26_R53\ASO_S21-05-26_E21-05-26_R53_0005.tif</SourceFilename>
       <SourceBand>4</SourceBand>
       <SourceProperties RasterXSize="16392" RasterYSize="16388" DataType="Byte" BlockXSize="512" BlockYSize="512" />
       <SrcRect xOff="0" yOff="0" xSize="16392" ySize="16388" />
       <DstRect xOff="65532" yOff="0" xSize="16392" ySize="16388" />
-      <NODATA>0</NODATA>
+      <UseMaskBand>true</UseMaskBand>
     </ComplexSource>
     <ComplexSource>
-      <SourceFilename relativeToVRT="0">C:\Users\LENOVO\Rainforest Builder Dropbox\03_RB Ghana - All Team\03_Planning\00_Spatial\04_Drone Imagery\01_Data\01_Forest Reserves\03_Anhwiaso South Compartment\2026\ASO_S21-04-26_E21-04-26_R53\ASO_S21-04-26_E21-04-26_R53_0006.tif</SourceFilename>
+      <SourceFilename relativeToVRT="0">C:\Users\LENOVO\Rainforest Builder Dropbox\03_RB Ghana - All Team\03_Planning\00_Spatial\04_Drone Imagery\01_Data\01_Forest Reserves\03_Anhwiaso South Compartment\2026\ASO_S21-05-26_E21-05-26_R53\ASO_S21-05-26_E21-05-26_R53_0006.tif</SourceFilename>
       <SourceBand>4</SourceBand>
       <SourceProperties RasterXSize="16392" RasterYSize="16388" DataType="Byte" BlockXSize="512" BlockYSize="512" />
       <SrcRect xOff="0" yOff="0" xSize="16392" ySize="16388" />
       <DstRect xOff="81916" yOff="0" xSize="16392" ySize="16388" />
-      <NODATA>0</NODATA>
+      <UseMaskBand>true</UseMaskBand>
     </ComplexSource>
     <ComplexSource>
-      <SourceFilename relativeToVRT="0">C:\Users\LENOVO\Rainforest Builder Dropbox\03_RB Ghana - All Team\03_Planning\00_Spatial\04_Drone Imagery\01_Data\01_Forest Reserves\03_Anhwiaso South Compartment\2026\ASO_S21-04-26_E21-04-26_R53\ASO_S21-04-26_E21-04-26_R53_0007.tif</SourceFilename>
+      <SourceFilename relativeToVRT="0">C:\Users\LENOVO\Rainforest Builder Dropbox\03_RB Ghana - All Team\03_Planning\00_Spatial\04_Drone Imagery\01_Data\01_Forest Reserves\03_Anhwiaso South Compartment\2026\ASO_S21-05-26_E21-05-26_R53\ASO_S21-05-26_E21-05-26_R53_0007.tif</SourceFilename>
       <SourceBand>4</SourceBand>
       <SourceProperties RasterXSize="16392" RasterYSize="16388" DataType="Byte" BlockXSize="512" BlockYSize="512" />
       <SrcRect xOff="0" yOff="0" xSize="16392" ySize="16388" />
       <DstRect xOff="98300" yOff="0" xSize="16392" ySize="16388" />
-      <NODATA>0</NODATA>
+      <UseMaskBand>true</UseMaskBand>
     </ComplexSource>
     <ComplexSource>
-      <SourceFilename relativeToVRT="0">C:\Users\LENOVO\Rainforest Builder Dropbox\03_RB Ghana - All Team\03_Planning\00_Spatial\04_Drone Imagery\01_Data\01_Forest Reserves\03_Anhwiaso South Compartment\2026\ASO_S21-04-26_E21-04-26_R53\ASO_S21-04-26_E21-04-26_R53_0008.tif</SourceFilename>
+      <SourceFilename relativeToVRT="0">C:\Users\LENOVO\Rainforest Builder Dropbox\03_RB Ghana - All Team\03_Planning\00_Spatial\04_Drone Imagery\01_Data\01_Forest Reserves\03_Anhwiaso South Compartment\2026\ASO_S21-05-26_E21-05-26_R53\ASO_S21-05-26_E21-05-26_R53_0008.tif</SourceFilename>
       <SourceBand>4</SourceBand>
-      <SourceProperties RasterXSize="12089" RasterYSize="16388" DataType="Byte" BlockXSize="512" BlockYSize="512" />
-      <SrcRect xOff="0" yOff="0" xSize="12089" ySize="16388" />
-      <DstRect xOff="114684" yOff="0" xSize="12089" ySize="16388" />
-      <NODATA>0</NODATA>
+      <SourceProperties RasterXSize="16392" RasterYSize="16388" DataType="Byte" BlockXSize="512" BlockYSize="512" />
+      <SrcRect xOff="0" yOff="0" xSize="16392" ySize="16388" />
+      <DstRect xOff="114684" yOff="0" xSize="16392" ySize="16388" />
+      <UseMaskBand>true</UseMaskBand>
     </ComplexSource>
     <ComplexSource>
-      <SourceFilename relativeToVRT="0">C:\Users\LENOVO\Rainforest Builder Dropbox\03_RB Ghana - All Team\03_Planning\00_Spatial\04_Drone Imagery\01_Data\01_Forest Reserves\03_Anhwiaso South Compartment\2026\ASO_S21-04-26_E21-04-26_R53\ASO_S21-04-26_E21-04-26_R53_0009.tif</SourceFilename>
+      <SourceFilename relativeToVRT="0">C:\Users\LENOVO\Rainforest Builder Dropbox\03_RB Ghana - All Team\03_Planning\00_Spatial\04_Drone Imagery\01_Data\01_Forest Reserves\03_Anhwiaso South Compartment\2026\ASO_S21-05-26_E21-05-26_R53\ASO_S21-05-26_E21-05-26_R53_0009.tif</SourceFilename>
+      <SourceBand>4</SourceBand>
+      <SourceProperties RasterXSize="4983" RasterYSize="16388" DataType="Byte" BlockXSize="512" BlockYSize="512" />
+      <SrcRect xOff="0" yOff="0" xSize="4983" ySize="16388" />
+      <DstRect xOff="131068" yOff="0" xSize="4983" ySize="16388" />
+      <UseMaskBand>true</UseMaskBand>
+    </ComplexSource>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="0">C:\Users\LENOVO\Rainforest Builder Dropbox\03_RB Ghana - All Team\03_Planning\00_Spatial\04_Drone Imagery\01_Data\01_Forest Reserves\03_Anhwiaso South Compartment\2026\ASO_S21-05-26_E21-05-26_R53\ASO_S21-05-26_E21-05-26_R53_0010.tif</SourceFilename>
       <SourceBand>4</SourceBand>
       <SourceProperties RasterXSize="16388" RasterYSize="16392" DataType="Byte" BlockXSize="512" BlockYSize="512" />
       <SrcRect xOff="0" yOff="0" xSize="16388" ySize="16392" />
       <DstRect xOff="0" yOff="16380" xSize="16388" ySize="16392" />
-      <NODATA>0</NODATA>
+      <UseMaskBand>true</UseMaskBand>
     </ComplexSource>
     <ComplexSource>
-      <SourceFilename relativeToVRT="0">C:\Users\LENOVO\Rainforest Builder Dropbox\03_RB Ghana - All Team\03_Planning\00_Spatial\04_Drone Imagery\01_Data\01_Forest Reserves\03_Anhwiaso South Compartment\2026\ASO_S21-04-26_E21-04-26_R53\ASO_S21-04-26_E21-04-26_R53_0010.tif</SourceFilename>
+      <SourceFilename relativeToVRT="0">C:\Users\LENOVO\Rainforest Builder Dropbox\03_RB Ghana - All Team\03_Planning\00_Spatial\04_Drone Imagery\01_Data\01_Forest Reserves\03_Anhwiaso South Compartment\2026\ASO_S21-05-26_E21-05-26_R53\ASO_S21-05-26_E21-05-26_R53_0011.tif</SourceFilename>
       <SourceBand>4</SourceBand>
       <SourceProperties RasterXSize="16392" RasterYSize="16392" DataType="Byte" BlockXSize="512" BlockYSize="512" />
       <SrcRect xOff="0" yOff="0" xSize="16392" ySize="16392" />
       <DstRect xOff="16380" yOff="16380" xSize="16392" ySize="16392" />
-      <NODATA>0</NODATA>
+      <UseMaskBand>true</UseMaskBand>
     </ComplexSource>
     <ComplexSource>
-      <SourceFilename relativeToVRT="0">C:\Users\LENOVO\Rainforest Builder Dropbox\03_RB Ghana - All Team\03_Planning\00_Spatial\04_Drone Imagery\01_Data\01_Forest Reserves\03_Anhwiaso South Compartment\2026\ASO_S21-04-26_E21-04-26_R53\ASO_S21-04-26_E21-04-26_R53_0011.tif</SourceFilename>
+      <SourceFilename relativeToVRT="0">C:\Users\LENOVO\Rainforest Builder Dropbox\03_RB Ghana - All Team\03_Planning\00_Spatial\04_Drone Imagery\01_Data\01_Forest Reserves\03_Anhwiaso South Compartment\2026\ASO_S21-05-26_E21-05-26_R53\ASO_S21-05-26_E21-05-26_R53_0012.tif</SourceFilename>
       <SourceBand>4</SourceBand>
       <SourceProperties RasterXSize="16392" RasterYSize="16392" DataType="Byte" BlockXSize="512" BlockYSize="512" />
       <SrcRect xOff="0" yOff="0" xSize="16392" ySize="16392" />
       <DstRect xOff="32764" yOff="16380" xSize="16392" ySize="16392" />
-      <NODATA>0</NODATA>
+      <UseMaskBand>true</UseMaskBand>
     </ComplexSource>
     <ComplexSource>
-      <SourceFilename relativeToVRT="0">C:\Users\LENOVO\Rainforest Builder Dropbox\03_RB Ghana - All Team\03_Planning\00_Spatial\04_Drone Imagery\01_Data\01_Forest Reserves\03_Anhwiaso South Compartment\2026\ASO_S21-04-26_E21-04-26_R53\ASO_S21-04-26_E21-04-26_R53_0012.tif</SourceFilename>
+      <SourceFilename relativeToVRT="0">C:\Users\LENOVO\Rainforest Builder Dropbox\03_RB Ghana - All Team\03_Planning\00_Spatial\04_Drone Imagery\01_Data\01_Forest Reserves\03_Anhwiaso South Compartment\2026\ASO_S21-05-26_E21-05-26_R53\ASO_S21-05-26_E21-05-26_R53_0013.tif</SourceFilename>
       <SourceBand>4</SourceBand>
       <SourceProperties RasterXSize="16392" RasterYSize="16392" DataType="Byte" BlockXSize="512" BlockYSize="512" />
       <SrcRect xOff="0" yOff="0" xSize="16392" ySize="16392" />
       <DstRect xOff="49148" yOff="16380" xSize="16392" ySize="16392" />
-      <NODATA>0</NODATA>
+      <UseMaskBand>true</UseMaskBand>
     </ComplexSource>
     <ComplexSource>
-      <SourceFilename relativeToVRT="0">C:\Users\LENOVO\Rainforest Builder Dropbox\03_RB Ghana - All Team\03_Planning\00_Spatial\04_Drone Imagery\01_Data\01_Forest Reserves\03_Anhwiaso South Compartment\2026\ASO_S21-04-26_E21-04-26_R53\ASO_S21-04-26_E21-04-26_R53_0013.tif</SourceFilename>
+      <SourceFilename relativeToVRT="0">C:\Users\LENOVO\Rainforest Builder Dropbox\03_RB Ghana - All Team\03_Planning\00_Spatial\04_Drone Imagery\01_Data\01_Forest Reserves\03_Anhwiaso South Compartment\2026\ASO_S21-05-26_E21-05-26_R53\ASO_S21-05-26_E21-05-26_R53_0014.tif</SourceFilename>
       <SourceBand>4</SourceBand>
       <SourceProperties RasterXSize="16392" RasterYSize="16392" DataType="Byte" BlockXSize="512" BlockYSize="512" />
       <SrcRect xOff="0" yOff="0" xSize="16392" ySize="16392" />
       <DstRect xOff="65532" yOff="16380" xSize="16392" ySize="16392" />
-      <NODATA>0</NODATA>
+      <UseMaskBand>true</UseMaskBand>
     </ComplexSource>
     <ComplexSource>
-      <SourceFilename relativeToVRT="0">C:\Users\LENOVO\Rainforest Builder Dropbox\03_RB Ghana - All Team\03_Planning\00_Spatial\04_Drone Imagery\01_Data\01_Forest Reserves\03_Anhwiaso South Compartment\2026\ASO_S21-04-26_E21-04-26_R53\ASO_S21-04-26_E21-04-26_R53_0014.tif</SourceFilename>
+      <SourceFilename relativeToVRT="0">C:\Users\LENOVO\Rainforest Builder Dropbox\03_RB Ghana - All Team\03_Planning\00_Spatial\04_Drone Imagery\01_Data\01_Forest Reserves\03_Anhwiaso South Compartment\2026\ASO_S21-05-26_E21-05-26_R53\ASO_S21-05-26_E21-05-26_R53_0015.tif</SourceFilename>
       <SourceBand>4</SourceBand>
       <SourceProperties RasterXSize="16392" RasterYSize="16392" DataType="Byte" BlockXSize="512" BlockYSize="512" />
       <SrcRect xOff="0" yOff="0" xSize="16392" ySize="16392" />
       <DstRect xOff="81916" yOff="16380" xSize="16392" ySize="16392" />
-      <NODATA>0</NODATA>
+      <UseMaskBand>true</UseMaskBand>
     </ComplexSource>
     <ComplexSource>
-      <SourceFilename relativeToVRT="0">C:\Users\LENOVO\Rainforest Builder Dropbox\03_RB Ghana - All Team\03_Planning\00_Spatial\04_Drone Imagery\01_Data\01_Forest Reserves\03_Anhwiaso South Compartment\2026\ASO_S21-04-26_E21-04-26_R53\ASO_S21-04-26_E21-04-26_R53_0015.tif</SourceFilename>
+      <SourceFilename relativeToVRT="0">C:\Users\LENOVO\Rainforest Builder Dropbox\03_RB Ghana - All Team\03_Planning\00_Spatial\04_Drone Imagery\01_Data\01_Forest Reserves\03_Anhwiaso South Compartment\2026\ASO_S21-05-26_E21-05-26_R53\ASO_S21-05-26_E21-05-26_R53_0016.tif</SourceFilename>
       <SourceBand>4</SourceBand>
       <SourceProperties RasterXSize="16392" RasterYSize="16392" DataType="Byte" BlockXSize="512" BlockYSize="512" />
       <SrcRect xOff="0" yOff="0" xSize="16392" ySize="16392" />
       <DstRect xOff="98300" yOff="16380" xSize="16392" ySize="16392" />
-      <NODATA>0</NODATA>
+      <UseMaskBand>true</UseMaskBand>
     </ComplexSource>
     <ComplexSource>
-      <SourceFilename relativeToVRT="0">C:\Users\LENOVO\Rainforest Builder Dropbox\03_RB Ghana - All Team\03_Planning\00_Spatial\04_Drone Imagery\01_Data\01_Forest Reserves\03_Anhwiaso South Compartment\2026\ASO_S21-04-26_E21-04-26_R53\ASO_S21-04-26_E21-04-26_R53_0016.tif</SourceFilename>
+      <SourceFilename relativeToVRT="0">C:\Users\LENOVO\Rainforest Builder Dropbox\03_RB Ghana - All Team\03_Planning\00_Spatial\04_Drone Imagery\01_Data\01_Forest Reserves\03_Anhwiaso South Compartment\2026\ASO_S21-05-26_E21-05-26_R53\ASO_S21-05-26_E21-05-26_R53_0017.tif</SourceFilename>
       <SourceBand>4</SourceBand>
-      <SourceProperties RasterXSize="12089" RasterYSize="16392" DataType="Byte" BlockXSize="512" BlockYSize="512" />
-      <SrcRect xOff="0" yOff="0" xSize="12089" ySize="16392" />
-      <DstRect xOff="114684" yOff="16380" xSize="12089" ySize="16392" />
-      <NODATA>0</NODATA>
+      <SourceProperties RasterXSize="16392" RasterYSize="16392" DataType="Byte" BlockXSize="512" BlockYSize="512" />
+      <SrcRect xOff="0" yOff="0" xSize="16392" ySize="16392" />
+      <DstRect xOff="114684" yOff="16380" xSize="16392" ySize="16392" />
+      <UseMaskBand>true</UseMaskBand>
     </ComplexSource>
     <ComplexSource>
-      <SourceFilename relativeToVRT="0">C:\Users\LENOVO\Rainforest Builder Dropbox\03_RB Ghana - All Team\03_Planning\00_Spatial\04_Drone Imagery\01_Data\01_Forest Reserves\03_Anhwiaso South Compartment\2026\ASO_S21-04-26_E21-04-26_R53\ASO_S21-04-26_E21-04-26_R53_0017.tif</SourceFilename>
+      <SourceFilename relativeToVRT="0">C:\Users\LENOVO\Rainforest Builder Dropbox\03_RB Ghana - All Team\03_Planning\00_Spatial\04_Drone Imagery\01_Data\01_Forest Reserves\03_Anhwiaso South Compartment\2026\ASO_S21-05-26_E21-05-26_R53\ASO_S21-05-26_E21-05-26_R53_0018.tif</SourceFilename>
+      <SourceBand>4</SourceBand>
+      <SourceProperties RasterXSize="4983" RasterYSize="16392" DataType="Byte" BlockXSize="512" BlockYSize="512" />
+      <SrcRect xOff="0" yOff="0" xSize="4983" ySize="16392" />
+      <DstRect xOff="131068" yOff="16380" xSize="4983" ySize="16392" />
+      <UseMaskBand>true</UseMaskBand>
+    </ComplexSource>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="0">C:\Users\LENOVO\Rainforest Builder Dropbox\03_RB Ghana - All Team\03_Planning\00_Spatial\04_Drone Imagery\01_Data\01_Forest Reserves\03_Anhwiaso South Compartment\2026\ASO_S21-05-26_E21-05-26_R53\ASO_S21-05-26_E21-05-26_R53_0019.tif</SourceFilename>
       <SourceBand>4</SourceBand>
       <SourceProperties RasterXSize="16388" RasterYSize="16392" DataType="Byte" BlockXSize="512" BlockYSize="512" />
       <SrcRect xOff="0" yOff="0" xSize="16388" ySize="16392" />
       <DstRect xOff="0" yOff="32764" xSize="16388" ySize="16392" />
-      <NODATA>0</NODATA>
+      <UseMaskBand>true</UseMaskBand>
     </ComplexSource>
     <ComplexSource>
-      <SourceFilename relativeToVRT="0">C:\Users\LENOVO\Rainforest Builder Dropbox\03_RB Ghana - All Team\03_Planning\00_Spatial\04_Drone Imagery\01_Data\01_Forest Reserves\03_Anhwiaso South Compartment\2026\ASO_S21-04-26_E21-04-26_R53\ASO_S21-04-26_E21-04-26_R53_0018.tif</SourceFilename>
+      <SourceFilename relativeToVRT="0">C:\Users\LENOVO\Rainforest Builder Dropbox\03_RB Ghana - All Team\03_Planning\00_Spatial\04_Drone Imagery\01_Data\01_Forest Reserves\03_Anhwiaso South Compartment\2026\ASO_S21-05-26_E21-05-26_R53\ASO_S21-05-26_E21-05-26_R53_0020.tif</SourceFilename>
       <SourceBand>4</SourceBand>
       <SourceProperties RasterXSize="16392" RasterYSize="16392" DataType="Byte" BlockXSize="512" BlockYSize="512" />
       <SrcRect xOff="0" yOff="0" xSize="16392" ySize="16392" />
       <DstRect xOff="16380" yOff="32764" xSize="16392" ySize="16392" />
-      <NODATA>0</NODATA>
+      <UseMaskBand>true</UseMaskBand>
     </ComplexSource>
     <ComplexSource>
-      <SourceFilename relativeToVRT="0">C:\Users\LENOVO\Rainforest Builder Dropbox\03_RB Ghana - All Team\03_Planning\00_Spatial\04_Drone Imagery\01_Data\01_Forest Reserves\03_Anhwiaso South Compartment\2026\ASO_S21-04-26_E21-04-26_R53\ASO_S21-04-26_E21-04-26_R53_0019.tif</SourceFilename>
+      <SourceFilename relativeToVRT="0">C:\Users\LENOVO\Rainforest Builder Dropbox\03_RB Ghana - All Team\03_Planning\00_Spatial\04_Drone Imagery\01_Data\01_Forest Reserves\03_Anhwiaso South Compartment\2026\ASO_S21-05-26_E21-05-26_R53\ASO_S21-05-26_E21-05-26_R53_0021.tif</SourceFilename>
       <SourceBand>4</SourceBand>
       <SourceProperties RasterXSize="16392" RasterYSize="16392" DataType="Byte" BlockXSize="512" BlockYSize="512" />
       <SrcRect xOff="0" yOff="0" xSize="16392" ySize="16392" />
       <DstRect xOff="32764" yOff="32764" xSize="16392" ySize="16392" />
-      <NODATA>0</NODATA>
+      <UseMaskBand>true</UseMaskBand>
     </ComplexSource>
     <ComplexSource>
-      <SourceFilename relativeToVRT="0">C:\Users\LENOVO\Rainforest Builder Dropbox\03_RB Ghana - All Team\03_Planning\00_Spatial\04_Drone Imagery\01_Data\01_Forest Reserves\03_Anhwiaso South Compartment\2026\ASO_S21-04-26_E21-04-26_R53\ASO_S21-04-26_E21-04-26_R53_0020.tif</SourceFilename>
+      <SourceFilename relativeToVRT="0">C:\Users\LENOVO\Rainforest Builder Dropbox\03_RB Ghana - All Team\03_Planning\00_Spatial\04_Drone Imagery\01_Data\01_Forest Reserves\03_Anhwiaso South Compartment\2026\ASO_S21-05-26_E21-05-26_R53\ASO_S21-05-26_E21-05-26_R53_0022.tif</SourceFilename>
       <SourceBand>4</SourceBand>
       <SourceProperties RasterXSize="16392" RasterYSize="16392" DataType="Byte" BlockXSize="512" BlockYSize="512" />
       <SrcRect xOff="0" yOff="0" xSize="16392" ySize="16392" />
       <DstRect xOff="49148" yOff="32764" xSize="16392" ySize="16392" />
-      <NODATA>0</NODATA>
+      <UseMaskBand>true</UseMaskBand>
     </ComplexSource>
     <ComplexSource>
-      <SourceFilename relativeToVRT="0">C:\Users\LENOVO\Rainforest Builder Dropbox\03_RB Ghana - All Team\03_Planning\00_Spatial\04_Drone Imagery\01_Data\01_Forest Reserves\03_Anhwiaso South Compartment\2026\ASO_S21-04-26_E21-04-26_R53\ASO_S21-04-26_E21-04-26_R53_0021.tif</SourceFilename>
+      <SourceFilename relativeToVRT="0">C:\Users\LENOVO\Rainforest Builder Dropbox\03_RB Ghana - All Team\03_Planning\00_Spatial\04_Drone Imagery\01_Data\01_Forest Reserves\03_Anhwiaso South Compartment\2026\ASO_S21-05-26_E21-05-26_R53\ASO_S21-05-26_E21-05-26_R53_0023.tif</SourceFilename>
       <SourceBand>4</SourceBand>
       <SourceProperties RasterXSize="16392" RasterYSize="16392" DataType="Byte" BlockXSize="512" BlockYSize="512" />
       <SrcRect xOff="0" yOff="0" xSize="16392" ySize="16392" />
       <DstRect xOff="65532" yOff="32764" xSize="16392" ySize="16392" />
-      <NODATA>0</NODATA>
+      <UseMaskBand>true</UseMaskBand>
     </ComplexSource>
     <ComplexSource>
-      <SourceFilename relativeToVRT="0">C:\Users\LENOVO\Rainforest Builder Dropbox\03_RB Ghana - All Team\03_Planning\00_Spatial\04_Drone Imagery\01_Data\01_Forest Reserves\03_Anhwiaso South Compartment\2026\ASO_S21-04-26_E21-04-26_R53\ASO_S21-04-26_E21-04-26_R53_0022.tif</SourceFilename>
+      <SourceFilename relativeToVRT="0">C:\Users\LENOVO\Rainforest Builder Dropbox\03_RB Ghana - All Team\03_Planning\00_Spatial\04_Drone Imagery\01_Data\01_Forest Reserves\03_Anhwiaso South Compartment\2026\ASO_S21-05-26_E21-05-26_R53\ASO_S21-05-26_E21-05-26_R53_0024.tif</SourceFilename>
       <SourceBand>4</SourceBand>
       <SourceProperties RasterXSize="16392" RasterYSize="16392" DataType="Byte" BlockXSize="512" BlockYSize="512" />
       <SrcRect xOff="0" yOff="0" xSize="16392" ySize="16392" />
       <DstRect xOff="81916" yOff="32764" xSize="16392" ySize="16392" />
-      <NODATA>0</NODATA>
+      <UseMaskBand>true</UseMaskBand>
     </ComplexSource>
     <ComplexSource>
-      <SourceFilename relativeToVRT="0">C:\Users\LENOVO\Rainforest Builder Dropbox\03_RB Ghana - All Team\03_Planning\00_Spatial\04_Drone Imagery\01_Data\01_Forest Reserves\03_Anhwiaso South Compartment\2026\ASO_S21-04-26_E21-04-26_R53\ASO_S21-04-26_E21-04-26_R53_0025.tif</SourceFilename>
+      <SourceFilename relativeToVRT="0">C:\Users\LENOVO\Rainforest Builder Dropbox\03_RB Ghana - All Team\03_Planning\00_Spatial\04_Drone Imagery\01_Data\01_Forest Reserves\03_Anhwiaso South Compartment\2026\ASO_S21-05-26_E21-05-26_R53\ASO_S21-05-26_E21-05-26_R53_0025.tif</SourceFilename>
       <SourceBand>4</SourceBand>
-      <SourceProperties RasterXSize="16388" RasterYSize="12778" DataType="Byte" BlockXSize="512" BlockYSize="512" />
-      <SrcRect xOff="0" yOff="0" xSize="16388" ySize="12778" />
-      <DstRect xOff="0" yOff="49148" xSize="16388" ySize="12778" />
-      <NODATA>0</NODATA>
+      <SourceProperties RasterXSize="16392" RasterYSize="16392" DataType="Byte" BlockXSize="512" BlockYSize="512" />
+      <SrcRect xOff="0" yOff="0" xSize="16392" ySize="16392" />
+      <DstRect xOff="98300" yOff="32764" xSize="16392" ySize="16392" />
+      <UseMaskBand>true</UseMaskBand>
     </ComplexSource>
     <ComplexSource>
-      <SourceFilename relativeToVRT="0">C:\Users\LENOVO\Rainforest Builder Dropbox\03_RB Ghana - All Team\03_Planning\00_Spatial\04_Drone Imagery\01_Data\01_Forest Reserves\03_Anhwiaso South Compartment\2026\ASO_S21-04-26_E21-04-26_R53\ASO_S21-04-26_E21-04-26_R53_0026.tif</SourceFilename>
+      <SourceFilename relativeToVRT="0">C:\Users\LENOVO\Rainforest Builder Dropbox\03_RB Ghana - All Team\03_Planning\00_Spatial\04_Drone Imagery\01_Data\01_Forest Reserves\03_Anhwiaso South Compartment\2026\ASO_S21-05-26_E21-05-26_R53\ASO_S21-05-26_E21-05-26_R53_0028.tif</SourceFilename>
       <SourceBand>4</SourceBand>
-      <SourceProperties RasterXSize="16392" RasterYSize="12778" DataType="Byte" BlockXSize="512" BlockYSize="512" />
-      <SrcRect xOff="0" yOff="0" xSize="16392" ySize="12778" />
-      <DstRect xOff="16380" yOff="49148" xSize="16392" ySize="12778" />
-      <NODATA>0</NODATA>
+      <SourceProperties RasterXSize="16388" RasterYSize="16392" DataType="Byte" BlockXSize="512" BlockYSize="512" />
+      <SrcRect xOff="0" yOff="0" xSize="16388" ySize="16392" />
+      <DstRect xOff="0" yOff="49148" xSize="16388" ySize="16392" />
+      <UseMaskBand>true</UseMaskBand>
     </ComplexSource>
     <ComplexSource>
-      <SourceFilename relativeToVRT="0">C:\Users\LENOVO\Rainforest Builder Dropbox\03_RB Ghana - All Team\03_Planning\00_Spatial\04_Drone Imagery\01_Data\01_Forest Reserves\03_Anhwiaso South Compartment\2026\ASO_S21-04-26_E21-04-26_R53\ASO_S21-04-26_E21-04-26_R53_0027.tif</SourceFilename>
+      <SourceFilename relativeToVRT="0">C:\Users\LENOVO\Rainforest Builder Dropbox\03_RB Ghana - All Team\03_Planning\00_Spatial\04_Drone Imagery\01_Data\01_Forest Reserves\03_Anhwiaso South Compartment\2026\ASO_S21-05-26_E21-05-26_R53\ASO_S21-05-26_E21-05-26_R53_0029.tif</SourceFilename>
       <SourceBand>4</SourceBand>
-      <SourceProperties RasterXSize="16392" RasterYSize="12778" DataType="Byte" BlockXSize="512" BlockYSize="512" />
-      <SrcRect xOff="0" yOff="0" xSize="16392" ySize="12778" />
-      <DstRect xOff="32764" yOff="49148" xSize="16392" ySize="12778" />
-      <NODATA>0</NODATA>
+      <SourceProperties RasterXSize="16392" RasterYSize="16392" DataType="Byte" BlockXSize="512" BlockYSize="512" />
+      <SrcRect xOff="0" yOff="0" xSize="16392" ySize="16392" />
+      <DstRect xOff="16380" yOff="49148" xSize="16392" ySize="16392" />
+      <UseMaskBand>true</UseMaskBand>
     </ComplexSource>
     <ComplexSource>
-      <SourceFilename relativeToVRT="0">C:\Users\LENOVO\Rainforest Builder Dropbox\03_RB Ghana - All Team\03_Planning\00_Spatial\04_Drone Imagery\01_Data\01_Forest Reserves\03_Anhwiaso South Compartment\2026\ASO_S21-04-26_E21-04-26_R53\ASO_S21-04-26_E21-04-26_R53_0028.tif</SourceFilename>
+      <SourceFilename relativeToVRT="0">C:\Users\LENOVO\Rainforest Builder Dropbox\03_RB Ghana - All Team\03_Planning\00_Spatial\04_Drone Imagery\01_Data\01_Forest Reserves\03_Anhwiaso South Compartment\2026\ASO_S21-05-26_E21-05-26_R53\ASO_S21-05-26_E21-05-26_R53_0030.tif</SourceFilename>
       <SourceBand>4</SourceBand>
-      <SourceProperties RasterXSize="16392" RasterYSize="12778" DataType="Byte" BlockXSize="512" BlockYSize="512" />
-      <SrcRect xOff="0" yOff="0" xSize="16392" ySize="12778" />
-      <DstRect xOff="49148" yOff="49148" xSize="16392" ySize="12778" />
-      <NODATA>0</NODATA>
+      <SourceProperties RasterXSize="16392" RasterYSize="16392" DataType="Byte" BlockXSize="512" BlockYSize="512" />
+      <SrcRect xOff="0" yOff="0" xSize="16392" ySize="16392" />
+      <DstRect xOff="32764" yOff="49148" xSize="16392" ySize="16392" />
+      <UseMaskBand>true</UseMaskBand>
+    </ComplexSource>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="0">C:\Users\LENOVO\Rainforest Builder Dropbox\03_RB Ghana - All Team\03_Planning\00_Spatial\04_Drone Imagery\01_Data\01_Forest Reserves\03_Anhwiaso South Compartment\2026\ASO_S21-05-26_E21-05-26_R53\ASO_S21-05-26_E21-05-26_R53_0031.tif</SourceFilename>
+      <SourceBand>4</SourceBand>
+      <SourceProperties RasterXSize="16392" RasterYSize="16392" DataType="Byte" BlockXSize="512" BlockYSize="512" />
+      <SrcRect xOff="0" yOff="0" xSize="16392" ySize="16392" />
+      <DstRect xOff="49148" yOff="49148" xSize="16392" ySize="16392" />
+      <UseMaskBand>true</UseMaskBand>
+    </ComplexSource>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="0">C:\Users\LENOVO\Rainforest Builder Dropbox\03_RB Ghana - All Team\03_Planning\00_Spatial\04_Drone Imagery\01_Data\01_Forest Reserves\03_Anhwiaso South Compartment\2026\ASO_S21-05-26_E21-05-26_R53\ASO_S21-05-26_E21-05-26_R53_0032.tif</SourceFilename>
+      <SourceBand>4</SourceBand>
+      <SourceProperties RasterXSize="16392" RasterYSize="16392" DataType="Byte" BlockXSize="512" BlockYSize="512" />
+      <SrcRect xOff="0" yOff="0" xSize="16392" ySize="16392" />
+      <DstRect xOff="65532" yOff="49148" xSize="16392" ySize="16392" />
+      <UseMaskBand>true</UseMaskBand>
+    </ComplexSource>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="0">C:\Users\LENOVO\Rainforest Builder Dropbox\03_RB Ghana - All Team\03_Planning\00_Spatial\04_Drone Imagery\01_Data\01_Forest Reserves\03_Anhwiaso South Compartment\2026\ASO_S21-05-26_E21-05-26_R53\ASO_S21-05-26_E21-05-26_R53_0033.tif</SourceFilename>
+      <SourceBand>4</SourceBand>
+      <SourceProperties RasterXSize="16392" RasterYSize="16392" DataType="Byte" BlockXSize="512" BlockYSize="512" />
+      <SrcRect xOff="0" yOff="0" xSize="16392" ySize="16392" />
+      <DstRect xOff="81916" yOff="49148" xSize="16392" ySize="16392" />
+      <UseMaskBand>true</UseMaskBand>
+    </ComplexSource>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="0">C:\Users\LENOVO\Rainforest Builder Dropbox\03_RB Ghana - All Team\03_Planning\00_Spatial\04_Drone Imagery\01_Data\01_Forest Reserves\03_Anhwiaso South Compartment\2026\ASO_S21-05-26_E21-05-26_R53\ASO_S21-05-26_E21-05-26_R53_0038.tif</SourceFilename>
+      <SourceBand>4</SourceBand>
+      <SourceProperties RasterXSize="16392" RasterYSize="358" DataType="Byte" BlockXSize="512" BlockYSize="512" />
+      <SrcRect xOff="0" yOff="0" xSize="16392" ySize="358" />
+      <DstRect xOff="16380" yOff="65532" xSize="16392" ySize="358" />
+      <UseMaskBand>true</UseMaskBand>
     </ComplexSource>
   </VRTRasterBand>
   <OverviewList resampling="nearest">2 4 8 16 32</OverviewList>
